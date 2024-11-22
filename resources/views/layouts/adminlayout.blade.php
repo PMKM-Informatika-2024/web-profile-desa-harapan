@@ -63,7 +63,7 @@
                 </div>
                 <ul class="sidebar-nav">
                     <li class="sidebar-item">
-                        <a href="admin" class="sidebar-link {{ Request::is('admin') ? 'active' : '' }}"
+                        <a href="admin" class="sidebar-link {{ Request::is('admin') ? 'active-link' : '' }}"
                             id="admin-dashboard">
                             <i class="fa-solid fa-list pe-2"></i>
                             <span class="link-text">Dashboard</span>

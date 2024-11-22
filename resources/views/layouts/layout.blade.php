@@ -17,7 +17,6 @@
 <style>
   .nav-item.dropdown:hover .dropdown-menu {
   display: block;
-  /* margin-top: 0; */
 }
 </style>
 <body>
@@ -43,7 +42,7 @@
               <a class="nav-link {{ Request::is('/') ? 'active-link' : '' }}" href="/" id="beranda">Beranda</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link {{ Request::is('profile-desa') ? 'active-link' : '' }} active" href="/profile-desa" id="profile-desa">Profile Desa</a>
+              <a class="nav-link {{ Request::is('profile-desa') ? 'active-link' : '' }}" href="/profile-desa" id="profile-desa">Profile Desa</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle {{ Request::is('perangkat-desa') || Request::is('lembaga-desa') ? 'active-link' : '' }}" href="#" id="pemerintahan-desa" role="button"
@@ -62,7 +61,7 @@
               <a class="nav-link {{ Request::is('layanan-publik') ? 'active-link' : '' }}" href="layanan-publik" id="layanan-publik">Layanan Publik</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle {{ Request::is('layanan-administrasi') || Request::is('daftar-pengumuman') || Request::is('daftar-kegiatan') ? 'active' : '' }}" href="#" id="informasi-publik" role="button" data-bs-toggle="dropdown"
+              <a class="nav-link dropdown-toggle {{ Request::is('layanan-administrasi') || Request::is('daftar-pengumuman') || Request::is('daftar-kegiatan') ? 'active-link' : '' }}" href="#" id="informasi-publik" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Informasi Publik
               </a>
@@ -121,34 +120,6 @@
 
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var currentPage = window.location.pathname;
-
-      var navBeranda = document.getElementById("beranda");
-      var navProfile = document.getElementById("profile-desa");
-      var navPemerintahan = document.getElementById("pemerintahan-desa");
-      var navLayananPublik = document.getElementById("layanan-publik");
-      var navInformasiPublik = document.getElementById("informasi-publik");
-      var navKontak = document.getElementById("kontak");
-
-      if (currentPage.endsWith("beranda.html") || currentPage === "/") {
-        navBeranda.classList.add("active-link");
-      } else if (currentPage.endsWith("profile-desa.html")) {
-        navProfile.classList.add("active-link");
-      } else if (currentPage.endsWith("perangkat-desa.html") || currentPage.endsWith("lembaga-desa.html")) {
-        navPemerintahan.classList.add("active-link");
-      } else if (currentPage.endsWith("layanan-publik.html")) {
-        navLayananPublik.classList.add("active-link");
-      } else if (
-        currentPage.endsWith("layanan-administrasi.html") ||
-        currentPage.endsWith("pengumuman.html") ||
-        currentPage.endsWith("kegiatan.html")
-      ) {
-        navInformasiPublik.classList.add("active-link");
-      } else if (currentPage.endsWith("kontak.html")) {
-        navKontak.classList.add("active-link");
-      }
-    });
 
     // Navbar
     let lastScrollTop = 0;

@@ -13,7 +13,11 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-
+<style>
+  .nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+</style>
 <body>
 
   <!-- Navbar -->
@@ -21,7 +25,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark p-md-3">
       <div class="container-fluid">
         <a class="navbar-brand ms-3 d-flex align-items-center" href="#">
-          <img src="img/logo.png" width="50" class="me-2">
+          <img src="image/logo.png" width="50" class="me-2">
           <span style="line-height: 1.1; font-size:medium;">
             Desa<br>
             Sungai<br>
@@ -35,13 +39,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0" style="color: #f8f9fa;">
             <li class="nav-item">
-              <a class="nav-link" href="/" id="beranda">Beranda</a>
+              <a class="nav-link {{ Request::is('/') ? 'active-link' : '' }}" href="/" id="beranda">Beranda</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/profile-desa" id="profile-desa">Profile Desa</a>
+              <a class="nav-link {{ Request::is('profile-desa') ? 'active-link' : '' }}" href="/profile-desa" id="profile-desa">Profile Desa</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="pemerintahan-desa" role="button"
+              <a class="nav-link dropdown-toggle {{ Request::is('perangkat-desa') || Request::is('lembaga-desa') ? 'active-link' : '' }}" href="#" id="pemerintahan-desa" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Pemerintahan Desa
               </a>
@@ -54,7 +58,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/layanan-publik" id="layanan-publik">Layanan Publik</a>
+              <a class="nav-link {{ Request::is('layanan-publik') ? 'active-link' : '' }}" href="/layanan-publik" id="layanan-publik">Layanan Publik</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="informasi-publik" role="button" data-bs-toggle="dropdown"
@@ -62,7 +66,7 @@
                 Informasi Publik
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/layanan-administrasi" id="layanan-administrasi">Layanan
+                <li><a class="dropdown-item {{ Request::is('daftar-pengumuman') || Request::is('daftar-kegiatan') ? 'active-link' : '' }}" href="/layanan-administrasi" id="layanan-administrasi">Layanan
                     Administrasi Desa</a></li>
                 <li>
                   <hr class="dropdown-divider">
@@ -303,34 +307,6 @@
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var currentPage = window.location.pathname;
-
-      var navBeranda = document.getElementById("beranda");
-      var navProfile = document.getElementById("profile-desa");
-      var navPemerintahan = document.getElementById("pemerintahan-desa");
-      var navLayananPublik = document.getElementById("layanan-publik");
-      var navInformasiPublik = document.getElementById("informasi-publik");
-      var navKontak = document.getElementById("kontak");
-
-      if (currentPage.endsWith("beranda.html") || currentPage === "/") {
-        navBeranda.classList.add("active-link");
-      } else if (currentPage.endsWith("profile-desa.html")) {
-        navProfile.classList.add("active-link");
-      } else if (currentPage.endsWith("perangkat-desa.html") || currentPage.endsWith("lembaga-desa.html")) {
-        navPemerintahan.classList.add("active-link");
-      } else if (currentPage.endsWith("layanan-publik.html")) {
-        navLayananPublik.classList.add("active-link");
-      } else if (
-        currentPage.endsWith("layanan-administrasi.html") ||
-        currentPage.endsWith("pengumuman.html") ||
-        currentPage.endsWith("kegiatan.html")
-      ) {
-        navInformasiPublik.classList.add("active-link");
-      } else if (currentPage.endsWith("kontak.html")) {
-        navKontak.classList.add("active-link");
-      }
-    });
 
     // Navbar
     let lastScrollTop = 0;

@@ -89,9 +89,9 @@ class PerangkatdesaController
      */
     public function destroy(Request $request, Perangkatdesa $perangkatdesa)
     {
-        // dd($request);
-        if($perangkatdesa->gambar_perangkatadesa){
-            Storage::delete($perangkatdesa->gambar_perangkatadesa);
+        // dd($perangkatdesa->gambar_perangkatdesa);
+        if($perangkatdesa->gambar_perangkatdesa){
+            Storage::delete($perangkatdesa->gambar_perangkatdesa);
         }
         Perangkatdesa::destroy($perangkatdesa->id);
         return redirect('/perangkatdesa')->with('success', 'Perangkat desa berhasil dihapus');

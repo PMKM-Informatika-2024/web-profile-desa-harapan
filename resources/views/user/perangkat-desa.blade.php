@@ -2,7 +2,7 @@
 @section('child')
     
 
-<!-- Banner -->
+  <!-- Banner -->
   <section id="banner">
     <div class="container-fluid banner-image w-100 vh-60 d-flex justify-content-center align-items-center">
       <div class="row">
@@ -260,6 +260,4 @@
     </div>
   </section>
   <!-- End of Perangkat Desa -->
-
-@endsection
-  
+  @endsection
