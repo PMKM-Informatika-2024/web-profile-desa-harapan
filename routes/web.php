@@ -18,7 +18,8 @@ Route::get('/profile-desa', function () {
     return view('user/profile-desa');
 });
 Route::get('/perangkat-desa', function () {
-    return view('user/perangkat-desa');
+    $perangkatdesas = Perangkatdesa::all();
+    return view('user/perangkat-desa', compact('perangkatdesas'));
 });
 Route::get('/daftar-kegiatan', function () {
     return view('user/kegiatan');
