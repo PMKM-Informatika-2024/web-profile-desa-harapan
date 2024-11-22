@@ -82,7 +82,7 @@
           </ul>
           <ul class="navbar-nav ms-auto me-3">
             <li class="nav-item">
-              <a class="nav-link" href="/kontak"
+              <a class="nav-link" href="/daftar-kontak"
                 style="color:#f8f9fa ; background-color: #1E90FF; border-radius: 8px; padding-left: 15px; padding-right: 15px;">Kontak</a>
             </li>
           </ul>

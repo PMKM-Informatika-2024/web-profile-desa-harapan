@@ -67,17 +67,17 @@
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="/pengumuman" id="pengumuman">Pengumuman</a></li>
+                <li><a class="dropdown-item" href="/daftar-pengumuman" id="pengumuman">Pengumuman</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="/kegiatan" id="kegiatan">Kegiatan</a></li>
+                <li><a class="dropdown-item" href="/daftar-kegiatan" id="kegiatan">Kegiatan</a></li>
               </ul>
             </li>
           </ul>
           <ul class="navbar-nav ms-auto me-3">
             <li class="nav-item">
-              <a class="nav-link" href="/kontak"
+              <a class="nav-link" href="/daftar-kontak"
                 style="color:#f8f9fa ; background-color: #1E90FF; border-radius: 8px; padding-left: 15px; padding-right: 15px;">Kontak</a>
             </li>
           </ul>
