@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Layananpublik;
 use App\Http\Requests\StoreLayananpublikRequest;
 use App\Http\Requests\UpdateLayananpublikRequest;
+use Illuminate\Http\Request;
 
 class LayananpublikController  
 {
@@ -13,7 +14,12 @@ class LayananpublikController
      */
     public function index()
     {
-        return view('admin.admin-layanan-publik', []);
+        return view('admin.admin-layanan-publik', [
+        'layananpublikpendidikan' => Layananpublik::where('kategori_fasilitas', 'pendidikan')->get(),
+        'layananpublikkesehatan' => Layananpublik::where('kategori_fasilitas', 'kesehatan')->get()
+
+        ]);
+
     }
 
     /**
@@ -27,9 +33,20 @@ class LayananpublikController
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreLayananpublikRequest $request)
+    public function store( Request $request)
     {
-        //
+        // dd($request);
+        $validatedData = $request->validate([
+            'kategori_fasilitas' => 'required',
+            'nama_fasilitas' => 'required',
+            'url_alamat' => 'required',
+            'gambar_fasilitas'=>'image'
+        ]);
+        if($request->file('gambar_fasilitas')) {
+            $validatedData['gambar_fasilitas'] = $request->file('gambar_fasilitas')->store('gambar_yang_tersimpan');
+        }
+        Layananpublik::create($validatedData);
+        return redirect('/layananpublik')->with('success', 'layanan Publik berhasil ditambahkan');
     }
 
     /**
