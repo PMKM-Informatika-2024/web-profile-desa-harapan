@@ -26,7 +26,7 @@
                                                 <select name="kategori_fasilitas" class="form-control" id="kategoriFasilitas" required>
                                                     <option value="">-- pilih kategori --</option>
                                                     <option value="pendidikan">Pendidikan</option>
-                                                    <option value="kesehatan">Kesehatan</option>
+                                                    <option value="publik">Publik</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -111,7 +111,7 @@
                     </table>
 
                     <!-- Tabel Fasilitas Kesehatan -->
-                    <h5 class="mt-5">Fasilitas Kesehatan</h5>
+                    <h5 class="mt-5">Fasilitas Publik</h5>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
@@ -125,24 +125,24 @@
                         </thead>
                         <tbody id="fasilitasPublikTableBody">
                             <!-- Data fasilitas kesehatan akan ditambahkan di sini -->
-                            @foreach ($layananpublikkesehatan as $fasilitaskesehatan)
+                            @foreach ($layananpublikpublik as $fasilitaspublik)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $fasilitaskesehatan->kategori_fasilitas }}</td>
-                                <td>{{ $fasilitaskesehatan->nama_fasilitas }}</td>
-                                <td>{{ $fasilitaskesehatan->url_alamat }}</td>
-                                <td><img src="{{ asset('storage/' . $fasilitaskesehatan->gambar_fasilitas) }}"
+                                <td>{{ $fasilitaspublik->kategori_fasilitas }}</td>
+                                <td>{{ $fasilitaspublik->nama_fasilitas }}</td>
+                                <td>{{ $fasilitaspublik->url_alamat }}</td>
+                                <td><img src="{{ asset('storage/' . $fasilitaspublik->gambar_fasilitas) }}"
                                         alt="" class="img-thumbnail" style="width: 50px; height: 50px;"></td>
                                 <td>
                                     <a class=" btn btn-warning" href="javascript:void(0)" data-bs-toggle="modal"
                                         data-bs-target="#editPerangkatModal"
-                                        onclick="loadEditData({{ $fasilitaskesehatan }})"><i
+                                        onclick="loadEditData({{ $fasilitaspublik }})"><i
                                             class="fa-solid fa-pen-to-square"></i></a>
-                                    <form action="/layananpublik/{{ $fasilitaskesehatan->id }}" method="post" class="d-inline">
+                                    <form action="/layananpublik/{{ $fasilitaspublik->id }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
                                         <button class=" btn btn-danger border-0"
-                                            onclick="return confirm('Hapus data {{ $fasilitaskesehatan->nama }}?')"><i
+                                            onclick="return confirm('Hapus data {{ $fasilitaspublik->nama }}?')"><i
                                                 class="fa-solid fa-trash-can"></i></button>
                                     </form>
                                 </td>
@@ -220,7 +220,7 @@
             document.getElementById('editKategoriFasilitas').value = layananpublik.kategori_fasilitas;
             document.getElementById('editGambar').value = layananpublik.gambar_fasilitas;
             document.getElementById('editNama').value = layananpublik.nama_fasilitas;
-            document.getElementById('editurlAlamat').value = layananpublik.url_alamat;
+            document.getElementById('editurlAlamat').value = layananpublik.url_alamat;  
             const previewImage = document.getElementById('previewImage');
             if (layananpublik.gambar_fasilitas) {
                 previewImage.src = `/storage/${layananpublik.gambar_fasilitas}`;

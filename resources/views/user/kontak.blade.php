@@ -18,7 +18,7 @@
     <div class="container mt-5">
       <div class="row">
         <div class="col-lg-6 mb-4 mb-lg-0 text-center text-lg-start">
-          <img src="img/kontak.jpg" class="img-fluid image-kontak rounded" alt="Kontak Kami">
+          <img src="/image/kontak.jpg" class="img-fluid image-kontak rounded" alt="Kontak Kami">
         </div>
 
         <!-- Info Kontak -->
@@ -54,7 +54,7 @@
             </div>
             <div>
               <p class="mb-1">Email</p>
-              <p><a href="mailto:your.email" target="_blank">sungaikeran@gmail.com</a></p>
+              <p><a href="mailto:your.email" target="_blank">desaharapan@gmail.com</a></p>
             </div>
           </div>
         </div>
