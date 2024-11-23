@@ -1,0 +1,1061 @@
+:root {
+  --pr-color: #1E90FF;
+  --sec-color: #f8f9fa;
+  --trd-color: #6c757d;
+  --pr-font: 'Poppins', sans-serif;
+  --sec-font: 'Monsterrat', sans-serif;
+  --trd-font: 'Lato', sans-serif;
+}
+
+/* USER */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  transition: top 0.3s ease;
+  text-transform: uppercase;
+}
+
+#navbar-pengumuman {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: top 0.3s ease;
+  text-transform: uppercase;
+}
+
+.navbar-collapse {
+  padding: 15px;
+  border-radius: 0 0 10px 10px;
+  transition: all 0.3s ease;
+  font-family: var(--pr-font);
+  font-weight: bold;
+  color: var(--sec-color);
+}
+
+.navbar-nav .nav-link {
+  color: var(--sec-color);
+}
+
+.navbar-nav .active-link {
+  background-color: var(--sec-color);
+  color: var(--pr-color) !important;
+  padding: 5px 10px;
+}
+
+.nav-item.dropdown .nav-link.active-link {
+  background-color: var(--sec-color);
+  color: var(--pr-color) !important;
+}
+
+.btn-close {
+  position: absolute;
+  top: 25px;
+  right: 22px;
+  color: var(--pr-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.collapse.show .btn-close {
+  display: block;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: var(--sec-color);
+  }
+
+  .navbar-nav .nav-link {
+    color: #343a40;
+    padding: 10px;
+    font-family: var(--pr-font);
+    font-weight: bold;
+  }
+
+  .navbar-toggler {
+    background-color: #1E90FF;
+  }
+}
+
+.navbar-nav .nav-link:hover {
+  color: #1E90FF;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-item .dropdown-menu {
+  border-radius: 0;
+  background-color: #f8f9fa;
+  border: none;
+}
+
+.nav-item .dropdown-menu .dropdown-item {
+  font-family: var(--pr-font);
+  color: #343a40;
+  padding: 5px 20px;
+  font-weight: bold;
+}
+
+.nav-item .dropdown-menu .dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: var(--pr-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-item .dropdown-toggle:hover {
+  color: var(--pr-color);
+}
+
+/* CSS for responsive banner */
+#banner-beranda .banner-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://media.istockphoto.com/id/2163917140/id/foto/lereng-bukit-hijau-subur-dengan-jalan-tanah-menuju-desa-langit-cerah-dan-biru-dan-pepohonan.jpg?s=612x612&w=0&k=20&c=YFflDu5rLy-lxzBNfnoqzt0bcdJ8IqGckTPfNGCEuIc=');
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+
+.banner-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://media.istockphoto.com/id/2163917140/id/foto/lereng-bukit-hijau-subur-dengan-jalan-tanah-menuju-desa-langit-cerah-dan-biru-dan-pepohonan.jpg?s=612x612&w=0&k=20&c=YFflDu5rLy-lxzBNfnoqzt0bcdJ8IqGckTPfNGCEuIc=');
+  background-size: cover;
+  height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#banner-beranda .text-banner-h1 {
+  font-size: 4rem;
+  color: var(--sec-color);
+  font-family: var(--pr-font);
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#banner-beranda .text-banner-h2 {
+  margin-top: 70px;
+  font-size: 2rem;
+  color: var(--sec-color);
+  font-family: var(--pr-font);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.text-banner {
+  font-size: 3rem;
+  color: var(--sec-color);
+  font-family: var(--pr-font);
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1200px) {
+  #banner-beranda .text-banner-h1 {
+    font-size: 3.5rem;
+  }
+
+  #banner-beranda .text-banner-h2 {
+    font-size: 1.8rem;
+  }
+
+  .text-banner {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  #banner-beranda .text-banner-h1 {
+    font-size: 3rem;
+  }
+
+  #banner-beranda .text-banner-h2 {
+    font-size: 1.6rem;
+  }
+
+  .text-banner {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #banner-beranda .text-banner-h1 {
+    font-size: 2.5rem;
+  }
+
+  #banner-beranda .text-banner-h2 {
+    font-size: 1.4rem;
+  }
+
+  .text-banner {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #banner-beranda .text-banner-h1 {
+    font-size: 2rem;
+  }
+
+  #banner-beranda .text-banner-h2 {
+    font-size: 1.2rem;
+  }
+
+  .text-banner {
+    font-size: 1.5rem;
+  }
+}
+
+.btn-more {
+  padding: 10px 20px;
+  background-color: var(--pr-color);
+  color: var(--sec-color);
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: var(--pr-font);
+  font-weight: bold;
+}
+
+.btn-more:hover {
+  background-color: #16599b;
+  color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  #content h1 {
+    font-size: 2rem;
+  }
+
+  .btn-more {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #content h1 {
+    font-size: 1.5rem;
+  }
+
+  .btn-more {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+/* typography */
+.container .subjudul {
+  font-family: var(--pr-font) !important;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.container-fluid .subjudul {
+  font-family: var(--pr-font) !important;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.container p {
+  color: var(--trd-color);
+  font-family: var(--sec-font);
+  line-height: 1.7;
+}
+
+.container ol {
+  color: var(--trd-color);
+  font-family: var(--sec-font);
+  line-height: 1.7;
+}
+
+
+/* Content */
+.my-5 {
+  padding-top: 60px;
+}
+
+#content .btn-more {
+  margin-top: 20px;
+  display: inline-block;
+  width: fit-content;
+  align-self: flex-end;
+  padding: 10px 20px;
+}
+
+#content .image {
+  width: 530px;
+  max-height: 388px;
+  border-radius: 30px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 5px solid #8da9c5;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+@media (max-width: 768px) {
+  .col-lg-6 {
+    margin-bottom: 20px;
+  }
+}
+
+/* Slider Perangkat Desa */
+.perangkat-desa-container {
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 -15px 30px rgba(0, 0, 0, 0.7), 0 15px 30px rgba(0, 0, 0, 0.7);
+}
+.carousel-caption {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--sec-color);
+  text-transform: uppercase;
+  position: relative;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+.carousel-item {
+  transition: transform 0.6s ease;
+}
+
+#perangkat-desa .img-hover {
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.carousel-inner {
+  padding: 20px 0;
+}
+
+.img-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+#carouselExampleIndicators .carousel-indicators button {
+  background-color: #767676;
+}
+
+#carouselExampleIndicators .carousel-indicators .active {
+  background-color: #4f4f4f;
+}
+
+/* Pengumuman */
+#pengumuman {
+  background-color: #f1f1f1;
+}
+
+#pengumuman .card {
+  transition: transform 0.2s;
+  /* Efek transformasi saat hover */
+}
+
+#pengumuman .card-title {
+  border-bottom: 2px solid --pr-color;
+}
+
+#pengumuman .card-text {
+  margin-bottom: 1rem;
+}
+
+#sejarah-desa .container {
+  text-align: justify;
+}
+
+#image-desa {
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#visi-misi h5 {
+  font-family: var(--pr-font);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+
+#kependudukan {
+  background-color: #f1f1f1;
+}
+
+#kependudukan .card {
+  background-color: #f1f1f1;
+  border: none;
+  font-family: var(--sec-font);
+}
+
+#kependudukan .counter {
+  font-family: var(--trd-font);
+  font-size: 4.5rem;
+  font-weight: bold;
+}
+
+#kependudukan h5 {
+  font-family: var(--pr-font);
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+#sukuChart,
+#agamaChart {
+  width: 100%;
+  height: 400px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#kependudukan .chart-card {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 0px;
+  background-color: var(--sec-color);
+  padding: 20px;
+  height: 400px;
+  width: 500px;
+  margin-bottom: 20px;
+}
+
+.lembaga-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.lembaga-img-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.lembaga-img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.lembaga-icon {
+  font-size: 80px;
+  color: #aaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lembaga-info {
+  text-align: center;
+}
+
+.lembaga-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.lembaga-alamat,
+.lembaga-ketua {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.card-sekolah img,
+.card-fasilitas-publik img,
+.card-kegiatan img {
+  height: 150;
+  width: 100%;
+}
+
+.card-sekolah h5,
+.card-fasilitas-publik h5 {
+  color: var(--sec-color);
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  font-family: var(--pr-font);
+}
+
+.card-kegiatan h5 {
+  color: var(--sec-color);
+  font-size: 32px;
+  font-weight: 500;
+  font-family: var(--pr-font);
+  margin: 0;
+}
+
+.card-sekolah .button,
+.card-fasilitas-publik .button {
+  background-color: var(--pr-color);
+  color: var(--sec-color);
+  border: none;
+  width: 150px;
+  height: 45px;
+  font-size: 18px;
+  font-weight: 500;
+  display: inline-block;
+  text-align: center;
+  line-height: 45px;
+  text-decoration: none;
+}
+
+.card-sekolah .overlay,
+.card-fasilitas-publik .overlay,
+.card-kegiatan .overlay {
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 0;
+  transition: all ease-in-out .3s;
+  -webkit-transition: all ease-in-out .3s;
+  -moz-transition: all ease-in-out .3s;
+  -ms-transition: all ease-in-out .3s;
+  -o-transition: all ease-in-out .3s;
+}
+
+.card-sekolah .overlay:hover,
+.card-fasilitas-publik .overlay:hover,
+.card-kegiatan .overlay:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+}
+
+#kontak p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-family: var(--trd-font) !important;
+}
+
+#kontak a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+#kontak a:hover {
+  text-decoration: underline;
+}
+
+#pengumuman .btn-more {
+  padding: 5px 10px;
+  background-color: var(--pr-color);
+  color: var(--sec-color);
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: var(--sec-font);
+  font-weight: medium;
+}
+
+#pengumuman .table th,
+#pengumuman .table td {
+  font-family: var(--sec-font);
+  padding: 12px 16px;
+  text-align: center;
+}
+
+#pengumuman .table td {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  #pengumuman .table {
+    font-size: 14px;
+  }
+}
+
+#backToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: var(--pr-color);
+  color: var(--sec-color);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 2px;
+  font-size: 14px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+#backToTopBtn:hover {
+  background-color: #0255af;
+}
+
+.transition-container {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.transition-container.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+  border-top: #000000;
+  font-family: var(--trd-font);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.contact-icons a {
+  margin: 0 8px;
+  font-size: 1.2rem;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.contact-icons a:hover {
+  color: #007bff;
+}
+
+/* END OF USER */
+
+
+/* ADMIN */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(130deg, var(--pr-color), var(--sec-color));
+}
+
+/* form Login */
+.form-signin {
+  background-color: var(--sec-color);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-container h2 {
+  font-family: var(--pr-font);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.login-container .form-control {
+  padding: 10px;
+}
+
+.btn-admin {
+  padding: 7px 20px;
+  background-color: var(--pr-color);
+  color: var(--sec-color);
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: var(--pr-font);
+  font-weight: medium;
+  text-align: center;
+}
+
+.btn-admin:hover {
+  background-color: #16599b;
+  color: #f8f9fa;
+}
+
+@media (max-width: 992px) {
+  .login-container h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-admin {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .login-container .form-control {
+    padding: 8px;
+  }
+
+  .login-container h2 {
+    font-size: 1.4rem;
+  }
+
+  .login-container h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn-admin {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .login-container .form-control {
+    padding: 6px;
+  }
+}
+
+/* End of form login */
+
+
+/* Admin Dashboard */
+.wrapper {
+  align-items: stretch;
+  display: flex;
+  width: 100%;
+}
+
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 0;
+  overflow: hidden;
+  transition: all 0.35s ease-in-out;
+  width: 100%;
+  background: var(--sec-color);
+}
+
+#sidebar {
+  max-width: 264px;
+  min-width: 264px;
+  background: var(--pr-color);
+  transition: all 0.35s ease-in-out;
+}
+
+#sidebar.collapsed {
+  max-width: 50px;
+  min-width: 50px;
+}
+
+.sidebar-logo {
+  padding: 1.3rem;
+}
+
+.sidebar-logo a {
+  color: var(--sec-color);
+  font-size: 22px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: font-size 0.35s ease-in-out, opacity 0.3s ease, transform 0.3s ease;
+}
+
+#sidebar.collapsed .sidebar-logo {
+  display: none;
+}
+
+#sidebar.collapsed .sidebar-logo a {
+  display: none;
+  white-space: nowrap;
+}
+
+a.sidebar-link {
+  padding: 10px 20px;
+  color: var(--sec-color);
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  transition: all 0.35s ease-in-out;
+  margin-left: -35px;
+  white-space: nowrap;
+}
+
+a.sidebar-link.active {
+  background-color: var(--sec-color);
+  color: var(--pr-color);
+  cursor: pointer;
+}
+
+#sidebar.collapsed .sidebar-nav {
+  padding-top: 73px;
+}
+
+#sidebar.collapsed a.sidebar-link .link-text {
+  display: none;
+  white-space: nowrap;
+}
+
+#sidebar.collapsed a.sidebar-link i {
+  margin-right: 10px;
+  font-size: 16px;
+  padding: 3px 0px;
+}
+
+.link-text {
+  transition: opacity 0.35s ease-in-out;
+}
+
+
+
+.avatar {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+
+.main .dropdown-item {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.navbar-expand .navbar-nav {
+  margin-left: auto;
+  font-weight: 300;
+}
+
+.content {
+  flex: 1;
+  max-width: 100vw;
+  width: 100vw;
+}
+
+@media (min-width:768px) {
+  .content {
+    max-width: auto;
+    width: auto;
+  }
+}
+
+.main .card {
+  box-shadow: 0 0 .875rem 0 rgba(34, 46, 60, .05);
+  margin-bottom: 24px;
+  border: none;
+}
+
+
+
+/* End of Admin Dashboard */
+
+
+/* Kelola Profile Desa */
+.main .btn-simpan {
+  padding: 7px 20px;
+  background-color: var(--pr-color);
+  color: var(--sec-color);
+  border: none;
+  border-radius: 2px;
+  text-decoration: none;
+  font-family: var(--pr-font);
+  font-weight: medium;
+  text-align: center;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+.main .btn-simpan:hover {
+  background-color: #16599b;
+  color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  .main .btn-simpan {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .main .btn-simpan {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+.main .btn-edit {
+  padding: 7px 20px;
+  background-color: #17a2b8;
+  color: var(--sec-color);
+  border: none;
+  border-radius: 2px;
+  text-decoration: none;
+  font-family: var(--pr-font);
+  font-weight: medium;
+  text-align: center;
+}
+
+.main .btn-edit:hover {
+  background-color: #138496;
+  color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  .main .btn-edit {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .main .btn-edit {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+.main .btn-hapus {
+  padding: 7px 20px;
+  background-color: #dc3545;
+  color: var(--sec-color);
+  border: none;
+  border-radius: 2px;
+  text-decoration: none;
+  font-family: var(--pr-font);
+  font-weight: medium;
+  text-align: center;
+}
+
+.main .btn-hapus:hover {
+  background-color: #c82333;
+  color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  .main .btn-hapus {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .main .btn-hapus {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+.main .btn-batal {
+  padding: 7px 20px;
+  background-color: #6c757d;
+  color: var(--sec-color);
+  border: none;
+  border-radius: 2px;
+  text-decoration: none;
+  font-family: var(--pr-font);
+  font-weight: medium;
+  text-align: center;
+}
+
+.main .btn-batal:hover {
+  background-color: #5a6268;
+  color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  .main .btn-batal {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .main .btn-batal {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+
+#imagePreview img {
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+}
+
+#imagePreview div {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#imagePreview span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: red;
+  cursor: pointer;
+}
+
+/* End of Kelola Profile Desa */
+
+
+/* Kelola Perangkat Desa */
+.main .table {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.main .table td,
+.main .table th {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.main .modal-header {
+  background-color: var(--trd-color);
+  color: var(--sec-color);
+}
+
+.main .table img {
+  max-width: 50px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .main .table {
+    font-size: 0.9rem;
+  }
+}
+
+/* End of Kelola Perangkat Desa */
+
+
+
+
+
+/* END OF ADMIN */
