@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kelolakegiatan;
-use App\Http\Requests\StoreKelolakegiatanRequest;
-use App\Http\Requests\UpdateKelolakegiatanRequest;
-use Illuminate\Support\Facades\Gate;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class KelolakegiatanController  
 {
@@ -28,9 +27,19 @@ class KelolakegiatanController
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreKelolakegiatanRequest $request)
+    public function store(Request $request)
     {
-        // Gate::inspect()
+        // dd($request);
+        $validatedData = $request->validate([
+            'nama' => 'required',
+            'jabatan' => 'required',
+            'gambar_perangkatdesa'=>'image'
+        ]);
+        if($request->file('gambar_perangkatdesa')) {
+            $validatedData['gambar_perangkatdesa'] = $request->file('gambar_perangkatdesa')->store('gambar_yang_tersimpan');
+        }
+        Kelolakegiatan::create($validatedData);
+        return redirect('/perangkatdesa')->with('success', 'Perangkat desa baru berhasil ditambahkan');
     }
 
     /**
@@ -52,9 +61,23 @@ class KelolakegiatanController
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateKelolakegiatanRequest $request, Kelolakegiatan $kelolakegiatan)
+    public function update(Request $request, Kelolakegiatan $kelolakegiatan)
     {
-        //
+        $validatedData = $request->validate([
+            'nama' => 'required',
+            'jabatan' => 'required',
+            'gambar_perangkatdesa' => 'image'
+        ]);
+        if($request->file('gambar_perangkatdesa')) {
+            if($request->oldImage){
+                Storage::delete($request->oldImage);
+            }
+            $validatedData['gambar_perangkatdesa'] = $request->file('gambar_perangkatdesa')->store('gambar_yang_tersimpan');
+        }
+        Kelolakegiatan::where('id', $request->input('id'))
+            ->update($validatedData);
+
+        return redirect('/perangkatdesa')->with('success', 'Perangkat desa berhasil diupdate');
     }
 
     /**
@@ -62,6 +85,11 @@ class KelolakegiatanController
      */
     public function destroy(Kelolakegiatan $kelolakegiatan)
     {
-        //
+        // dd($perangkatdesa->gambar_perangkatdesa);
+        if($kelolakegiatan->gambar_perangkatdesa){
+            Storage::delete($kelolakegiatan->gambar_perangkatdesa);
+        }
+        Kelolakegiatan::destroy($kelolakegiatan->id);
+        return redirect('/perangkatdesa')->with('success', 'Perangkat desa berhasil dihapus');
     }
 }

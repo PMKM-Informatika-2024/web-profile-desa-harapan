@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Layananadministrasi;
-use App\Http\Requests\StoreLayananadministrasiRequest;
-use App\Http\Requests\UpdateLayananadministrasiRequest;
+use Illuminate\Http\Request;
 
 class LayananadministrasiController  
 {
@@ -27,9 +26,16 @@ class LayananadministrasiController
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreLayananadministrasiRequest $request)
+    public function store(Request $request)
     {
-        //
+        // dd($request);
+        $validatedData = $request->validate([
+            'nama_layanan' => 'required',
+            'deskripsi' => 'required',
+            'persyaratan'=>'required'
+        ]);
+        Layananadministrasi::create($validatedData);
+        return redirect('/layananadministrasi')->with('success', 'Layanan administrasi baru berhasil ditambahkan');
     }
 
     /**
@@ -51,9 +57,17 @@ class LayananadministrasiController
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateLayananadministrasiRequest $request, Layananadministrasi $layananadministrasi)
+    public function update(Request $request, Layananadministrasi $layananadministrasi)
     {
-        //
+        $validatedData = $request->validate([
+            'nama_layanan' => 'required',
+            'deskripsi' => 'required',
+            'persyaratan'=>'required'
+        ]);
+        Layananadministrasi::where('id', $request->input('id'))
+            ->update($validatedData);
+
+        return redirect('/layananadministrasi')->with('success', 'Layanan administrasi berhasil diupdate');
     }
 
     /**
@@ -61,6 +75,8 @@ class LayananadministrasiController
      */
     public function destroy(Layananadministrasi $layananadministrasi)
     {
-        //
+        // dd($perangkatdesa->gambar_perangkatdesa);
+        Layananadministrasi::destroy($layananadministrasi->id);
+        return redirect('/layananadministrasi')->with('success', 'Layanan administrasi berhasil dihapus');
     }
 }

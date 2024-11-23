@@ -3,9 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kelolakontak;
-use App\Http\Requests\StoreKelolakontakRequest;
-use App\Http\Requests\UpdateKelolakontakRequest;
-
+use Illuminate\Http\Request;
 class KelolakontakController  
 {
     /**
@@ -13,7 +11,9 @@ class KelolakontakController
      */
     public function index()
     {
-        return view('admin.admin-kontak', []);
+        return view('admin.admin-kontak', [
+            'kontak' => Kelolakontak::get()
+        ]);
     }
 
     /**
@@ -27,7 +27,7 @@ class KelolakontakController
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreKelolakontakRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -51,9 +51,17 @@ class KelolakontakController
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateKelolakontakRequest $request, Kelolakontak $kelolakontak)
+    public function update(Request $request, Kelolakontak $kelolakontak)
     {
-        //
+        $validatedData = $request->validate([
+            'no_whatsapp' => 'required',
+            'username_instagram' => 'required',
+            'email' => 'required'
+        ]);
+        Kelolakontak::where('id', $request->input('id'))
+            ->update($validatedData);
+
+        return redirect('/kelolakontak')->with('success', 'Kontak berhasil diupdate');
     }
 
     /**
@@ -61,6 +69,6 @@ class KelolakontakController
      */
     public function destroy(Kelolakontak $kelolakontak)
     {
-        //
+        // dd($perangkatdesa->gambar_perangkatdesa);
     }
 }

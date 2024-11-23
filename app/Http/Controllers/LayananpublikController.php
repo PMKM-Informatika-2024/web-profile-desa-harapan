@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Layananpublik;
 use Illuminate\Support\Facades\Storage;
-use App\Http\Requests\StoreLayananpublikRequest;
-use App\Http\Requests\UpdateLayananpublikRequest;
 
 class LayananpublikController  
 {
@@ -76,7 +74,7 @@ class LayananpublikController
             'kategori_fasilitas' => 'required',
             'nama_fasilitas' => 'required',
             'url_alamat' => 'required',
-            'gambar_fasilitas' => 'image'
+            'gambar_fasilitas'=>'image'
         ]);
         if($request->file('gambar_fasilitas')) {
             if($request->oldImage){
@@ -87,7 +85,7 @@ class LayananpublikController
         Layananpublik::where('id', $request->input('id'))
             ->update($validatedData);
 
-        return redirect('/layananpublik')->with('success', 'Layanan Publik berhasil diupdate');
+        return redirect('/layananpublik')->with('success', 'Layanan publik berhasil diupdate');
     }
 
     /**
@@ -95,6 +93,11 @@ class LayananpublikController
      */
     public function destroy(Layananpublik $layananpublik)
     {
-        //
+        // dd($request);
+        if($layananpublik->gambar_fasilitas){
+            Storage::delete($layananpublik->gambar_fasilitas);
+        }
+        Layananpublik::destroy($layananpublik->id);
+        return redirect('/layananpublik')->with('success', 'Layanan publik berhasil dihapus');
     }
 }
