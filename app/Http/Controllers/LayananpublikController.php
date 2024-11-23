@@ -74,7 +74,6 @@ class LayananpublikController
             'kategori_fasilitas' => 'required',
             'nama_fasilitas' => 'required',
             'url_alamat' => 'required',
-            'gambar_fasilitas'=>'image'
         ]);
         if($request->file('gambar_fasilitas')) {
             if($request->oldImage){

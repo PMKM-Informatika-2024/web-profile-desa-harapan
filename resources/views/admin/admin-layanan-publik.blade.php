@@ -171,18 +171,18 @@
                                         <input type="hidden" name="id" id="editId">
                                         <input type="hidden" name="oldImage" id="editGambar">
                                         <div class="mb-3">
-                                            <label for="editKategoriFasilitasKesehatan" class="form-label">Kategori</label>
-                                            <input type="text" name="kategoriFasilitasKesehatan" class="form-control" id="editKategoriFasilitasKesehatan"
+                                            <label for="editKategoriFasilitas" class="form-label">Kategori</label>
+                                            <input type="text" name="kategori_fasilitas" class="form-control" id="editKategoriFasilitas"
                                                 required>
                                         </div>
                                         <div class="mb-3">
                                             <label for="editNama" class="form-label">Nama</label>
-                                            <input type="text" name="nama" class="form-control" id="editNama"
+                                            <input type="text" name="nama_fasilitas" class="form-control" id="editNama"
                                                 required>
                                         </div>
                                         <div class="mb-3">
                                             <label for="editurlAlamat" class="form-label">URL Alamat</label>
-                                            <input type="text" name="urlAlamat" class="form-control" id="editurlAlamat"
+                                            <input type="text" name="url_alamat" class="form-control" id="editurlAlamat"
                                                 required>
                                         </div>
                                         <div class="mb-3">
@@ -213,8 +213,11 @@
 
     <script>
         function loadEditData(layananpublik) {
+            console.log(layananpublik);
+            
             // Isi nilai input dengan data dari parameter
-            document.getElementById('editKategoriFasilitasKesehatan').value = layananpublik.kategori_fasilitas;
+            document.getElementById('editId').value = layananpublik.id;
+            document.getElementById('editKategoriFasilitas').value = layananpublik.kategori_fasilitas;
             document.getElementById('editGambar').value = layananpublik.gambar_fasilitas;
             document.getElementById('editNama').value = layananpublik.nama_fasilitas;
             document.getElementById('editurlAlamat').value = layananpublik.url_alamat;
