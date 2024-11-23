@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Kelolakontak;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -18,6 +19,11 @@ class DatabaseSeeder extends Seeder
         User::create([
             'username' => 'test',
             'password' =>bcrypt('1234')
+        ]);
+        Kelolakontak::create([
+            'no_whatsapp'=>'081234567890',
+            'username_instagram'=>'youhou',
+            'email'=>'test'
         ]);
     }
 }
