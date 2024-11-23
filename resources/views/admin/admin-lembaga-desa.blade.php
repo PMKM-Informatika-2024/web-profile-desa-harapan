@@ -48,7 +48,7 @@
                                         </div>
                                         <div class="d-flex justify-content-end mt-4">
                                             <button type="submit" class="btn btn-simpan">Simpan</button>
-                                            <button type="button" class="btn btn-batal ms-2">Batal</button>
+                                            {{-- <button type="button" class="btn btn-batal ms-2">Batal</button> --}}
                                         </div>
                                     </form>
                                 </div>
