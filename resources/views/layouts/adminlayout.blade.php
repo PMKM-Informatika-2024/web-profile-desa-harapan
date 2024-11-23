@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Desa Sungai Keran</title>
+    <title>Dashboard - Desa Harapan</title>
     <link rel="stylesheet" href="css/style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Inter:wght@400;700&family=Lora:wght@400;700&family=Poppins:wght@400;700&family=Lato:wght@400;700&display=swap"
@@ -59,7 +59,7 @@
             <!-- Content fo Sidebar -->
             <div class="h100">
                 <div class="sidebar-logo collapsed-icon">
-                    <a href="#">Desa Sungai Keran</a>
+                    <a href="#">Desa Harapan</a>
                 </div>
                 <ul class="sidebar-nav">
                     <li class="sidebar-item">

@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Models\Layananpublik;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\StoreLayananpublikRequest;
 use App\Http\Requests\UpdateLayananpublikRequest;
-use Illuminate\Http\Request;
 
 class LayananpublikController  
 {
@@ -68,9 +69,25 @@ class LayananpublikController
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateLayananpublikRequest $request, Layananpublik $layananpublik)
+    public function update(Request $request, Layananpublik $layananpublik)
     {
-        //
+        // dd($request);
+        $validatedData = $request->validate([
+            'kategori_fasilitas' => 'required',
+            'nama_fasilitas' => 'required',
+            'url_alamat' => 'required',
+            'gambar_fasilitas' => 'image'
+        ]);
+        if($request->file('gambar_fasilitas')) {
+            if($request->oldImage){
+                Storage::delete($request->oldImage);
+            }
+            $validatedData['gambar_fasilitas'] = $request->file('gambar_fasilitas')->store('gambar_yang_tersimpan');
+        }
+        Layananpublik::where('id', $request->input('id'))
+            ->update($validatedData);
+
+        return redirect('/layananpublik')->with('success', 'Layanan Publik berhasil diupdate');
     }
 
     /**

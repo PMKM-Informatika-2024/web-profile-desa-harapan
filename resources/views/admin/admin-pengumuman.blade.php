@@ -60,6 +60,7 @@
                                 <th>No</th>
                                 <th>Tanggal Dibuat</th>
                                 <th>Judul</th>
+                                <th>Foto</th>
                                 <th>Deskripsi Singkat</th>
                                 <th>Aksi</th>
                             </tr>
@@ -70,6 +71,8 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $pengumuman->created_at }}</td>
                                     <td>{{ $pengumuman->judul }}</td>
+                                    <td><img src="{{ asset('storage/' . $pengumuman->gambar_pengumuman) }}"
+                                        alt="" class="img-thumbnail" style="width: 50px; height: 50px;"></td>
                                     <td>{{ $pengumuman->deskripsi_singkat }}</td>
                                     <td>
                                         <a class=" btn btn-warning" href="javascript:void(0)" data-bs-toggle="modal"
@@ -95,7 +98,7 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="editPerangkatModalLabel">Edit Perangkat Desa</h5>
+                                    <h5 class="modal-title" id="editPerangkatModalLabel">Edit Pengumuman</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>

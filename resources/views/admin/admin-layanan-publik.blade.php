@@ -150,6 +150,55 @@
                             @endforeach
                         </tbody>
                     </table>
+
+                    <!-- Modal untuk Edit Perangkat -->
+                    <div class="modal fade" id="editPerangkatModal" tabindex="-1" aria-labelledby="editPerangkatModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="editPerangkatModalLabel">Edit Layanan Public
+
+                                    </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="editPerangkatForm" method="POST" enctype="multipart/form-data">
+                                        @method('put')
+                                        @csrf
+                                        {{-- <input type="hidden" id="editIndex"> --}}
+                                        <input type="hidden" name="id" id="editId">
+                                        <input type="hidden" name="oldImage" id="editGambar">
+                                        <div class="mb-3">
+                                            <label for="editKategoriFasilitasKesehatan" class="form-label">Kategori</label>
+                                            <input type="text" name="kategoriFasilitasKesehatan" class="form-control" id="editKategoriFasilitasKesehatan"
+                                                required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="editNama" class="form-label">Nama</label>
+                                            <input type="text" name="nama" class="form-control" id="editNama"
+                                                required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="editurlAlamat" class="form-label">URL Alamat</label>
+                                            <input type="text" name="urlAlamat" class="form-control" id="editurlAlamat"
+                                                required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="editFoto" class="form-label">Foto</label>
+                                            <img alt="" id="previewImage" class="img-thumbnail"
+                                                style="width: 50px; height: 50px;">
+                                            <input type="file" name="gambar_fasilitas" class="form-control"
+                                                id="editFoto" accept="image/*" onchange="changeImage(event)">
+                                        </div>
+                                        <button type="submit" class="btn btn-edit">Update</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- modal stops here --}}
                 </div>
             </div>
         </div>
@@ -159,5 +208,40 @@
 
 
 @section('kodejs')
-    
+    !-- Scripts -->
+
+
+    <script>
+        function loadEditData(layananpublik) {
+            // Isi nilai input dengan data dari parameter
+            document.getElementById('editKategoriFasilitasKesehatan').value = layananpublik.kategori_fasilitas;
+            document.getElementById('editGambar').value = layananpublik.gambar_fasilitas;
+            document.getElementById('editNama').value = layananpublik.nama_fasilitas;
+            document.getElementById('editurlAlamat').value = layananpublik.url_alamat;
+            const previewImage = document.getElementById('previewImage');
+            if (layananpublik.gambar_fasilitas) {
+                previewImage.src = `/storage/${layananpublik.gambar_fasilitas}`;
+            } else {
+                previewImage.src = ''; // Kosongkan jika tidak ada foto
+            }
+
+            // Ubah action form untuk mengarahkan ke route update yang sesuai
+            const editForm = document.getElementById('editPerangkatForm');
+            editForm.action = `/layananpublik/${layananpublik.id}`;
+        }
+
+        function changeImage(event) {
+            const previewImage = document.getElementById('previewImage');
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    console.log(e.target.result);
+
+                    previewImage.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
 @endsection
