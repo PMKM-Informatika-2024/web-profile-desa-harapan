@@ -1,1 +1,617 @@
-<h1>Hello, World!</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beranda - Sungai Keran</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&family=Merriweather:wght@400;700&family=Lora:wght@400;700&family=Poppins:wght@400;700&family=Lato:wght@400;700&family=Nunito:wght@400;700&family=OpenSans:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    :root {
+      --pr-color: #1E90FF;
+      --sec-color: #f8f9fa;
+    }
+
+    /* Class untuk background khusus halaman aktif */
+    .active-link {
+      background-color: var(--sec-color);
+      color: var(--pr-color) !important;
+      padding: 5px 10px;
+    }
+
+    /* Collapse */
+    .navbar-brand {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .navbar-collapse {
+      padding: 15px;
+      border-radius: 0 0 10px 10px;
+      transition: all 0.3s ease;
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+      color: #f8f9fa;
+    }
+
+    .nav-link {
+      color: #f8f9fa;
+    }
+
+    .btn-close {
+      position: absolute;
+      top: 25px;
+      right: 22px;
+      color: #1E90FF;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: none;
+    }
+
+    .collapse.show .btn-close {
+      display: block;
+    }
+
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background-color: #f8f9fa;
+      }
+
+      .navbar-nav .nav-link {
+        color: #343a40;
+        padding: 10px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+      }
+
+      .navbar-toggler {
+        background-color: #1E90FF;
+      }
+    }
+
+
+    /* CSS for responsive banner */
+    .banner-image {
+      background-image: url('https://media.istockphoto.com/id/2163917140/id/foto/lereng-bukit-hijau-subur-dengan-jalan-tanah-menuju-desa-langit-cerah-dan-biru-dan-pepohonan.jpg?s=612x612&w=0&k=20&c=YFflDu5rLy-lxzBNfnoqzt0bcdJ8IqGckTPfNGCEuIc=');
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+
+    .content h1 {
+      font-size: 4rem;
+      color: var(--sec-color);
+      font-family: 'Lato', sans-serif;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .content h2 {
+      margin-top: 70px;
+      font-size: 2rem;
+      color: var(--sec-color);
+      font-family: 'Lato', sans-serif;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .btn-more {
+      padding: 10px 20px;
+      background-color: #1E90FF;
+      /* Button background color */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+    }
+
+    .btn-more:hover {
+      background-color: #1C86EE;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .content h1 {
+        font-size: 2rem;
+      }
+
+      .btn-more {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .content h1 {
+        font-size: 1.5rem;
+      }
+
+      .btn-more {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+      }
+    }
+
+    /* Content */
+    .my-5 {
+      padding-top: 60px;
+    }
+
+    .subjudul {
+      font-family: 'Lato', sans-serif;
+      font-weight: bold;
+    }
+
+    #content .btn-more {
+      margin-top: 20px;
+      display: inline-block;
+      width: fit-content;
+      align-self: flex-end;
+      padding: 10px 20px;
+    }
+
+    #content .image {
+      width: 530px;
+      max-height: 388px;
+      border-radius: 30px;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border: 5px solid #8da9c5;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      -ms-border-radius: 30px;
+      -o-border-radius: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .col-lg-6 {
+        margin-bottom: 20px;
+      }
+    }
+
+    /* Slider Perangkat Desa */
+    .perangkat-desa-container {
+      padding: 20px;
+      margin-top: 20px;
+
+      border-radius: 10px;
+      box-shadow: 0 -15px 30px rgba(0, 0, 0, 0.7), 0 15px 30px rgba(0, 0, 0, 0.7);
+    }
+
+    .carousel-caption {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: var(--sec-color);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .carousel-item {
+      transition: transform 0.6s ease;
+    }
+
+    .carousel-inner {
+      padding: 20px 0;
+      /* Mengatur jarak atas dan bawah */
+    }
+
+    .img-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .img-hover:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 50%;
+      padding: 10px;
+    }
+
+    /* Pengumuman */
+    #pengumuman {
+      background-color: #f1f1f1;
+    }
+
+    #pengumuman .card {
+      transition: transform 0.2s;
+      /* Efek transformasi saat hover */
+    }
+
+    #pengumuman .card:hover {
+      transform: scale(1.05);
+      /* Zoom saat hover */
+    }
+
+    #pengumuman .card-title {
+      border-bottom: 2px solid #007bff;
+      /* Ganti dengan warna yang diinginkan */
+    }
+
+    #pengumuman .card-text {
+      margin-bottom: 1rem;
+      /* Sesuaikan jarak sesuai kebutuhan */
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <section>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3" id="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand ms-3 d-flex align-items-center" href="#">
+          <img src="img/logo.png" width="50" class="me-2">
+          <span style="line-height: 1.1; font-size:medium;">
+            Desa<br>
+            Sungai<br>
+            Keran
+          </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" id="beranda">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile-desa" id="profile-desa">Profile Desa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pemerintahan-desa.html" id="pemerintahan-desa">Struktur Pemerintahan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="layanan-publik.html" id="layanan-publik ">Layanan
+                Publik</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Informasi-publik.html" id="informasi-publik">Informasi Publik</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-auto me-3">
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                style="color:#f8f9fa ; background-color: #1E90FF; border-radius: 8px; padding-left: 15px; padding-right: 15px;">Kontak</a>
+            </li>
+          </ul>
+          <!-- Tombol Close -->
+          <button id="closeSidebar" class="btn-close" aria-label="Close"></button>
+        </div>
+      </div>
+    </nav>
+  </section>
+  <!-- End of Navbar -->
+
+  <!-- Banner -->
+  <section id="banner">
+    <div class="container-fluid banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
+      <div class="row">
+        <div class="content text-center">
+          <h2> Selamat Datang di </h2>
+          <h1>Desa Sungai Keran</h1>
+        </div>
+        <div class="text-center mt-3">
+          <a href="profil-desa.html" class="btn-more">Lihat..</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of Banner -->
+
+
+  <!-- Content -->
+  <section id="content" class="py-5">
+    <div class="container col-lg-9 mt-5">
+      <div class="row align-items-center">
+        <div class="col-lg-5 mt-3 d-flex flex-column justify-content-between">
+          <h2 class="subjudul">Mengenal Tentang Desa Sungai Keran...</h2>
+          <p style="text-align: justify;">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Nobis, dolorem. Odio
+            impedit consequatur ipsam
+            assumenda est quidem molestias deserunt eaque ad quis molestiae reiciendis optio
+            blanditiis neque atque
+            architecto laborum quibusdam voluptas nam, maiores cum eius voluptatem. Ab,
+            blanditiis iusto sapiente nam
+            iure provident culpa? Pariatur possimus modi consectetur nihil!.......</p>
+          <a href="profil-desa.html" class="btn-more mt-5 ">Selengkapnya..</a>
+        </div>
+        <div class="col-lg-7 mt-3">
+          <img src="img/1.jpg" class="image shadow-lg" alt="Desa Sungai Keran">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of Content -->
+
+  <!-- Perangkat Desa -->
+  <section id="perangkat-desa" class="py-5">
+    <div class="container-fluid perangkat-desa-container shadow">
+      <div class="row mb-2 justify-content-center text-center">
+        <div class="col-12">
+          <h2 class="subjudul text-center">Perangkat Desa</h2>
+        </div>
+      </div>
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+            aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+            aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+            aria-label="Slide 6"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-lg-4 col-md-6">
+                <img src="img/1.jpg" class="d-block w-100 img-fluid rounded shadow img-hover" alt="Kepala Desa">
+                <div class="overlay">
+                  <h5 class="text-center mt-2">Kepala Desa</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-lg-4 col-md-6">
+                <img src="img/2.jpg" class="d-block w-100 img-fluid rounded shadow img-hover" alt="Sekretaris Desa">
+                <div class="overlay">
+                  <h5 class="text-center mt-2">Sekretaris Desa</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-lg-4 col-md-6">
+                <img src="img/3.jpg" class="d-block w-100 img-fluid rounded shadow img-hover" alt="Kasi Pemerintahan">
+                <div class="overlay">
+                  <h5 class="text-center mt-2">Kasi Pemerintahan</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-lg-4 col-md-6">
+                <img src="img/4.jpg" class="d-block w-100 img-fluid rounded shadow img-hover" alt="Perangkat 4">
+                <div class="overlay">
+                  <h5 class="text-center mt-2">Perangkat 4</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-lg-4 col-md-6">
+                <img src="img/5.jpg" class="d-block w-100 img-fluid rounded shadow img-hover" alt="Perangkat 5">
+                <div class="overlay">
+                  <h5 class="text-center mt-2">Perangkat 5</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-lg-4 col-md-6">
+                <img src="img/6.jpg" class="d-block w-100 img-fluid rounded shadow img-hover" alt="Perangkat 6">
+                <div class="overlay">
+                  <h5 class="text-center mt-2">Perangkat 6</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        <div class="row">
+          <div class="col-lg-11 text-end">
+            <button class="btn-more">Selengkapnya...</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- End of Perangkat Desa -->
+
+  <!-- Pengumuman -->
+  <section id="pengumuman" class="py-5">
+    <div class="container mb-5 justify-content-center">
+      <div class="row">
+        <h2 class="subjudul text-center mb-5">Pengumuman</h2>
+        <div class="col-lg-3 mb-4">
+          <div class="card shadow">
+            <div class="card-body">
+              <h5 class="card-title text-center border-bottom pb-2 mb-3">Pengumuman 1</h5>
+              <p class="card-text mb-3">Ini adalah isi pengumuman 1. Deskripsi singkat
+                mengenai pengumuman ini.</p>
+              <p class="card-text text-muted mb-3">
+                <i class="fas fa-clock"></i> 12 Oktober 2024
+              </p>
+              <a href="halaman_pengumuman_1.html" class="btn btn-link ms-auto position-absolute"
+                style="bottom: 10px; right: 10px;">Read more...</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-4">
+          <div class="card shadow">
+            <div class="card-body">
+              <h5 class="card-title text-center border-bottom pb-2 mb-3">Pengumuman 1</h5>
+              <p class="card-text mb-3">Ini adalah isi pengumuman 1. Deskripsi singkat
+                mengenai pengumuman ini.</p>
+              <p class="card-text text-muted mb-3">
+                <i class="fas fa-clock"></i> 12 Oktober 2024
+              </p>
+              <a href="halaman_pengumuman_1.html" class="btn btn-link ms-auto position-absolute"
+                style="bottom: 10px; right: 10px;">Read more...</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-4">
+          <div class="card shadow">
+            <div class="card-body">
+              <h5 class="card-title text-center border-bottom pb-2 mb-3">Pengumuman 1</h5>
+              <p class="card-text mb-3">Ini adalah isi pengumuman 1. Deskripsi singkat
+                mengenai pengumuman ini.</p>
+              <p class="card-text text-muted mb-3">
+                <i class="fas fa-clock"></i> 12 Oktober 2024
+              </p>
+              <a href="halaman_pengumuman_1.html" class="btn btn-link ms-auto position-absolute"
+                style="bottom: 10px; right: 10px;">Read more...</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-4">
+          <div class="card shadow">
+            <div class="card-body">
+              <h5 class="card-title text-center border-bottom pb-2 mb-3">Pengumuman 1</h5>
+              <p class="card-text mb-3">Ini adalah isi pengumuman 1. Deskripsi singkat
+                mengenai pengumuman ini.</p>
+              <p class="card-text text-muted mb-3">
+                <i class="fas fa-clock"></i> 12 Oktober 2024
+              </p>
+              <a href="halaman_pengumuman_1.html" class="btn btn-link ms-auto position-absolute"
+                style="bottom: 10px; right: 10px;">Read more...</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of Pengumuman -->
+
+  <!-- Footer -->
+  <footer class="text-center text-dark bg-light p-3">
+    <p>Copyright &copy; 2024 Profil Desa Sungai Keran</p>
+    <!-- Social Media Links -->
+    <div class="contact-icons">
+      <a href="https://wa.me/your-wa-number" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/your-ig" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:your-email" target="_blank"><i class="fas fa-envelope"></i></a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var currentPage = window.location.pathname;
+
+      var navBeranda = document.getElementById("beranda");
+      var navProfile = document.getElementById("profile-desa");
+      var navStruktur = document.getElementById("pemerintahan-desa");
+      var navLayanan = document.getElementById("layanan-publik");
+      var navLayanan = document.getElementById("informasi-publik");
+      var navKontak = document.getElementById("kontak");
+
+      if (currentPage.endsWith("beranda.html") || currentPage === "/") {
+        navBeranda.classList.add("active-link");
+      } else if (currentPage.endsWith("profile-desa.html")) {
+        navProfile.classList.add("active-link");
+      } else if (currentPage.endsWith("pemerintahan-desa.html")) {
+        navStruktur.classList.add("active-link");
+      } else if (currentPage.endsWith("layanan-publik.html")) {
+        navLayanan.classList.add("active-link");
+      } else if (currentPage.includes("informasi-publik.html")) {
+        navInformasi.classList.add("active-link");
+      } else if (currentPage.endsWith("kontak.html")) {
+        navKontak.classList.add("active-link");
+      }
+    });
+
+    // Navbar
+    let lastScrollTop = 0;
+    const navbar = document.getElementById('navbar');
+    const scrollThreshold = 150;
+
+    window.addEventListener('scroll', function () {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      // Sembunyikan navbar saat scroll ke bawah
+      if (scrollTop > lastScrollTop) {
+        navbar.style.top = '-100px';
+      }
+      // Tampilkan navbar hanya jika sudah sampai di atas atau dalam threshold tertentu
+      else if (scrollTop < scrollThreshold) {
+        navbar.style.top = '0';
+      }
+
+      // Update posisi terakhir
+      lastScrollTop = scrollTop;
+    });
+
+
+
+    // Menutup sidebar
+    document.addEventListener('DOMContentLoaded', function () {
+      const navbarCollapse = document.getElementById('navbarSupportedContent');
+      const closeBtn = document.getElementById('closeSidebar');
+      const toggleBtn = document.querySelector('.navbar-toggler');
+
+      // Event listener untuk membuka dan menutup sidebar
+      toggleBtn.addEventListener('click', function () {
+        navbarCollapse.classList.toggle('show');
+      });
+
+      // Event listener untuk menutup sidebar menggunakan tombol 'X'
+      closeBtn.addEventListener('click', function () {
+        navbarCollapse.classList.remove('show'); // Menutup sidebar
+        closeBtn.style.display = 'none'; // Sembunyikan tombol 'X'
+        toggleBtn.style.display = 'block'; // Tampilkan ikon sidebar
+      });
+
+      // Event listener untuk menghilangkan ikon sidebar saat sidebar terbuka
+      navbarCollapse.addEventListener('show.bs.collapse', function () {
+        closeBtn.style.display = 'block'; // Tampilkan tombol 'X'
+        toggleBtn.style.display = 'none'; // Sembunyikan ikon toggler
+      });
+
+      // Event listener untuk mengembalikan ikon sidebar saat sidebar ditutup
+      navbarCollapse.addEventListener('hide.bs.collapse', function () {
+        closeBtn.style.display = 'none'; // Sembunyikan tombol 'X'
+        toggleBtn.style.display = 'block'; // Tampilkan ikon toggler
+      });
+    });
+
+  </script>
+</body>
+
+</html>
