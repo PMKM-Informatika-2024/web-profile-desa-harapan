@@ -13,7 +13,9 @@ class KelolakegiatanController
      */
     public function index()
     {
-        return view('admin.admin-kegiatan', []);
+        return view('admin.admin-kegiatan', [
+            'kelolakegiatans' => Kelolakegiatan::all()
+        ]);
     }
 
     /**
@@ -31,15 +33,14 @@ class KelolakegiatanController
     {
         // dd($request);
         $validatedData = $request->validate([
-            'nama' => 'required',
-            'jabatan' => 'required',
-            'gambar_perangkatdesa'=>'image'
+            'nama_kegiatan' => 'required',
+            'gambar_kegiatan'=>'image'
         ]);
-        if($request->file('gambar_perangkatdesa')) {
-            $validatedData['gambar_perangkatdesa'] = $request->file('gambar_perangkatdesa')->store('gambar_yang_tersimpan');
+        if($request->file('gambar_kegiatan')) {
+            $validatedData['gambar_kegiatan'] = $request->file('gambar_kegiatan')->store('gambar_yang_tersimpan');
         }
         Kelolakegiatan::create($validatedData);
-        return redirect('/perangkatdesa')->with('success', 'Perangkat desa baru berhasil ditambahkan');
+        return redirect('/kegiatan')->with('success', 'Kegiatan Desa baru berhasil ditambahkan');
     }
 
     /**
@@ -63,33 +64,36 @@ class KelolakegiatanController
      */
     public function update(Request $request, Kelolakegiatan $kelolakegiatan)
     {
+        // dd($request);
         $validatedData = $request->validate([
-            'nama' => 'required',
-            'jabatan' => 'required',
-            'gambar_perangkatdesa' => 'image'
+            'nama_kegiatan' => 'required',
+            'gambar_kegiatan'=>'image'
         ]);
-        if($request->file('gambar_perangkatdesa')) {
+        if($request->file('gambar_kegiatan')) {
             if($request->oldImage){
                 Storage::delete($request->oldImage);
             }
-            $validatedData['gambar_perangkatdesa'] = $request->file('gambar_perangkatdesa')->store('gambar_yang_tersimpan');
+            $validatedData['gambar_kegiatan'] = $request->file('gambar_kegiatan')->store('gambar_yang_tersimpan');
         }
+
         Kelolakegiatan::where('id', $request->input('id'))
             ->update($validatedData);
 
-        return redirect('/perangkatdesa')->with('success', 'Perangkat desa berhasil diupdate');
+        return redirect('/kegiatan')->with('success', 'Kegiatan berhasil diupdate');
+        
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Kelolakegiatan $kelolakegiatan)
+    public function destroy(Request $request)
     {
         // dd($perangkatdesa->gambar_perangkatdesa);
-        if($kelolakegiatan->gambar_perangkatdesa){
-            Storage::delete($kelolakegiatan->gambar_perangkatdesa);
+        // dd($request->gambar_kegiatan);
+        if($request->gambar_kegiatan){
+            Storage::delete($request->gambar_kegiatan);
         }
-        Kelolakegiatan::destroy($kelolakegiatan->id);
-        return redirect('/perangkatdesa')->with('success', 'Perangkat desa berhasil dihapus');
+        Kelolakegiatan::destroy($request->id);
+        return redirect('/kegiatan')->with('success', 'Kegiatan berhasil dihapus');
     }
 }
