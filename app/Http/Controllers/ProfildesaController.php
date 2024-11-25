@@ -66,18 +66,53 @@ class ProfildesaController
             'total_kk' => 'required|integer',
             'total_dusun' => 'required|integer',
             'total_rt' => 'required|integer',
-            // 'suku' => 'required',
-            // 'agama' => 'required',
+            'suku_melayu' => 'required|integer',
+            'suku_madura' => 'required|integer',
+            'suku_tionghoa' => 'required|integer',
+            'suku_dayak' => 'required|integer',
+            'suku_jawa' => 'required|integer',
+            'suku_bugis' => 'required|integer',
+            'suku_lainnya' => 'required|integer',
+            'agama_islam' => 'required|integer',
+            'agama_katolik' => 'required|integer',
+            'agama_protestan' => 'required|integer',
+            'agama_buddha' => 'required|integer',
+            'agama_hindu' => 'required|integer',
+            'agama_konghucu' => 'required|integer',
             'peta_desa' => 'required',
             'kantor_desa' => 'required',
 
         ]);
 
-        if($request->file('gambar_desa')) {
-            if($request->oldImage){
-                Storage::delete($request->oldImage);
+        if($request->file('gambar_desa_1')) {
+            if($request->oldImage1){
+                Storage::delete($request->oldImage1);
             }
-            $validatedData['gambar_desa'] = $request->file('gambar_desa')->store('gambar_yang_tersimpan');
+            $validatedData['gambar_desa_1'] = $request->file('gambar_desa_1')->store('gambar_yang_tersimpan');
+        }
+        if($request->file('gambar_desa_2')) {
+            if($request->oldImage2){
+                Storage::delete($request->oldImage2);
+            }
+            $validatedData['gambar_desa_2'] = $request->file('gambar_desa_2')->store('gambar_yang_tersimpan');
+        }
+        if($request->file('gambar_desa_3')) {
+            if($request->oldImage3){
+                Storage::delete($request->oldImage3);
+            }
+            $validatedData['gambar_desa_3'] = $request->file('gambar_desa_3')->store('gambar_yang_tersimpan');
+        }
+        if($request->file('gambar_desa_4')) {
+            if($request->oldImage4){
+                Storage::delete($request->oldImage4);
+            }
+            $validatedData['gambar_desa_4'] = $request->file('gambar_desa_4')->store('gambar_yang_tersimpan');
+        }
+        if($request->file('gambar_desa_5')) {
+            if($request->oldImage5){
+                Storage::delete($request->oldImage5);
+            }
+            $validatedData['gambar_desa_5'] = $request->file('gambar_desa_5')->store('gambar_yang_tersimpan');
         }
 
         Profildesa::where('id', $request->input('id'))

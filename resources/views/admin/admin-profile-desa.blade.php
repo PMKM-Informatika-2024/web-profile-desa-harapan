@@ -40,11 +40,59 @@
                             <div class="form-group row mb-3">
                                 <label for="fotoDesa" class="col-lg-2 col-md-3 col-sm-4 form-label">Foto Desa:</label>
                                 <div class="col-lg-10 col-md-9 col-sm-8">
-                                    <input type="hidden" name="oldImage" id="editGambar">
-                                    <img src="{{ asset('storage/' . $profildesa->gambar_desa) }}" alt="" class="img-thumbnail" style="width: 100px; height: 100px;">
+                                    <input type="hidden" name="oldImage1" id="editGambar">
+                                    <img src="{{ asset('storage/' . $profildesa->gambar_desa_1) }}" alt="" class="img-thumbnail" style="width: 100px; height: 100px;">
                                     <br>
                                     <br>
-                                    <input name="gambar_desa" type="file" class="form-control" id="fotoDesa" accept="image/*" 
+                                    <input name="gambar_desa_1" type="file" class="form-control" id="fotoDesa1" accept="image/*" 
+                                        multiple onchange="previewImages()">
+                                </div>
+                                <div id="imagePreview" class="mt-3"></div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <label for="fotoDesa" class="col-lg-2 col-md-3 col-sm-4 form-label"></label>
+                                <div class="col-lg-10 col-md-9 col-sm-8">
+                                    <input type="hidden" name="oldImage2" id="editGambar">
+                                    <img src="{{ asset('storage/' . $profildesa->gambar_desa_2) }}" alt="" class="img-thumbnail" style="width: 100px; height: 100px;">
+                                    <br>
+                                    <br>
+                                    <input name="gambar_desa_2" type="file" class="form-control" id="fotoDesa2" accept="image/*" 
+                                        multiple onchange="previewImages()">
+                                </div>
+                                <div id="imagePreview" class="mt-3"></div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <label for="fotoDesa" class="col-lg-2 col-md-3 col-sm-4 form-label"></label>
+                                <div class="col-lg-10 col-md-9 col-sm-8">
+                                    <input type="hidden" name="oldImage3" id="editGambar">
+                                    <img src="{{ asset('storage/' . $profildesa->gambar_desa_3) }}" alt="" class="img-thumbnail" style="width: 100px; height: 100px;">
+                                    <br>
+                                    <br>
+                                    <input name="gambar_desa_3" type="file" class="form-control" id="fotoDesa3" accept="image/*" 
+                                        multiple onchange="previewImages()">
+                                </div>
+                                <div id="imagePreview" class="mt-3"></div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <label for="fotoDesa" class="col-lg-2 col-md-3 col-sm-4 form-label"></label>
+                                <div class="col-lg-10 col-md-9 col-sm-8">
+                                    <input type="hidden" name="oldImage4" id="editGambar">
+                                    <img src="{{ asset('storage/' . $profildesa->gambar_desa_4) }}" alt="" class="img-thumbnail" style="width: 100px; height: 100px;">
+                                    <br>
+                                    <br>
+                                    <input name="gambar_desa_4" type="file" class="form-control" id="fotoDesa4" accept="image/*" 
+                                        multiple onchange="previewImages()">
+                                </div>
+                                <div id="imagePreview" class="mt-3"></div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <label for="fotoDesa" class="col-lg-2 col-md-3 col-sm-4 form-label"></label>
+                                <div class="col-lg-10 col-md-9 col-sm-8">
+                                    <input type="hidden" name="oldImage5" id="editGambar">
+                                    <img src="{{ asset('storage/' . $profildesa->gambar_desa_5) }}" alt="" class="img-thumbnail" style="width: 100px; height: 100px;">
+                                    <br>
+                                    <br>
+                                    <input name="gambar_desa_5" type="file" class="form-control" id="fotoDesa5" accept="image/*" 
                                         multiple onchange="previewImages()">
                                 </div>
                                 <div id="imagePreview" class="mt-3"></div>
@@ -68,6 +116,8 @@
                                 </div>
                             </div>
 
+                            <br>
+
                             <!-- Additional Details (Total Jiwa, Total KK, Total Dusun, Total RT) -->
                             <div class="form-group row gx-3 gy-3">
                                 <div class="col-lg-3 col-md-6">
@@ -87,90 +137,90 @@
                                     <input name="total_rt" type="number" class="form-control" id="totalRT" value="{{ $profildesa->total_rt ?? '' }}" required>
                                 </div>
                             </div>
-
+                            <br>
                             <!-- Suku -->
-                            {{-- <div class="form-group row mt-3 mb-3">
+                            <div class="form-group row mt-3 mb-3">
                                 <label class="col-lg-2 col-md-3 col-sm-4 form-label"> Suku:</label>
                                 <div class="col-lg-10 col-md-9 col-sm-8">
                                     <div class="row gx-3 gy-2">
                                         <div class="col-lg-2 col-md-3">
                                             <label for="sukuMelayu" class="form-label">Melayu</label>
-                                            <input type="number" class="form-control" id="sukuMelayu" placeholder=""
+                                            <input type="number" name="suku_melayu" value="{{ $profildesa->suku_melayu }}" class="form-control" id="sukuMelayu" placeholder=""
                                                 min="0">
                                         </div>
                                         <div class="col-lg-2 col-md-3">
                                             <label for="sukuMadura" class="form-label">Madura</label>
-                                            <input type="number" class="form-control" id="sukuMadura" placeholder=""
+                                            <input type="number" name="suku_madura" value="{{ $profildesa->suku_madura }}" class="form-control" id="sukuMadura" placeholder=""
                                                 min="0">
                                         </div>
                                         <div class="col-lg-2 col-md-3">
                                             <label for="sukuTionghoa" class="form-label">Tionghoa</label>
-                                            <input type="number" class="form-control" id="sukuTionghoa" placeholder=""
+                                            <input type="number" name="suku_tionghoa" value="{{ $profildesa->suku_tionghoa }}" class="form-control" id="sukuTionghoa" placeholder=""
                                                 min="0">
                                         </div>
                                         <div class="col-lg-2 col-md-3">
                                             <label for="sukuDayak" class="form-label">Dayak</label>
-                                            <input type="number" class="form-control" id="sukuDayak" placeholder=""
+                                            <input type="number" name="suku_dayak" value="{{ $profildesa->suku_dayak }}" class="form-control" id="sukuDayak" placeholder=""
                                                 min="0">
                                         </div>
                                         <div class="col-lg-2 col-md-3">
                                             <label for="sukuJawa" class="form-label">Jawa</label>
-                                            <input type="number" class="form-control" id="sukuJawa" placeholder=""
+                                            <input type="number" name="suku_jawa" value="{{ $profildesa->suku_jawa }}" class="form-control" id="sukuJawa" placeholder=""
                                                 min="0">
                                         </div>
                                         <div class="col-lg-2 col-md-3">
                                             <label for="sukuBugis" class="form-label">Bugis</label>
-                                            <input type="number" class="form-control" id="sukuBugis" placeholder=""
+                                            <input type="number" name="suku_bugis" value="{{ $profildesa->suku_bugis }}" class="form-control" id="sukuBugis" placeholder=""
                                                 min="0">
                                         </div>
                                         <div class="col-lg-2 col-md-3">
                                             <label for="sukuLainnya" class="form-label">Lainnya</label>
-                                            <input type="number" class="form-control" id="sukuLainnya" placeholder=""
+                                            <input type="number" name="suku_lainnya" value="{{ $profildesa->suku_lainnya }}" class="form-control" id="sukuLainnya" placeholder=""
                                                 min="0">
                                         </div>
                                     </div>
                                 </div>
-                            </div> --}}
-
+                            </div>
+                            <br>
                             <!-- Agama -->
-                            {{-- <div class="form-group row mt-3 mb-3">
+                            <div class="form-group row mt-3 mb-3">
                                 <label class="col-lg-2 col-md-3 col-sm-4 form-label"> Agama:</label>
                                 <div class="col-lg-10 col-md-9 col-sm-8">
                                     <div class="row gx-3 gy-2">
                                         <div class="col-lg-2 col-md-3">
                                             <label for="agamaIslam" class="form-label">Islam</label>
-                                            <input type="number" class="form-control" id="agamaIslam" placeholder=""
+                                            <input type="number" name="agama_islam" value="{{ $profildesa->agama_islam }}" class="form-control" id="agamaIslam" placeholder=""
                                                 min="0">
                                         </div>
                                         <div class="col-lg-2 col-md-3">
                                             <label for="agamaKatolik" class="form-label">Katolik</label>
-                                            <input type="number" class="form-control" id="agamaKatolik" placeholder=""
+                                            <input type="number" name="agama_katolik" value="{{ $profildesa->agama_katolik }}" class="form-control" id="agamaKatolik" placeholder=""
                                                 min="0">
                                         </div>
                                         <div class="col-lg-2 col-md-3">
                                             <label for="agamaProtestan" class="form-label">Protestan</label>
-                                            <input type="number" class="form-control" id="agamaProtestan"
+                                            <input type="number" name="agama_protestan" value="{{ $profildesa->agama_protestan }}" class="form-control" id="agamaProtestan"
                                                 placeholder="" min="0">
                                         </div>
                                         <div class="col-lg-2 col-md-3">
                                             <label for="agamaBuddha" class="form-label">Buddha</label>
-                                            <input type="number" class="form-control" id="agamaBuddha" placeholder=""
+                                            <input type="number" name="agama_buddha" value="{{ $profildesa->agama_buddha }}" class="form-control" id="agamaBuddha" placeholder=""
                                                 min="0">
                                         </div>
                                         <div class="col-lg-2 col-md-3">
                                             <label for="agamaHindu" class="form-label">Hindu</label>
-                                            <input type="number" class="form-control" id="agamaHindu" placeholder=""
+                                            <input type="number" name="agama_hindu" value="{{ $profildesa->agama_hindu }}" class="form-control" id="agamaHindu" placeholder=""
                                                 min="0">
                                         </div>
                                         <div class="col-lg-2 col-md-3">
                                             <label for="agamaKonghuchu" class="form-label">Konghuchu</label>
-                                            <input type="number" class="form-control" id="agamaKonghuchu"
+                                            <input type="number" name="agama_konghucu" value="{{ $profildesa->agama_konghucu }}" class="form-control" id="agamaKonghuchu"
                                                 placeholder="" min="0">
                                         </div>
                                     </div>
                                 </div>
-                            </div> --}}
-
+                            </div>
+                            <br>
                             <!-- Peta Desa -->
                             <div class="form-group row mt-3 mb-3">
                                 <label for="petaDesa" class="col-lg-2 col-md-3 col-sm-4 form-label">Peta Desa:</label>
@@ -179,7 +229,7 @@
                                         placeholder="Masukkan tautan alamat peta Desa" value="{{ $profildesa->peta_desa }}" required>
                                 </div>
                             </div>
-
+                            <br>
                             <!-- Kantor Desa -->
                             <div class="form-group row mt-3 mb-3">
                                 <label for="kantorDesa" class="col-lg-2 col-md-3 col-sm-4 form-label">Kantor Desa:</label>
