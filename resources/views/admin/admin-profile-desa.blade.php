@@ -14,13 +14,17 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-
-                            <!-- Nama Desa -->
-                            <div class="form-group row mb-3">
-                                <label for="namaDesa" class="col-lg-2 col-md-3 col-sm-4 form-label">Nama Desa:</label>
+                            <form action="/profildesa/{{ $profildesa->id }}" method="post" enctype="multipart/form-data">
+                                @csrf
+                                @method('put')
+                                {{-- memanggil id --}}
+                                <input type="text" hidden name="id" value="{{ $profildesa->id }}">
+                                <!-- Nama Desa -->
+                                <div class="form-group row mb-3">
+                                    <label for="namaDesa" class="col-lg-2 col-md-3 col-sm-4 form-label">Nama Desa:</label>
                                 <div class="col-lg-10 col-md-9 col-sm-8">
-                                    <input type="text" class="form-control" id="namaDesa"
-                                        placeholder="Masukkan nama desa" required>
+                                    <input type="text" name="nama_desa" class="form-control" id="namaDesa"
+                                        placeholder="Masukkan nama desa"  value="{{ $profildesa->nama_desa ?? '' }}">
                                 </div>
                             </div>
 
@@ -28,7 +32,7 @@
                             <div class="form-group row mb-3">
                                 <label for="sejarahDesa" class="col-lg-2 col-md-3 col-sm-4 form-label">Sejarah Desa:</label>
                                 <div class="col-lg-10 col-md-9 col-sm-8">
-                                    <textarea class="form-control" id="sejarahDesa" placeholder="Masukkan Sejarah Desa" required></textarea>
+                                    <textarea name="sejarah_desa" class="form-control" id="sejarahDesa" placeholder="Masukkan Sejarah Desa" required>{{ $profildesa->sejarah_desa ?? '' }}</textarea>
                                 </div>
                             </div>
 
@@ -36,7 +40,11 @@
                             <div class="form-group row mb-3">
                                 <label for="fotoDesa" class="col-lg-2 col-md-3 col-sm-4 form-label">Foto Desa:</label>
                                 <div class="col-lg-10 col-md-9 col-sm-8">
-                                    <input type="file" class="form-control" id="fotoDesa" accept="image/*" required
+                                    <input type="hidden" name="oldImage" id="editGambar">
+                                    <img src="{{ asset('storage/' . $profildesa->gambar_desa) }}" alt="" class="img-thumbnail" style="width: 100px; height: 100px;">
+                                    <br>
+                                    <br>
+                                    <input name="gambar_desa" type="file" class="form-control" id="fotoDesa" accept="image/*" 
                                         multiple onchange="previewImages()">
                                 </div>
                                 <div id="imagePreview" class="mt-3"></div>
@@ -48,7 +56,7 @@
                             <div class="form-group row mb-3">
                                 <label for="visiDesa" class="col-lg-2 col-md-3 col-sm-4 form-label">Visi Desa:</label>
                                 <div class="col-lg-10 col-md-9 col-sm-8">
-                                    <textarea class="form-control" id="visiDesa" placeholder="Masukkan Visi Desa" required></textarea>
+                                    <textarea name="visi_desa" class="form-control" id="visiDesa" placeholder="Masukkan Visi Desa" required>{{ $profildesa->visi_desa ?? '' }}</textarea>
                                 </div>
                             </div>
 
@@ -56,7 +64,7 @@
                             <div class="form-group row mb-3">
                                 <label for="misiDesa" class="col-lg-2 col-md-3 col-sm-4 form-label">Misi Desa:</label>
                                 <div class="col-lg-10 col-md-9 col-sm-8">
-                                    <textarea class="form-control" id="misiDesa" placeholder="Masukkan Misi Desa" required></textarea>
+                                    <textarea name="misi_desa" class="form-control" id="misiDesa" placeholder="Masukkan Misi Desa" required>{{ $profildesa->misi_desa ?? '' }}</textarea>
                                 </div>
                             </div>
 
@@ -64,24 +72,24 @@
                             <div class="form-group row gx-3 gy-3">
                                 <div class="col-lg-3 col-md-6">
                                     <label for="totalJiwa" class="form-label">Total Jiwa:</label>
-                                    <input type="number" class="form-control" id="totalJiwa" required>
+                                    <input name="total_jiwa" type="number" class="form-control" id="totalJiwa" value="{{ $profildesa->total_jiwa ?? '' }}" required>
                                 </div>
                                 <div class="col-lg-3 col-md-6">
                                     <label for="totalKK" class="form-label">Total KK:</label>
-                                    <input type="number" class="form-control" id="totalKK" required>
+                                    <input name="total_kk" type="number" class="form-control" id="totalKK" value="{{ $profildesa->total_kk ?? '' }}" required>
                                 </div>
                                 <div class="col-lg-3 col-md-6">
                                     <label for="totalDusun" class="form-label">Total Dusun:</label>
-                                    <input type="number" class="form-control" id="totalDusun" required>
+                                    <input name="total_dusun" type="number" class="form-control" id="totalDusun" value="{{ $profildesa->total_dusun ?? '' }}" required>
                                 </div>
                                 <div class="col-lg-3 col-md-6">
                                     <label for="totalRT" class="form-label">Total RT:</label>
-                                    <input type="number" class="form-control" id="totalRT" required>
+                                    <input name="total_rt" type="number" class="form-control" id="totalRT" value="{{ $profildesa->total_rt ?? '' }}" required>
                                 </div>
                             </div>
 
                             <!-- Suku -->
-                            <div class="form-group row mt-3 mb-3">
+                            {{-- <div class="form-group row mt-3 mb-3">
                                 <label class="col-lg-2 col-md-3 col-sm-4 form-label"> Suku:</label>
                                 <div class="col-lg-10 col-md-9 col-sm-8">
                                     <div class="row gx-3 gy-2">
@@ -122,10 +130,10 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
 
                             <!-- Agama -->
-                            <div class="form-group row mt-3 mb-3">
+                            {{-- <div class="form-group row mt-3 mb-3">
                                 <label class="col-lg-2 col-md-3 col-sm-4 form-label"> Agama:</label>
                                 <div class="col-lg-10 col-md-9 col-sm-8">
                                     <div class="row gx-3 gy-2">
@@ -161,14 +169,14 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
 
                             <!-- Peta Desa -->
                             <div class="form-group row mt-3 mb-3">
                                 <label for="petaDesa" class="col-lg-2 col-md-3 col-sm-4 form-label">Peta Desa:</label>
                                 <div class="col-lg-10 col-md-9 col-sm-8">
-                                    <input type="url" class="form-control" id="petaDesa"
-                                        placeholder="Masukkan tautan alamat peta Desa" required>
+                                    <input name="peta_desa" type="url" class="form-control" id="petaDesa"
+                                        placeholder="Masukkan tautan alamat peta Desa" value="{{ $profildesa->peta_desa }}" required>
                                 </div>
                             </div>
 
@@ -176,14 +184,15 @@
                             <div class="form-group row mt-3 mb-3">
                                 <label for="kantorDesa" class="col-lg-2 col-md-3 col-sm-4 form-label">Kantor Desa:</label>
                                 <div class="col-lg-10 col-md-9 col-sm-8">
-                                    <textarea type="text" class="form-control" id="kantorDesa" placeholder="Masukkan alamat Kantor Desa" required></textarea>
+                                    <textarea name="kantor_desa" type="text" class="form-control" id="kantorDesa" placeholder="Masukkan alamat Kantor Desa" required>{{ $profildesa->kantor_desa }}</textarea>
                                 </div>
                             </div>
 
                             <!-- Submit Button -->
                             <div class="d-flex justify-content-end mt-4">
-                                <button type="submit" class="btn btn-simpan" onclick="showAlert()">Simpan</button>
+                                <button type="submit" class="btn btn-simpan">Simpan</button>
                             </div>
+                        </form>
 
                         </div>
                     </div>
@@ -198,55 +207,53 @@
 
 @section('kodejs')
     <script>
-        function showAlert() {
-            alert("Data telah disimpan!");
-        }
+        
         // preview image
-        function previewImages() {
-            const previewContainer = document.getElementById('imagePreview');
-            const files = document.getElementById('fotoDesa').files;
+        // function previewImages() {
+        //     const previewContainer = document.getElementById('imagePreview');
+        //     const files = document.getElementById('fotoDesa').files;
 
-            previewContainer.innerHTML = '';
+        //     previewContainer.innerHTML = '';
 
-            Array.from(files).forEach((file) => {
-                const reader = new FileReader();
+        //     Array.from(files).forEach((file) => {
+        //         const reader = new FileReader();
 
-                reader.onload = function(event) {
-                    const imageDiv = document.createElement('div');
-                    imageDiv.style.position = 'relative';
-                    imageDiv.style.display = 'inline-block';
-                    imageDiv.style.marginRight = '10px';
+        //         reader.onload = function(event) {
+        //             const imageDiv = document.createElement('div');
+        //             imageDiv.style.position = 'relative';
+        //             imageDiv.style.display = 'inline-block';
+        //             imageDiv.style.marginRight = '10px';
 
-                    const img = document.createElement('img');
-                    img.src = event.target.result;
-                    img.style.width = '100px';
-                    img.style.height = 'auto';
-                    img.style.borderRadius = '5px';
+        //             const img = document.createElement('img');
+        //             img.src = event.target.result;
+        //             img.style.width = '100px';
+        //             img.style.height = 'auto';
+        //             img.style.borderRadius = '5px';
 
-                    const removeBtn = document.createElement('span');
-                    removeBtn.innerHTML = '✖';
-                    removeBtn.style.position = 'absolute';
-                    removeBtn.style.top = '0';
-                    removeBtn.style.right = '0';
-                    removeBtn.style.color = 'red';
-                    removeBtn.style.cursor = 'pointer';
-                    removeBtn.onclick = function() {
-                        // Remove the image and its corresponding file from the input
-                        const newFileList = Array.from(files).filter(f => f !== file);
-                        const dataTransfer = new DataTransfer();
-                        newFileList.forEach(f => dataTransfer.items.add(f));
-                        document.getElementById('fotoDesa').files = dataTransfer.files;
+        //             const removeBtn = document.createElement('span');
+        //             removeBtn.innerHTML = '✖';
+        //             removeBtn.style.position = 'absolute';
+        //             removeBtn.style.top = '0';
+        //             removeBtn.style.right = '0';
+        //             removeBtn.style.color = 'red';
+        //             removeBtn.style.cursor = 'pointer';
+        //             removeBtn.onclick = function() {
+        //                 // Remove the image and its corresponding file from the input
+        //                 const newFileList = Array.from(files).filter(f => f !== file);
+        //                 const dataTransfer = new DataTransfer();
+        //                 newFileList.forEach(f => dataTransfer.items.add(f));
+        //                 document.getElementById('fotoDesa').files = dataTransfer.files;
 
-                        imageDiv.remove();
-                    };
+        //                 imageDiv.remove();
+        //             };
 
-                    imageDiv.appendChild(img);
-                    imageDiv.appendChild(removeBtn);
-                    previewContainer.appendChild(imageDiv);
-                };
+        //             imageDiv.appendChild(img);
+        //             imageDiv.appendChild(removeBtn);
+        //             previewContainer.appendChild(imageDiv);
+        //         };
 
-                reader.readAsDataURL(file);
-            });
-        }
+        //         reader.readAsDataURL(file);
+        //     });
+        // }
     </script>
 @endsection
