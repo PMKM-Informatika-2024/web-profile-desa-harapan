@@ -4,6 +4,11 @@
 
 <main class="content px-3 py-2">
     <div class="container-fluid" id="admin-kegiatan">
+        @if (session()->has('success'))
+                <div class="alert alert-primary" role="alert">
+                    {{ session('success') }}
+                </div>
+            @endif
         <div class="mt-3 mb-3">
             <h4>Kelola Kegiatan</h4>
         </div>

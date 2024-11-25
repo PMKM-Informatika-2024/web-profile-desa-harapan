@@ -2,6 +2,11 @@
 @section('child')
     <main class="content px-3 py-2">
         <div class="container-fluid" id="admin-edit-pengumuman">
+            @if (session()->has('success'))
+                <div class="alert alert-primary" role="alert">
+                    {{ session('success') }}
+                </div>
+            @endif
             <div class="row">
                 <div class="col-12">
                     <div class="card">

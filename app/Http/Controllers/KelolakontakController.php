@@ -11,9 +11,14 @@ class KelolakontakController
      */
     public function index()
     {
+        // $kontak = Kelolakontak::first();
+        // dd($kontak); // Akan menampilkan isi $kontak di layar
         return view('admin.admin-kontak', [
-            'kontak' => Kelolakontak::get()
+            'kontak' => Kelolakontak::first()
         ]);
+        
+
+        
     }
 
     /**
@@ -61,7 +66,7 @@ class KelolakontakController
         Kelolakontak::where('id', $request->input('id'))
             ->update($validatedData);
 
-        return redirect('/kelolakontak')->with('success', 'Kontak berhasil diupdate');
+        return redirect('/kontak')->with('success', 'Kontak berhasil diupdate');
     }
 
     /**
@@ -69,6 +74,6 @@ class KelolakontakController
      */
     public function destroy(Kelolakontak $kelolakontak)
     {
-        // dd($perangkatdesa->gambar_perangkatdesa);
+        // 
     }
 }

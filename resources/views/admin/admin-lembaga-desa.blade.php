@@ -2,6 +2,11 @@
 @section('child')
     <main class="content px-3 py-2">
         <div class="container-fluid" id="admin-lembaga-desa">
+            @if (session()->has('success'))
+                <div class="alert alert-primary" role="alert">
+                    {{ session('success') }}
+                </div>
+            @endif
             <div class="mt-3 mb-3">
                 <h4>Kelola Lembaga Desa</h4>
             </div>
