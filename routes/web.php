@@ -1,4 +1,7 @@
 <?php
+
+use App\Http\Controllers\Dashboard;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfildesaController;
 use App\Http\Controllers\PerangkatdesaController;
@@ -51,9 +54,10 @@ Route::get('/struktur-pemerintahan', function () {
 Route::get('/adminlogin', [LoginController::class, 'index'])->middleware('guest');
 Route::post('/adminlogin', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
-Route::get('/admin', function(){
-    return view('admin/admin-dashboard');
-})->middleware('auth');
+// Route::get('/admin', function(){
+//     return view('admin/admin-dashboard');
+// })->middleware('auth');
+Route::resource('/admin', DashboardController::class)->middleware('auth');
 Route::resource('/profildesa', ProfildesaController::class)->middleware('auth');
 Route::resource('/perangkatdesa', PerangkatdesaController::class)->middleware('auth');
 Route::resource('/lembagadesa', LembagadesaController::class)->middleware('auth');

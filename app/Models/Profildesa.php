@@ -19,6 +19,7 @@ class Profildesa extends Model
         'total_kk',
         'total_dusun',
         'total_rt',
+        'total_rw',
         'suku_melayu',
         'suku_madura',
         'suku_tionghoa',

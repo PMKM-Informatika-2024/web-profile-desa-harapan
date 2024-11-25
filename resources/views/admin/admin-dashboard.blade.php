@@ -17,7 +17,7 @@
                             <div class="d-flex align-items-start">
                                 <div class="flex-grow-1">
                                     <h4 class="mb-2">
-                                        1234
+                                        {{ $dashboard->total_dusun }}
                                     </h4>
                                     <p class="jumlah mb-2">
                                         Jumlah Dusun
@@ -34,7 +34,7 @@
                             <div class="d-flex align-items-start">
                                 <div class="flex-grow-1">
                                     <h4 class="mb-2">
-                                        1234
+                                        {{ $dashboard->total_rw }}
                                     </h4>
                                     <p class="jumlah mb-2">
                                         Jumlah RW
@@ -50,7 +50,7 @@
                             <div class="d-flex align-items-start">
                                 <div class="flex-grow-1">
                                     <h4 class="mb-2">
-                                        1234
+                                        {{ $dashboard->total_rt }}
                                     </h4>
                                     <p class="jumlah mb-2">
                                         Jumlah RT
@@ -67,7 +67,7 @@
                             <div class="d-flex align-items-start">
                                 <div class="flex-grow-1">
                                     <h4 class="mb-2">
-                                        1234
+                                        {{ $dashboard->total_jiwa }}
                                     </h4>
                                     <p class="jumlah mb-2">
                                         Jumlah Penduduk
@@ -95,7 +95,8 @@
                                     {{-- src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17596.69517182833!2d108.89841217452445!3d0.692050119300173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31e305ab91cca753%3A0x10d868d0d0d897e3!2sSungai%20Keran%20Village%20Office!5e0!3m2!1sen!2sid!4v1728940315050!5m2!1sen!2sid"
                                     width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy"
                                     referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24806.394029058163!2d108.97054280403697!3d1.1830134235617937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31e48329fac4dbb1%3A0x88547da6bafe7ddc!2sHarapan%2C%20Kec.%20Pemangkat%2C%20Kabupaten%20Sambas%2C%20Kalimantan%20Barat!5e1!3m2!1sid!2sid!4v1732284595655!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    <iframe src="{{ $dashboard->peta_desa }}" width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>
@@ -111,12 +112,7 @@
                                 </div>
                             </div>
                             <div class="mt-3 text-muted">
-                                <p>Jalan Desa No. 123, Sungai Keran, Kecamatan Sungai Raya Kepulauan, Kabupaten Ketapang,
-                                    Kalimantan
-                                    Barat, Indonesia.</p>
-                                <p>Telepon: (021) 1234567</p>
-                                <p>Email: kantor@sungaikeran.go.id</p>
-                                <p>Jam Operasional: Senin - Jumat, 08.00 - 16.00</p>
+                                <p>{{ $dashboard->kantor_desa }}</p>
                             </div>
                         </div>
                     </div>
