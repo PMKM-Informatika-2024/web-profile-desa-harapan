@@ -159,10 +159,11 @@
                                     <i class="fa-solid fa-user-gear pe-2"></i>
                                     Profile
                                 </a>
-                                <a href="#" class="dropdown-item">
+                                <form action="/logout" method="POST" class="dropdown-item">
+                                    @csrf
                                     <i class="fa-solid fa-right-from-bracket pe-2"></i>
-                                    Logout
-                                </a>
+                                    <button type="submit" style="all: unset; pointer:cursor">Logout</button>
+                                </form>
                             </div>
                         </li>
                     </ul>

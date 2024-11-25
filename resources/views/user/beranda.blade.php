@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beranda - Desa Sungai Keran</title>
+  <title>Beranda - Desa Harapan</title>
   <link rel="stylesheet" href="/css/style.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Inter:wght@400;700&family=Lora:wght@400;700&family=Poppins:wght@400;700&family=Lato:wght@400;700&family=OpenSans:wght@400;700&display=swap"
@@ -25,11 +25,10 @@
     <nav class="navbar navbar-expand-lg navbar-dark p-md-3">
       <div class="container-fluid">
         <a class="navbar-brand ms-3 d-flex align-items-center" href="#">
-          <img src="image/logo.png" width="50" class="me-2">
+          <img src="/image/kab-sambas.png" width="50" class="me-2">
           <span style="line-height: 1.1; font-size:medium;">
             Desa<br>
-            Sungai<br>
-            Keran
+            Harapan<br>
           </span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -99,11 +98,9 @@
       <div class="row">
         <div class="text-center">
           <h2 class="text-banner-h2"> Selamat Datang di </h2>
-          <h1 class="text-banner-h1">Desa Sungai Keran</h1>
+          <h1 class="text-banner-h1">Desa Harapan</h1>
         </div>
-        <div class="text-center mt-3">
-          <a href="/profile-desa" class="btn-more">Lihat..</a>
-        </div>
+
       </div>
     </div>
   </section>
@@ -115,7 +112,7 @@
     <div class="container transition-container col-lg-9 mt-5">
       <div class="row align-items-center">
         <div class="col-lg-5 mt-3 d-flex flex-column justify-content-between">
-          <h2 class="subjudul">Mengenal Tentang Desa Sungai Keran...</h2>
+          <h2 class="subjudul">Mengenal Tentang Desa Harapan</h2>
           <p style="text-align: justify;">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Nobis, dolorem. Odio
             impedit consequatur ipsam
@@ -124,10 +121,10 @@
             architecto laborum quibusdam voluptas nam, maiores cum eius voluptatem. Ab,
             blanditiis iusto sapiente nam
             iure provident culpa? Pariatur possimus modi consectetur nihil!.......</p>
-          <a href="profil-desa.html" class="btn-more mt-5 ">Selengkapnya..</a>
+          <a href="/profile-desa" class="btn-more mt-5 ">Selengkapnya..</a>
         </div>
         <div class="col-lg-7 mt-3">
-          <img src="img/1.jpg" class="image shadow-lg" alt="Desa Sungai Keran">
+          <img src="/image/1.jpg" class="image shadow-lg" alt="Desa Harapan">
         </div>
       </div>
     </div>
@@ -153,19 +150,19 @@
           <div class="carousel-item active">
             <div class="row justify-content-center">
               <div class="col-lg-4 col-md-4 col-sm-6"> <!-- Ubah ukuran kolom -->
-                <img src="img/1.jpg" class="d-block w-100 rounded shadow img-hover" alt="Kepala Desa">
+                <img src="/image/1.jpg" class="d-block w-100 rounded shadow img-hover" alt="Kepala Desa">
                 <div class="overlay">
                   <h5 class="text-center mt-2">Kepala Desa</h5>
                 </div>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-6"> <!-- Ubah ukuran kolom -->
-                <img src="img/2.jpg" class="d-block w-100 rounded shadow img-hover" alt="Sekretaris Desa">
+                <img src="/image/2.jpg" class="d-block w-100 rounded shadow img-hover" alt="Sekretaris Desa">
                 <div class="overlay">
                   <h5 class="text-center mt-2">Sekretaris Desa</h5>
                 </div>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-6"> <!-- Ubah ukuran kolom -->
-                <img src="img/3.jpg" class="d-block w-100 rounded shadow img-hover" alt="Kasi Pemerintahan">
+                <img src="/image/3.jpg" class="d-block w-100 rounded shadow img-hover" alt="Kasi Pemerintahan">
                 <div class="overlay">
                   <h5 class="text-center mt-2">Kasi Pemerintahan</h5>
                 </div>
@@ -175,19 +172,19 @@
           <div class="carousel-item">
             <div class="row justify-content-center">
               <div class="col-lg-4 col-md-4 col-sm-6"> <!-- Ubah ukuran kolom -->
-                <img src="img/4.jpg" class="d-block w-100 rounded shadow img-hover" alt="Perangkat 4">
+                <img src="/image/4.jpg" class="d-block w-100 rounded shadow img-hover" alt="Perangkat 4">
                 <div class="overlay">
                   <h5 class="text-center mt-2">Perangkat 4</h5>
                 </div>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-6"> <!-- Ubah ukuran kolom -->
-                <img src="img/5.jpg" class="d-block w-100 rounded shadow img-hover" alt="Perangkat 5">
+                <img src="/image/5.jpg" class="d-block w-100 rounded shadow img-hover" alt="Perangkat 5">
                 <div class="overlay">
                   <h5 class="text-center mt-2">Perangkat 5</h5>
                 </div>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-6"> <!-- Ubah ukuran kolom -->
-                <img src="img/6.jpg" class="d-block w-100 rounded shadow img-hover" alt="Perangkat 6">
+                <img src="/image/6.jpg" class="d-block w-100 rounded shadow img-hover" alt="Perangkat 6">
                 <div class="overlay">
                   <h5 class="text-center mt-2">Perangkat 6</h5>
                 </div>
@@ -285,7 +282,7 @@
 
   <!-- Footer -->
   <footer class="d-flex flex-column align-items-center text-center text-dark bg-light p-4">
-    <p>Copyright &copy; 2024 Desa Sungai Keran</p>
+    <p>Copyright &copy; 2024 Desa Harapan</p>
     <!-- Social Media Links -->
     <div class="contact-icons d-flex justify-content-center mt-0">
       <a href="https://wa.me/your-wa-number" target="_blank"><i class="fab fa-whatsapp"></i></a>

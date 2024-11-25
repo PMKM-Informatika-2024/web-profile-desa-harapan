@@ -16,14 +16,14 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::create([
-            'username' => 'test',
-            'password' =>bcrypt('1234')
-        ]);
+        // User::create([
+        //     'username' => 'test',
+        //     'password' =>bcrypt('1234')
+        // ]);
         Kelolakontak::create([
             'no_whatsapp'=>'081234567890',
-            'username_instagram'=>'youhou',
-            'email'=>'test'
+            'username_instagram'=>'desaharapanpemangkat',
+            'email'=>'desaharapan@gmail.com'
         ]);
     }
 }

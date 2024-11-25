@@ -12,7 +12,9 @@ class LayananadministrasiController
      */
     public function index()
     {
-        return view('admin.admin-layanan-administrasi', []);
+        return view('admin.admin-layanan-administrasi', [
+            'layananadministrasis' => Layananadministrasi::all()
+        ]);
     }
 
     /**
@@ -59,6 +61,7 @@ class LayananadministrasiController
      */
     public function update(Request $request, Layananadministrasi $layananadministrasi)
     {
+        // dd($request);
         $validatedData = $request->validate([
             'nama_layanan' => 'required',
             'deskripsi' => 'required',

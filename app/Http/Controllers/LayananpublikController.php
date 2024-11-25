@@ -15,7 +15,7 @@ class LayananpublikController
     {
         return view('admin.admin-layanan-publik', [
         'layananpublikpendidikan' => Layananpublik::where('kategori_fasilitas', 'pendidikan')->get(),
-        'layananpublikkesehatan' => Layananpublik::where('kategori_fasilitas', 'kesehatan')->get()
+        'layananpublikpublik' => Layananpublik::where('kategori_fasilitas', 'publik')->get()
 
         ]);
 

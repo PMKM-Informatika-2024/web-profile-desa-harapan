@@ -76,7 +76,7 @@
                                     <td>{{ $pengumuman->deskripsi_singkat }}</td>
                                     <td>
                                         <a class=" btn btn-warning" href="javascript:void(0)" data-bs-toggle="modal"
-                                            data-bs-target="#editPerangkatModal"
+                                            data-bs-target="#editPengumumanModal"
                                             onclick="loadEditData({{ $pengumuman }})"><i
                                                 class="fa-solid fa-pen-to-square"></i></a>
                                         <form action="/pengumuman/{{ $pengumuman->id }}" method="post" class="d-inline">
@@ -93,17 +93,17 @@
                     </table>
 
                     <!-- Modal untuk Edit Perangkat -->
-                    <div class="modal fade" id="editPerangkatModal" tabindex="-1" aria-labelledby="editPerangkatModalLabel"
+                    <div class="modal fade" id="editPengumumanModal" tabindex="-1" aria-labelledby="editPengumumanModalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="editPerangkatModalLabel">Edit Pengumuman</h5>
+                                    <h5 class="modal-title" id="editPengumumanModalLabel">Edit Pengumuman</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form id="editPerangkatForm" method="POST" enctype="multipart/form-data">
+                                    <form id="editPengumumanForm" method="POST" enctype="multipart/form-data">
                                         @method('put')
                                         @csrf
                                         {{-- <input type="hidden" id="editIndex"> --}}
@@ -157,7 +157,7 @@
             }
 
             // Ubah action form untuk mengarahkan ke route update yang sesuai
-            const editForm = document.getElementById('editPerangkatForm');
+            const editForm = document.getElementById('editPengumumanForm');
             editForm.action = `/pengumuman/${pengumuman.id}`;
         }
 
