@@ -131,14 +131,22 @@
                             <span class="link-text">Kontak</span>
                         </a>
                     </li>
+                    <span></span>
                     <li class="sidebar-item">
+                        <form action="/logout" method="POST" class="sidebar-link" style="margin-left:-13px; margin-top:10px; border:solid 1px white; border-radius:10px; width: 110px; padding:8px; background-color:#2186eb">
+                            @csrf
+                            <i class="fa-solid fa-right-from-bracket pe-2" style="color: white; font-size:16px;"></i>
+                            <button type="submit" style="background-color:transparent;border:none; pointer:cursor; font-size:16px; margin-left:-10px; color:white">Logout</button>
+                        </form>
+                    </li>
+                    {{-- <li class="sidebar-item">
                         <a href="kelolapengguna"
                             class="sidebar-link {{ Request::is('adminkelolapengguna*') ? 'active' : '' }}"
                             id="kelola-pengguna">
                             <i class="fa-solid fa-user pe-2"></i>
                             <span class="link-text">Pengguna</span>
                         </a>
-                    </li>
+                    </li> --}}
                 </ul>
 
             </div>
@@ -149,23 +157,13 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse navbar">
+                    <form action="/logout" method="POST" class="nav-item">
+                        @csrf
+                        <i class="fa-solid fa-right-from-bracket pe-2"></i>
+                        <button type="submit" style="all: unset; pointer:cursor">Logout</button>
+                    </form>
                     <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
-                                <img src="img/6.jpg" class="avatar img-fluid" alt="User Avatar">
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end">
-                                <a href="#" class="dropdown-item">
-                                    <i class="fa-solid fa-user-gear pe-2"></i>
-                                    Profile
-                                </a>
-                                <form action="/logout" method="POST" class="dropdown-item">
-                                    @csrf
-                                    <i class="fa-solid fa-right-from-bracket pe-2"></i>
-                                    <button type="submit" style="all: unset; pointer:cursor">Logout</button>
-                                </form>
-                            </div>
-                        </li>
+                        
                     </ul>
                 </div>
             </nav>
