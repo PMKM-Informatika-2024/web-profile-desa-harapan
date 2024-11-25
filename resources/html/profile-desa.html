@@ -105,24 +105,8 @@
     <h2 class="subjudul text-center mb-4">Sejarah Desa</h2>
     <div class="row">
       <div class="container">
-        <p id="sejarahDesa">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dolorem
-          cupiditate iste dignissimos adipisci sapiente nesciunt, exercitationem dolore consectetur
-          praesentium rerum, labore quod maiores! Voluptatem accusantium, ipsa nihil libero aspernatur
-          corrupti saepe consectetur suscipit. Repellendus, assumenda tempore, aliquid illo cumque, atque
-          illum architecto reprehenderit magni voluptatibus delectus quas exercitationem eos. Non quod
-          voluptate impedit, quis neque architecto voluptatum eligendi, est illo quasi ratione tempora esse
-          commodi rerum perspiciatis atque obcaecati, omnis ipsam voluptas reiciendis? Cumque tempore
-          obcaecati, expedita sed doloribus atque ex officiis similique accusantium libero ea, praesentium
-          odit ducimus ipsa porro, pariatur necessitatibus? Quod facere doloribus modi dignissimos odio?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dolorem
-          cupiditate iste dignissimos adipisci sapiente nesciunt, exercitationem dolore consectetur
-          praesentium rerum, labore quod maiores! Voluptatem accusantium, ipsa nihil libero aspernatur
-          corrupti saepe consectetur suscipit. Repellendus, assumenda tempore, aliquid illo cumque, atque
-          illum architecto reprehenderit magni voluptatibus delectus quas exercitationem eos. Non quod
-          voluptate impedit, quis neque architecto voluptatum eligendi, est illo quasi ratione tempora esse
-          commodi rerum perspiciatis atque obcaecati, omnis ipsam voluptas reiciendis? Cumque tempore
-          obcaecati, expedita sed doloribus atque ex officiis similique accusantium libero ea, praesentium
-          odit ducimus ipsa porro, pariatur necessitatibus? Quod facere doloribus modi dignissimos odio?</p>
+        <p id="sejarahDesa">Harapan adalah sebuah desa yang berada di Kecamatan Pemangkat, Kabupaten Sambas, Kalimantan Barat, Indonesia. Berjarak sekitar 183 KM dari Kota Pontianak dengan titik koordinatnya 1°11′22.88″ LU 108°59′36.67″ BT. Desa Harapan memiliki luas geografis 4806,114 KM<sup>2</sup> dengan jumlah () jiwa dengan berbagai etnis diantaranya Suku Melayu, Melayu Sambas, Jawa, Dayak, Bugis, Tionghoa dan Lainnya, juga berbagai Keyakinan diantaranya Agama Islam, Katolik, Protestan, Hindu, Buddha dan Kong Hu Chu. Terdapat 4 (empat) Dusun yaitu Dusun Abdul Kadir Kasim, Dusun Mekar Lestari, Dusun Teluk Nusa dan Dusun Nusa Indah. </p>
+        <p>Dahulunya Desa Harapan adalah bagian dari Desa Penjajab, lalu berpisah pada tahun 1969. Kemudian pada tahun 2015 sampai sekarang terpecah lagi menjadi 3 desa yaitu Desa Harapan, Desa Gugah Sejahtera dan Desa Lonam. Masyarakat di Desa Harapan sebagian besar memiliki mata pencaharian sebagai petani dan pekebun. Sekarang sudah memiliki sebuah BUMDesa yang merupakan salah satu upaya dari Pemerintah Desa Harapan agar dapat menjadi Desa yang lebih maju.</p>
       </div>
       <div class="container transition-container" id="fotoDesa">
         <div class="row">
@@ -197,7 +181,7 @@
           <div class="card p-3">
             <div class="card-body">
               <h5 class="card-title">Total Jiwa</h5>
-              <span class="counter display-4" data-target="5000" id="totalJiwa">0</span>
+              <span class="counter display-4" data-target="6443" id="totalJiwa"></span>
             </div>
           </div>
         </div>
@@ -205,7 +189,7 @@
           <div class="card p-3">
             <div class="card-body">
               <h5 class="card-title">Total KK</h5>
-              <span class="counter display-4" data-target="1200" id="totalKK">0</span>
+              <span class="counter display-4" data-target="1758" id="totalKK">0</span>
             </div>
           </div>
         </div>
@@ -213,7 +197,7 @@
           <div class="card p-3">
             <div class="card-body">
               <h5 class="card-title">Dusun</h5>
-              <span class="counter display-4" data-target="15" id="totalDusun">0</span>
+              <span class="counter display-4" data-target="4" id="totalDusun">0</span>
             </div>
           </div>
         </div>
@@ -221,7 +205,7 @@
           <div class="card p-3">
             <div class="card-body">
               <h5 class="card-title">Jumlah RT</h5>
-              <span class="counter display-4" data-target="50" id="totalRT">0</span>
+              <span class="counter display-4" data-target="31" id="totalRT">0</span>
             </div>
           </div>
         </div>
@@ -431,10 +415,10 @@
     const sukuChart = new Chart(sukuCtx, {
       type: 'pie',
       data: {
-        labels: ['Melayu', 'Madura', 'Tionghoa', 'Dayak', 'Jawa', 'Bugis', 'Lainnya'],
+        labels: ['Melayu', 'Melayu Sambas', 'Tionghoa', 'Dayak', 'Jawa', 'Bugis', 'Lainnya'],
         datasets: [{
           label: 'Jumlah Suku',
-          data: [200, 150, 100, 50, 30, 20, 10],
+          data: [421, 5662, 11, 11, 1, 150, 177],
           backgroundColor: ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'magenta'],
           hoverOffset: 0
         }]
@@ -479,7 +463,7 @@
         labels: ['Islam', 'Katolik', 'Protestan', 'Buddha', 'Hindu', 'Kong Hu Chu'],
         datasets: [{
           label: 'Jumlah Agama',
-          data: [300, 100, 50, 30, 20, 10],
+          data: [5380, 123, 68, 1, 786, 85],
           backgroundColor: ['red', 'orange', 'yellow', 'green', 'blue', 'magenta'],
           hoverOffset: 0
         }]
