@@ -18,6 +18,15 @@
   .nav-item.dropdown:hover .dropdown-menu {
   display: block;
 }
+.carousel-item img {
+            width: 60%; /* Adjust the percentage to control the width */
+            height: auto; /* Maintain aspect ratio */
+            margin: 0 auto; /* Center the image horizontally */
+        }
+
+        .carousel-caption {
+            font-size: 1rem; /* Smaller text size for captions */
+        }
 </style>
 <body>
   <!-- Navbar -->

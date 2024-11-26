@@ -211,7 +211,48 @@
       </div>
     </div>
   </section>
+{{-- carousel --}}
+<div class="container">
 
+  <div id="kegiatanCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+    <div class="carousel-indicators">
+        @foreach ($perangkat_desas->chunk(3) as $index => $chunk)
+        <button type="button" data-bs-target="#kegiatanCarousel" data-bs-slide-to="{{ $index }}" 
+        class="{{ $index === 0 ? 'active' : '' }}" aria-label="Slide {{ $index + 1 }}">
+        </button>
+            
+        @endforeach
+    </div>
+    <div class="carousel-inner">
+      @foreach ($perangkat_desas->chunk(3) as $index => $chunk)
+      <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+        <div class="row justify-content-center g-4">
+          @foreach ($chunk as $perangkatdesa)
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card shadow-sm border-0 rounded h-100">
+                  <img src="{{ asset('storage/'.$perangkatdesa->gambar_perangkatdesa) }}" alt=""
+                  class="card-img-top rounded-top" style="height: 250px; object-fit:cover; object-position:center;">
+                  <div class="card-body text-center">
+                    <h5 class="card-title fw-bold text-primary">{{ $perangkatdesa->nama }}</h5>
+                    <p class="card-text text-muted">{{ $perangkatdesa->jabatan }}</p>
+                  </div>
+                </div>
+              </div>
+          @endforeach
+        </div>
+    </div>
+      @endforeach
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#kegiatanCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#kegiatanCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+</div>
   <!-- End of Perangkat Desa -->
 
   <!-- Pengumuman -->

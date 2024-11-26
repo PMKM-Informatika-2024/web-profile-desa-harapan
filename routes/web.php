@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('user/beranda',[
         'profildesa' => Profildesa::first(),
+        'perangkat_desas'=>Perangkatdesa::all()
     ]);
 });
 Route::get('/profile-desa', function () {
