@@ -14,7 +14,6 @@ class DashboardController
      */
     public function index()
     {   
-        $dashboard = Profildesa::first();
         return view('admin.admin-dashboard', [
             'dashboard' => Profildesa::first()
         ]);

@@ -136,6 +136,10 @@
                                     <label for="totalRT" class="form-label">Total RT:</label>
                                     <input name="total_rt" type="number" class="form-control" id="totalRT" value="{{ $profildesa->total_rt ?? '' }}" required>
                                 </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <label for="totalRT" class="form-label">Total RW:</label>
+                                    <input name="total_rw" type="number" class="form-control" id="totalRW" value="{{ $profildesa->total_rw ?? '' }}" required>
+                                </div>
                             </div>
                             <br>
                             <!-- Suku -->
