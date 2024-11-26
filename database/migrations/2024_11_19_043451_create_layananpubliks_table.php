@@ -16,7 +16,6 @@ return new class extends Migration
             $table->timestamps();
             $table->string('kategori_fasilitas');
             $table->string('nama_fasilitas');     
-            $table->string('url_alamat');         
             $table->string('gambar_fasilitas');   
         });
     }
