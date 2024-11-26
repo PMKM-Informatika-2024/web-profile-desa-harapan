@@ -12,10 +12,14 @@ use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\KelolakegiatanController;
 use App\Http\Controllers\KelolakontakController;
 use App\Models\Perangkatdesa;
+use App\Models\Profildesa;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('user/beranda');
+    return view('user/beranda',[
+        'profildesa' => Profildesa::first(),
+        'perangkatdesas' => Perangkatdesa::all(),
+    ]);
 });
 Route::get('/profile-desa', function () {
     return view('user/profile-desa');

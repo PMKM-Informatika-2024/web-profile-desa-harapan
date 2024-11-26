@@ -124,7 +124,7 @@
           <a href="/profile-desa" class="btn-more mt-5 ">Selengkapnya..</a>
         </div>
         <div class="col-lg-7 mt-3">
-          <img src="/image/1.jpg" class="image shadow-lg" alt="Desa Harapan">
+          <img src="{{ asset('storage/'. $profildesa->gambar_desa_1) }}" class="image shadow-lg" alt="Desa Harapan">
         </div>
       </div>
     </div>
