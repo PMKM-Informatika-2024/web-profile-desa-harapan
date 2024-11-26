@@ -11,6 +11,7 @@ use App\Http\Controllers\LayananadministrasiController;
 use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\KelolakegiatanController;
 use App\Http\Controllers\KelolakontakController;
+use App\Models\Layananpublik;
 use App\Models\Perangkatdesa;
 use App\Models\Profildesa;
 use Illuminate\Support\Facades\Route;
@@ -18,7 +19,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('user/beranda',[
         'profildesa' => Profildesa::first(),
-        'perangkatdesas' => Perangkatdesa::all(),
     ]);
 });
 Route::get('/profile-desa', function () {
@@ -38,7 +38,12 @@ Route::get('/layanan-administrasi', function () {
     return view('user/layanan-administrasi');
 });
 Route::get('/layanan-publik', function () {
-    return view('user/layanan-publik');
+    $layananpublikpendidikan = Layananpublik::where('kategori_fasilitas', 'pendidikan')->get();
+    $layananpublikpublik = Layananpublik::where('kategori_fasilitas', 'publik')->get();
+    return view('user/layanan-publik',[
+        'layananpublikpendidikan' => $layananpublikpendidikan,
+        'layananpublikpublik' => $layananpublikpublik,
+    ]);
 });
 Route::get('/fasilitas-pendidikan', function () {
     return view('user/fasilitas-pendidikan');
