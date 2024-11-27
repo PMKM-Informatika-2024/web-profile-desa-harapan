@@ -1,5 +1,6 @@
 @extends('layouts.layout')
 @section('child')
+@section('title', 'Profile - Desa Harapan')
     
 <!-- End of Navbar -->
 
