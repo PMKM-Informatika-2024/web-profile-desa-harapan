@@ -154,7 +154,7 @@
                                         </div>
                                         <div class="col-lg-2 col-md-3">
                                             <label for="sukuMadura" class="form-label">Madura</label>
-                                            <input type="number" name="suku_madura" value="{{ $profildesa->suku_madura }}" class="form-control" id="sukuMadura" placeholder=""
+                                            <input type="number" name="suku_melayusambas" value="{{ $profildesa->suku_melayusambas }}" class="form-control" id="sukuMelayuSambas" placeholder=""
                                                 min="0">
                                         </div>
                                         <div class="col-lg-2 col-md-3">

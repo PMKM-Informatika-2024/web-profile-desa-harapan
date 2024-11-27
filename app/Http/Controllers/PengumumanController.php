@@ -34,7 +34,8 @@ class PengumumanController
         $validatedData = $request->validate([
             'judul' => 'required',
             'deskripsi_singkat' => 'required',
-            'gambar_pengumuman'=>'image'
+            'gambar_pengumuman'=>'image',
+            'konten' => 'required',
         ]);
         if($request->file('gambar_pengumuman')) {
             $validatedData['gambar_pengumuman'] = $request->file('gambar_pengumuman')->store('gambar_yang_tersimpan');
@@ -68,7 +69,8 @@ class PengumumanController
         $validatedData = $request->validate([
             'judul' => 'required',
             'deskripsi_singkat' => 'required',
-            'gambar_pengumuman' => 'image'
+            'gambar_pengumuman' => 'image',
+            'konten' => 'required',
         ]);
         if($request->file('gambar_pengumuman')) {
             if($request->oldImage){

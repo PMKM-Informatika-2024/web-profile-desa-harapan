@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('judul');
             $table->text('deskripsi_singkat');
             $table->string('gambar_pengumuman');
+            $table->text('konten');
 
         });
     }

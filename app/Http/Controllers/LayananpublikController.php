@@ -36,10 +36,21 @@ class LayananpublikController
     {
         // dd($request);
         $validatedData = $request->validate([
+            // ada dikeduanya
             'kategori_fasilitas' => 'required',
             'nama_fasilitas' => 'required',
-            // 'url_alamat' => 'required',
+            'alamat' => 'required',
             'gambar_fasilitas'=>'image',
+            'fasilitas_utama'=>'required',
+            'jam_operasional'=>'required',
+            'kontak'=>'required',
+            // fasilitas pendidikan
+            'akreditasi'=>'required',
+            'jumlah_tenaga_pengajar'=>'required',
+            'jumlah_murid'=>'required',
+            'visi'=>'required',
+            'misi'=>'required',
+
         ]);
         if($request->file('gambar_fasilitas')) {
             $validatedData['gambar_fasilitas'] = $request->file('gambar_fasilitas')->store('gambar_yang_tersimpan');
@@ -73,7 +84,15 @@ class LayananpublikController
         $validatedData = $request->validate([
             'kategori_fasilitas' => 'required',
             'nama_fasilitas' => 'required',
-            'url_alamat' => 'required',
+            'alamat' => 'required',
+            'fasilitas_utama'=>'required',
+            'jam_operasional'=>'required',
+            'kontak'=>'required',
+            'akreditasi'=>'required',
+            'jumlah_tenaga_pengajar'=>'required',
+            'jumlah_murid'=>'required',
+            'visi'=>'required',
+            'misi'=>'required',
         ]);
         if($request->file('gambar_fasilitas')) {
             if($request->oldImage){

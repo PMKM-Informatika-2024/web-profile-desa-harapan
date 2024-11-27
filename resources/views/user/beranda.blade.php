@@ -124,132 +124,54 @@
 
   <!-- Perangkat Desa -->
   <section id="perangkat-desa" class="py-5 mb-5">
-    <div class="container-fluid transition-container perangkat-desa-container shadow">
-      <div class="row mb-2 justify-content-center text-center">
-        <div class="col-12">
-          <h2 class="subjudul text-center">Perangkat Desa</h2>
-        </div>
-      </div>
-      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="row justify-content-center">
-              <div class="col-lg-4 col-md-4 col-sm-6"> <!-- Ubah ukuran kolom -->
-                <img src="/image/1.jpg" class="d-block w-100 rounded shadow img-hover" alt="Kepala Desa">
-                <div class="overlay">
-                  <h5 class="text-center mt-2">Kepala Desa</h5>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-sm-6"> <!-- Ubah ukuran kolom -->
-                <img src="/image/2.jpg" class="d-block w-100 rounded shadow img-hover" alt="Sekretaris Desa">
-                <div class="overlay">
-                  <h5 class="text-center mt-2">Sekretaris Desa</h5>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-sm-6"> <!-- Ubah ukuran kolom -->
-                <img src="/image/3.jpg" class="d-block w-100 rounded shadow img-hover" alt="Kasi Pemerintahan">
-                <div class="overlay">
-                  <h5 class="text-center mt-2">Kasi Pemerintahan</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="row justify-content-center">
-              <div class="col-lg-4 col-md-4 col-sm-6"> <!-- Ubah ukuran kolom -->
-                <img src="/image/4.jpg" class="d-block w-100 rounded shadow img-hover" alt="Perangkat 4">
-                <div class="overlay">
-                  <h5 class="text-center mt-2">Perangkat 4</h5>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-sm-6"> <!-- Ubah ukuran kolom -->
-                <img src="/image/5.jpg" class="d-block w-100 rounded shadow img-hover" alt="Perangkat 5">
-                <div class="overlay">
-                  <h5 class="text-center mt-2">Perangkat 5</h5>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-sm-6"> <!-- Ubah ukuran kolom -->
-                <img src="/image/6.jpg" class="d-block w-100 rounded shadow img-hover" alt="Perangkat 6">
-                <div class="overlay">
-                  <h5 class="text-center mt-2">Perangkat 6</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-        <div class="row">
-          <div class="col-lg-12 text-end pe-5 pb-3">
-            <a href="perangkat-desa.html" class="btn-more">Selengkapnya...</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-{{-- carousel --}}
-<div class="container">
   <div class="container-fluid transition-container perangkat-desa-container shadow">
     <div class="row mb-2 justify-content-center text-center">
       <div class="col-12">
         <h2 class="subjudul text-center">Perangkat Desa</h2>
       </div>
     </div>
-  <div id="kegiatanCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
-    <div class="carousel-indicators">
+    <div id="kegiatanCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+      <div class="carousel-indicators">
+          @foreach ($perangkat_desas->chunk(3) as $index => $chunk)
+          <button type="button" data-bs-target="#kegiatanCarousel" data-bs-slide-to="{{ $index }}" 
+          class="{{ $index === 0 ? 'active' : '' }}" aria-label="Slide {{ $index + 1 }}">
+          </button>
+              
+          @endforeach
+      </div>
+      <div class="carousel-inner">
         @foreach ($perangkat_desas->chunk(3) as $index => $chunk)
-        <button type="button" data-bs-target="#kegiatanCarousel" data-bs-slide-to="{{ $index }}" 
-        class="{{ $index === 0 ? 'active' : '' }}" aria-label="Slide {{ $index + 1 }}">
-        </button>
-            
-        @endforeach
-    </div>
-    <div class="carousel-inner">
-      @foreach ($perangkat_desas->chunk(3) as $index => $chunk)
-      <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-        <div class="row justify-content-center g-4">
-          @foreach ($chunk as $perangkatdesa)
-              <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card shadow-sm border-0 rounded h-100">
-                  <img src="{{ asset('storage/'.$perangkatdesa->gambar_perangkatdesa) }}" alt=""
-                  class="card-img-top rounded-top" style="height: 250px; object-fit:cover; object-position:center;">
-                  <div class="card-body text-center">
-                    <h5 class="card-title fw-bold text-primary">{{ $perangkatdesa->nama }}</h5>
-                    <p class="card-text text-muted">{{ $perangkatdesa->jabatan }}</p>
+        <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+          <div class="row justify-content-center g-4">
+            @foreach ($chunk as $perangkatdesa)
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="card shadow-sm border-0 rounded h-100">
+                    <img src="{{ asset('storage/'.$perangkatdesa->gambar_perangkatdesa) }}" alt=""
+                    class="card-img-top rounded-top" style="height: 250px; object-fit:cover; object-position:center;">
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold text-primary">{{ $perangkatdesa->nama }}</h5>
+                      <p class="card-text text-muted">{{ $perangkatdesa->jabatan }}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-          @endforeach
-        </div>
+            @endforeach
+          </div>
+      </div>
+        @endforeach
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#kegiatanCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#kegiatanCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
     </div>
-      @endforeach
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#kegiatanCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#kegiatanCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
-</div>  
-  <!-- End of Perangkat Desa -->
+  </div>  
+  </section>
+{{-- carousel --}}
+<!-- End of Perangkat Desa -->
 
 
   {{-- Pengumuman 2 --}}
@@ -272,10 +194,9 @@
             </div>
           </div>
         @endforeach
-{{-- end pengumuman2 --}}
-    
   </section>
-  {{-- End of Pengumuman 2 --}}
+{{-- end pengumuman --}}
+    
 
   <!-- Footer -->
   <footer class="d-flex flex-column align-items-center text-center text-dark bg-light p-4">
