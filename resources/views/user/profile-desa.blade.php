@@ -21,7 +21,7 @@
     <div class="row">
       <div class="container">
         <p id="sejarahDesa">Harapan adalah sebuah desa yang berada di Kecamatan Pemangkat, Kabupaten Sambas, Kalimantan Barat, Indonesia. Berjarak sekitar 183 KM dari Kota Pontianak dengan titik koordinatnya 1°11′22.88″ LU 108°59′36.67″ BT. Desa Harapan memiliki luas geografis 4806,114 KM<sup>2</sup> dengan jumlah 6443 jiwa dengan berbagai etnis diantaranya Suku Melayu, Melayu Sambas, Jawa, Dayak, Bugis, Tionghoa dan Lainnya, juga berbagai Keyakinan diantaranya Agama Islam, Katolik, Protestan, Hindu, Buddha dan Kong Hu Chu. Terdapat 4 (empat) Dusun yaitu Dusun Abdul Kadir Kasim, Dusun Mekar Lestari, Dusun Teluk Nusa dan Dusun Nusa Indah. </p>
-        <p>Secara historis, Desa Harapan dahulunya bernama Kampong Lo Nam Kok, yang terdiri dari beberapa bagian perbatasan, yaitu sebelah Utara berbatasan dengan Sungai Sambas disebut teluk kera (banyak binatang kera) dan sebelah selatan disebut Lo nam Kok berarti kampong tua yang diambil dari bahasa china, yang berbatasan dengan Gunung dan Hutan rawa kayu jelutung (disebut kampong Jelutung) sedangkan disebelah Timur berbatasan dengan Kampong Perapakan (tanah yang berawa/luapan air (banyak genangan air), serta sebelah Barat disebut Kampong Minyak berbatasan dengan Kampong Penjajap adalah merupakan sebagian dari wilayah kerajaan Keraton sambas yang termasuk dalam kewilayahan kewedanaan Kota Pemangkat, dari sejak masa penjajahan Belanda dan Jepang sampai masa Kemerdekaan Republik Indonesia hingga sekarang.</p>
+        <p>Secara historis, Desa Harapan dahulunya bernama Kampong Lo Nam Kok, yang terdiri dari beberapa bagian perbatasan, yaitu sebelah Utara berbatasan dengan Sungai Sambas disebut teluk kera (banyak binatang kera) dan sebelah selatan disebut Lo nam Kok berarti kampong tua yang diambil dari bahasa china, yang berbatasan dengan Gunung dan Hutan rawa kayu jelutung (disebut kampong Jelutung) sedangkan disebelah Timur berbatasan dengan Kampong Perapakan dengan tanah yang berawa/luapan air (banyak genangan air), serta sebelah Barat disebut Kampong Minyak berbatasan dengan Kampong Penjajap adalah merupakan sebagian dari wilayah kerajaan Keraton sambas yang termasuk dalam kewilayahan kewedanaan Kota Pemangkat, dari sejak masa penjajahan Belanda dan Jepang sampai masa Kemerdekaan Republik Indonesia hingga sekarang.</p>
         <p>Menurut Sejarah Kampong Teluk Kera, kampong Lo Nam Kok dan sebagian Kampong Minyak menjadi satu kekuasaan penuh untuk mengatur berbagai macam urusan dalam Kerajaan Kesultanan Sambas yang disebut KAMPONG LO NAM KOK, dari sejak masa Penjajahan Belanda dan Jepang sampai dengan masa Kemerdekaan Republik Indonesia Tahun 1945.</p>
       </div>
       <div class="container transition-container">
@@ -62,9 +62,7 @@
             </div>
             <div class="card-body">
               <p class="card-text">
-                Mewujudkan masyarakat desa yang mandiri, sejahtera, dan berdaya saing dengan
-                memanfaatkan
-                potensi sumber daya alam dan manusia secara berkelanjutan.
+              “Mewujudkan Pemerintahan Desa yang Baik dan Bersih, Wibawa, Unggul, Guna Menuju Masyarakat Adil, Makmur, dan Sejahtera.“
               </p>
             </div>
           </div>
