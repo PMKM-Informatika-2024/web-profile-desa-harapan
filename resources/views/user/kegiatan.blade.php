@@ -20,9 +20,9 @@
         <h2 class="subjudul text-center mb-5">Galeri Kegiatan Desa Harapan</h2>
         <div class="col-lg-4 g-0">
           <div class="card-kegiatan position-relative">
-            <img src="img/6.jpg" alt="">
+            <img src="img/pelatihanLKD.jpg" alt="">
             <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100 d-flex align-items-end p-3">
-              <h5 class="text-start">Sosialisasi</h5>
+              <h5 class="text-start">Pelatihan LKD</h5>
             </div>
           </div>
         </div>
