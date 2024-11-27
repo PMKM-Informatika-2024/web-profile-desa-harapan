@@ -24,7 +24,7 @@
               <div class="icon-circle mb-3">
                 <i class="bi bi-house-door-fill" style="font-size: 3rem; color: #007bff;"></i>
               </div>
-              <h5 class="card-title">Pelayanan Adminduk /KK, Akta Kematian,Akta Kelahiran, KIA, KTP dan Surat Pindah</h5>
+              <h5 class="card-title">Pelayanan Adminitrasi Kependudukan</h5>
               <p class="card-text">Dapatkan Pelayanan Adminduk /KK, Akta Kematian,Akta Kelahiran, KIA, KTP dan Surat Pindah dengan persyaratan berikut.</p>
             </div>
             <div class="card-footer bg-white border-0 text-center">
