@@ -72,11 +72,11 @@
             </div>
             <div class="card-body">
               <ol class="card-text" style="list-style-type: disc;">
-                <li>Meningkatkan kualitas sumber daya manusia melalui pendidikan dan pelatihan.</li>
-                <li>Meningkatkan kesejahteraan masyarakat dengan menciptakan lapangan pekerjaan.</li>
+                <li>1.	Mewujudkan Pembenahan dan Peningkatan Kinerja Aparatur Desa Serta Administrasi Desa Guna Meningkatkan Pelayanan Kepada Masyarakat</li>
+                <li>2.	Meningkatkan Sinergitas Pilar Pendukung Pemerintahan Desa yaitu BPD dan LKD (RT, LPM, PKK, Karang Taruna, dll)</li>
                 <li>Mengembangkan potensi ekonomi lokal melalui pertanian, pariwisata, dan UMKM.</li>
-                <li>Meningkatkan infrastruktur dan fasilitas umum untuk kesejahteraan masyarakat.</li>
-                <li>Mewujudkan pemerintahan desa yang transparan dan akuntabel.</li>
+                <li>3.	Melanjutkan Pembangunan Infrastruktur Berdasarkan Indikator dan Skala Prioritas Serta Mengutamakan Azas Manfaat .</li>
+                <li>4.	Berkoordinasi dan Konsolidasi dengan pihak SKPD dan Pihak Terkait di Atas Pemerintahan Desa Demi Percepatan Pembangunan.</li>
               </ol>
             </div>
           </div>
