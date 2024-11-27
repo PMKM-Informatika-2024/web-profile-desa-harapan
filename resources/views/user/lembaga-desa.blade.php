@@ -108,6 +108,96 @@
                                 </div>
                             </div>
 
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                <div class="lembaga-card">
+                                    <div class="lembaga-img-container">
+                                        <img src="foto-lembaga2.jpg" alt="Foto Lembaga Desa" class="lembaga-img"
+                                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <i class="fas fa-building lembaga-icon" style="display:none;"></i>
+                                    </div>
+                                    <div class="lembaga-info">
+                                        <h3 class="lembaga-name">Poslansia</h3>
+                                        <p class="lembaga-alamat"></p>
+                                        <p class="lembaga-ketua">Ketua: </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                <div class="lembaga-card">
+                                    <div class="lembaga-img-container">
+                                        <img src="foto-lembaga2.jpg" alt="Foto Lembaga Desa" class="lembaga-img"
+                                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <i class="fas fa-building lembaga-icon" style="display:none;"></i>
+                                    </div>
+                                    <div class="lembaga-info">
+                                        <h3 class="lembaga-name">Posbindu</h3>
+                                        <p class="lembaga-alamat"></p>
+                                        <p class="lembaga-ketua">Ketua: </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                <div class="lembaga-card">
+                                    <div class="lembaga-img-container">
+                                        <img src="foto-lembaga2.jpg" alt="Foto Lembaga Desa" class="lembaga-img"
+                                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <i class="fas fa-building lembaga-icon" style="display:none;"></i>
+                                    </div>
+                                    <div class="lembaga-info">
+                                        <h3 class="lembaga-name">Posyandu Khairul Ummi</h3>
+                                        <p class="lembaga-alamat"></p>
+                                        <p class="lembaga-ketua">Ketua: </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                <div class="lembaga-card">
+                                    <div class="lembaga-img-container">
+                                        <img src="foto-lembaga2.jpg" alt="Foto Lembaga Desa" class="lembaga-img"
+                                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <i class="fas fa-building lembaga-icon" style="display:none;"></i>
+                                    </div>
+                                    <div class="lembaga-info">
+                                        <h3 class="lembaga-name">Posyandu Bakti Husada</h3>
+                                        <p class="lembaga-alamat"></p>
+                                        <p class="lembaga-ketua">Ketua: </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                <div class="lembaga-card">
+                                    <div class="lembaga-img-container">
+                                        <img src="foto-lembaga2.jpg" alt="Foto Lembaga Desa" class="lembaga-img"
+                                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <i class="fas fa-building lembaga-icon" style="display:none;"></i>
+                                    </div>
+                                    <div class="lembaga-info">
+                                        <h3 class="lembaga-name">Posyandu Nusa Harapan</h3>
+                                        <p class="lembaga-alamat"></p>
+                                        <p class="lembaga-ketua">Ketua: </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                <div class="lembaga-card">
+                                    <div class="lembaga-img-container">
+                                        <img src="foto-lembaga2.jpg" alt="Foto Lembaga Desa" class="lembaga-img"
+                                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <i class="fas fa-building lembaga-icon" style="display:none;"></i>
+                                    </div>
+                                    <div class="lembaga-info">
+                                        <h3 class="lembaga-name">Posyandu Ceria</h3>
+                                        <p class="lembaga-alamat"></p>
+                                        <p class="lembaga-ketua">Ketua: </p>
+                                    </div>
+                                </div>
+                            </div>
+
                             <!-- Tambahkan kartu lainnya di sini -->
                         </div>
                     </div>
