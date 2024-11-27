@@ -100,11 +100,10 @@
     </nav>
   </section>
   <!-- End of Navbar -->
-  <!-- End of Banner -->
 
   <!-- Content -->
   @yield('child')
-  <!-- End of Kantor Desa -->
+  <!-- End of Content -->
 
   <!-- Footer -->
   <footer class="text-center text-dark bg-light p-4 border-top">
