@@ -1,5 +1,7 @@
 @extends('layouts.adminlayout')
 @section('child')
+@section('title', 'Admin - Lembaga Desa - Desa Harapan')
+
     <main class="content px-3 py-2">
         <div class="container-fluid" id="admin-lembaga-desa">
             @if (session()->has('success'))
