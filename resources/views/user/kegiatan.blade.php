@@ -17,7 +17,7 @@
   <section id="kegiatan">
     <div class="container-fluid transition-container py-5 mt-5 mb-5">
       <div class="row">
-        <h2 class="subjudul text-center mb-5">Galeri Kegiatan Desa Sungai Keran</h2>
+        <h2 class="subjudul text-center mb-5">Galeri Kegiatan Desa Harapan</h2>
         <div class="col-lg-4 g-0">
           <div class="card-kegiatan position-relative">
             <img src="img/6.jpg" alt="">
