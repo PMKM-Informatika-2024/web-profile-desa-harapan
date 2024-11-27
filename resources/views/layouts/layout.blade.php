@@ -250,7 +250,7 @@
         labels: ['Melayu', 'Melayu Sambas', 'Tionghoa', 'Dayak', 'Jawa', 'Bugis', 'Lainnya'],
         datasets: [{
           label: 'Jumlah Suku',
-          data: [200, 150, 100, 50, 30, 20, 10],
+          data: [421, 5662, 11, 11, 1, 150, 177],
           backgroundColor: ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'magenta'],
           hoverOffset: 0
         }]
@@ -295,7 +295,7 @@
         labels: ['Islam', 'Katolik', 'Protestan', 'Buddha', 'Hindu', 'Kong Hu Chu'],
         datasets: [{
           label: 'Jumlah Agama',
-          data: [300, 100, 50, 30, 20, 10],
+          data: [5380, 123, 68, 1, 786, 85],
           backgroundColor: ['red', 'orange', 'yellow', 'green', 'blue', 'magenta'],
           hoverOffset: 0
         }]
