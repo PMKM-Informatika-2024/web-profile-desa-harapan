@@ -95,7 +95,7 @@
           <div class="card p-3">
             <div class="card-body">
               <h5 class="card-title">Total Jiwa</h5>
-              <span class="counter display-4" data-target="5000">0</span>
+              <span class="counter display-4" data-target="6443">0</span>
             </div>
           </div>
         </div>
@@ -103,7 +103,7 @@
           <div class="card p-3">
             <div class="card-body">
               <h5 class="card-title">Total KK</h5>
-              <span class="counter display-4" data-target="1200">0</span>
+              <span class="counter display-4" data-target="1758">0</span>
             </div>
           </div>
         </div>
@@ -111,7 +111,7 @@
           <div class="card p-3">
             <div class="card-body">
               <h5 class="card-title">Dusun</h5>
-              <span class="counter display-4" data-target="15">0</span>
+              <span class="counter display-4" data-target="4">0</span>
             </div>
           </div>
         </div>
@@ -119,7 +119,7 @@
           <div class="card p-3">
             <div class="card-body">
               <h5 class="card-title">Jumlah RT</h5>
-              <span class="counter display-4" data-target="50">0</span>
+              <span class="counter display-4" data-target="31">0</span>
             </div>
           </div>
         </div>
@@ -150,10 +150,10 @@
   <!-- Kantor Desa -->
   <section id="kantor-desa" class="py-5">
     <div class="container transition-container">
-      <h2 class="subjudul text-center mb-4">Kantor Desa Sungai Keran</h2>
+      <h2 class="subjudul text-center mb-4">Kantor Desa & Balai Desa Harapan</h2>
       <div class="row">
         <div class="col-lg-12">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17596.69517182833!2d108.89841217452445!3d0.692050119300173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31e305ab91cca753%3A0x10d868d0d0d897e3!2sSungai%20Keran%20Village%20Office!5e0!3m2!1sen!2sid!4v1728940315050!5m2!1sen!2sid" width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.381582325904!2d108.9807299!3d1.1760021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31e482da5226b941%3A0xbb1b81f1600f81c3!2sKantor%20Desa%20%26%20Balai%20Desa%20Harapan!5e0!3m2!1sen!2sid!4v1698827469279!5m2!1sen!2sid" width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
