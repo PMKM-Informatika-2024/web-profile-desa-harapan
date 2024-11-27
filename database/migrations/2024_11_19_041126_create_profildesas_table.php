@@ -28,9 +28,8 @@ return new class extends Migration
             $table->integer('total_kk');
             $table->integer('total_dusun');
             $table->integer('total_rt');
-            $table->integer('total_rw');
             $table->integer('suku_melayu');
-            $table->integer('suku_melayu_sambas');
+            $table->integer('suku_melayusambas');
             $table->integer('suku_tionghoa');
             $table->integer('suku_dayak');
             $table->integer('suku_jawa');
