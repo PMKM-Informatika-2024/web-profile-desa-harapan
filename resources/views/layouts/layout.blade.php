@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile Desa - Desa Sungai Keran</title>
+  <title>Profile Desa - Desa Harapan</title>
   <link rel="stylesheet" href="css/style.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&family=Lato:wght@400;700&display=swap"
@@ -108,7 +108,7 @@
 
   <!-- Footer -->
   <footer class="text-center text-dark bg-light p-4 border-top">
-    <p>Copyright &copy; 2024 Desa Sungai Keran</p>
+    <p>Copyright &copy; 2024 Desa Harapan</p>
   </footer>
   <!-- End of Footer -->
 
@@ -247,7 +247,7 @@
     const sukuChart = new Chart(sukuCtx, {
       type: 'pie',
       data: {
-        labels: ['Melayu', 'Madura', 'Tionghoa', 'Dayak', 'Jawa', 'Bugis', 'Lainnya'],
+        labels: ['Melayu', 'Melayu Sambas', 'Tionghoa', 'Dayak', 'Jawa', 'Bugis', 'Lainnya'],
         datasets: [{
           label: 'Jumlah Suku',
           data: [200, 150, 100, 50, 30, 20, 10],
