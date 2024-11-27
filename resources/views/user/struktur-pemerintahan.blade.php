@@ -22,8 +22,7 @@
           <img src="img/logo.png" width="50" class="me-2">
           <span style="line-height: 1.1; font-size:medium;">
             Desa<br>
-            Sungai<br>
-            Keran
+            Harapan
           </span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
