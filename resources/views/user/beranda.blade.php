@@ -6,9 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beranda - Desa Harapan</title>
   <link rel="stylesheet" href="/css/style.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Inter:wght@400;700&family=Lora:wght@400;700&family=Poppins:wght@400;700&family=Lato:wght@400;700&family=OpenSans:wght@400;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Inter:wght@400;700&family=Lora:wght@400;700&family=Poppins:wght@400;700&family=Lato:wght@400;700&family=OpenSans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -113,15 +111,8 @@
       <div class="row align-items-center">
         <div class="col-lg-5 mt-3 d-flex flex-column justify-content-between">
           <h2 class="subjudul">Mengenal Tentang Desa Harapan</h2>
-          <p style="text-align: justify;">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Nobis, dolorem. Odio
-            impedit consequatur ipsam
-            assumenda est quidem molestias deserunt eaque ad quis molestiae reiciendis optio
-            blanditiis neque atque
-            architecto laborum quibusdam voluptas nam, maiores cum eius voluptatem. Ab,
-            blanditiis iusto sapiente nam
-            iure provident culpa? Pariatur possimus modi consectetur nihil!.......</p>
-          <a href="/profile-desa" class="btn-more mt-5 ">Selengkapnya..</a>
+          <p style="text-align: justify;" id="sejarahDesa">Harapan adalah sebuah desa yang berada di Kecamatan Pemangkat, Kabupaten Sambas, Kalimantan Barat, Indonesia. Berjarak sekitar 183 KM dari Kota Pontianak dengan titik koordinatnya 1°11′22.88″ LU 108°59′36.67″ BT. Desa Harapan memiliki luas geografis 4806,114 KM<sup>2</sup> dengan jumlah 6443 jiwa dengan berbagai etnis diantaranya Suku Melayu, Melayu Sambas, Jawa, Dayak, Bugis, Tionghoa dan Lainnya, juga berbagai Keyakinan diantaranya.......</p>
+          <a href="/profile-desa" class="btn-more mt-3 ">Selengkapnya..</a>
         </div>
         <div class="col-lg-7 mt-3">
           <img src="{{ asset('storage/'. $profildesa->gambar_desa_1) }}" class="image shadow-lg" alt="Desa Harapan">

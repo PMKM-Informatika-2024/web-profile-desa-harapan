@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile Desa - Desa Sungai Keran</title>
+  <title>Profile Desa - Desa Harapan</title>
   <link rel="stylesheet" href="css/style.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&family=Lato:wght@400;700&display=swap"
@@ -19,13 +19,13 @@
   display: block;
 }
 .carousel-item img {
-            width: 60%; /* Adjust the percentage to control the width */
-            height: auto; /* Maintain aspect ratio */
-            margin: 0 auto; /* Center the image horizontally */
+            width: 60%;
+            height: auto; 
+            margin: 0 auto;
         }
 
         .carousel-caption {
-            font-size: 1rem; /* Smaller text size for captions */
+            font-size: 1rem;
         }
 </style>
 <body>
@@ -108,7 +108,7 @@
 
   <!-- Footer -->
   <footer class="text-center text-dark bg-light p-4 border-top">
-    <p>Copyright &copy; 2024 Desa Harapan Pemangkat</p>
+    <p>Copyright &copy; 2024 Desa Harapan</p>
   </footer>
   <!-- End of Footer -->
 
@@ -247,10 +247,10 @@
     const sukuChart = new Chart(sukuCtx, {
       type: 'pie',
       data: {
-        labels: ['Melayu', 'Madura', 'Tionghoa', 'Dayak', 'Jawa', 'Bugis', 'Lainnya'],
+        labels: ['Melayu', 'Melayu Sambas', 'Tionghoa', 'Dayak', 'Jawa', 'Bugis', 'Lainnya'],
         datasets: [{
           label: 'Jumlah Suku',
-          data: [200, 150, 100, 50, 30, 20, 10],
+          data: [421, 5662, 11, 11, 1, 150, 177],
           backgroundColor: ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'magenta'],
           hoverOffset: 0
         }]
@@ -295,7 +295,7 @@
         labels: ['Islam', 'Katolik', 'Protestan', 'Buddha', 'Hindu', 'Kong Hu Chu'],
         datasets: [{
           label: 'Jumlah Agama',
-          data: [300, 100, 50, 30, 20, 10],
+          data: [5380, 123, 68, 1, 786, 85],
           backgroundColor: ['red', 'orange', 'yellow', 'green', 'blue', 'magenta'],
           hoverOffset: 0
         }]

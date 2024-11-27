@@ -20,24 +20,9 @@
     <h2 class="subjudul text-center mb-4">Sejarah Desa</h2>
     <div class="row">
       <div class="container">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dolorem
-          cupiditate iste dignissimos adipisci sapiente nesciunt, exercitationem dolore consectetur
-          praesentium rerum, labore quod maiores! Voluptatem accusantium, ipsa nihil libero aspernatur
-          corrupti saepe consectetur suscipit. Repellendus, assumenda tempore, aliquid illo cumque, atque
-          illum architecto reprehenderit magni voluptatibus delectus quas exercitationem eos. Non quod
-          voluptate impedit, quis neque architecto voluptatum eligendi, est illo quasi ratione tempora esse
-          commodi rerum perspiciatis atque obcaecati, omnis ipsam voluptas reiciendis? Cumque tempore
-          obcaecati, expedita sed doloribus atque ex officiis similique accusantium libero ea, praesentium
-          odit ducimus ipsa porro, pariatur necessitatibus? Quod facere doloribus modi dignissimos odio?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dolorem
-          cupiditate iste dignissimos adipisci sapiente nesciunt, exercitationem dolore consectetur
-          praesentium rerum, labore quod maiores! Voluptatem accusantium, ipsa nihil libero aspernatur
-          corrupti saepe consectetur suscipit. Repellendus, assumenda tempore, aliquid illo cumque, atque
-          illum architecto reprehenderit magni voluptatibus delectus quas exercitationem eos. Non quod
-          voluptate impedit, quis neque architecto voluptatum eligendi, est illo quasi ratione tempora esse
-          commodi rerum perspiciatis atque obcaecati, omnis ipsam voluptas reiciendis? Cumque tempore
-          obcaecati, expedita sed doloribus atque ex officiis similique accusantium libero ea, praesentium
-          odit ducimus ipsa porro, pariatur necessitatibus? Quod facere doloribus modi dignissimos odio?</p>
+        <p id="sejarahDesa">Harapan adalah sebuah desa yang berada di Kecamatan Pemangkat, Kabupaten Sambas, Kalimantan Barat, Indonesia. Berjarak sekitar 183 KM dari Kota Pontianak dengan titik koordinatnya 1°11′22.88″ LU 108°59′36.67″ BT. Desa Harapan memiliki luas geografis 4806,114 KM<sup>2</sup> dengan jumlah 6443 jiwa dengan berbagai etnis diantaranya Suku Melayu, Melayu Sambas, Jawa, Dayak, Bugis, Tionghoa dan Lainnya, juga berbagai Keyakinan diantaranya Agama Islam, Katolik, Protestan, Hindu, Buddha dan Kong Hu Chu. Terdapat 4 (empat) Dusun yaitu Dusun Abdul Kadir Kasim, Dusun Mekar Lestari, Dusun Teluk Nusa dan Dusun Nusa Indah. </p>
+        <p>Secara historis, Desa Harapan dahulunya bernama Kampong Lo Nam Kok, yang terdiri dari beberapa bagian perbatasan, yaitu sebelah Utara berbatasan dengan Sungai Sambas disebut teluk kera (banyak binatang kera) dan sebelah selatan disebut Lo nam Kok berarti kampong tua yang diambil dari bahasa china, yang berbatasan dengan Gunung dan Hutan rawa kayu jelutung (disebut kampong Jelutung) sedangkan disebelah Timur berbatasan dengan Kampong Perapakan dengan tanah yang berawa/luapan air (banyak genangan air), serta sebelah Barat disebut Kampong Minyak berbatasan dengan Kampong Penjajap adalah merupakan sebagian dari wilayah kerajaan Keraton sambas yang termasuk dalam kewilayahan kewedanaan Kota Pemangkat, dari sejak masa penjajahan Belanda dan Jepang sampai masa Kemerdekaan Republik Indonesia hingga sekarang.</p>
+        <p>Menurut Sejarah Kampong Teluk Kera, kampong Lo Nam Kok dan sebagian Kampong Minyak menjadi satu kekuasaan penuh untuk mengatur berbagai macam urusan dalam Kerajaan Kesultanan Sambas yang disebut KAMPONG LO NAM KOK, dari sejak masa Penjajahan Belanda dan Jepang sampai dengan masa Kemerdekaan Republik Indonesia Tahun 1945.</p>
       </div>
       <div class="container transition-container">
         <div class="row">
@@ -77,9 +62,7 @@
             </div>
             <div class="card-body">
               <p class="card-text">
-                Mewujudkan masyarakat desa yang mandiri, sejahtera, dan berdaya saing dengan
-                memanfaatkan
-                potensi sumber daya alam dan manusia secara berkelanjutan.
+              “Mewujudkan Pemerintahan Desa yang Baik dan Bersih, Wibawa, Unggul, Guna Menuju Masyarakat Adil, Makmur, dan Sejahtera.“
               </p>
             </div>
           </div>
@@ -89,11 +72,11 @@
             </div>
             <div class="card-body">
               <ol class="card-text" style="list-style-type: disc;">
-                <li>Meningkatkan kualitas sumber daya manusia melalui pendidikan dan pelatihan.</li>
-                <li>Meningkatkan kesejahteraan masyarakat dengan menciptakan lapangan pekerjaan.</li>
+                <li>Mewujudkan Pembenahan dan Peningkatan Kinerja Aparatur Desa Serta Administrasi Desa Guna Meningkatkan Pelayanan Kepada Masyarakat</li>
+                <li>Meningkatkan Sinergitas Pilar Pendukung Pemerintahan Desa yaitu BPD dan LKD (RT, LPM, PKK, Karang Taruna, dll)</li>
                 <li>Mengembangkan potensi ekonomi lokal melalui pertanian, pariwisata, dan UMKM.</li>
-                <li>Meningkatkan infrastruktur dan fasilitas umum untuk kesejahteraan masyarakat.</li>
-                <li>Mewujudkan pemerintahan desa yang transparan dan akuntabel.</li>
+                <li>Melanjutkan Pembangunan Infrastruktur Berdasarkan Indikator dan Skala Prioritas Serta Mengutamakan Azas Manfaat .</li>
+                <li>Berkoordinasi dan Konsolidasi dengan pihak SKPD dan Pihak Terkait di Atas Pemerintahan Desa Demi Percepatan Pembangunan.</li>
               </ol>
             </div>
           </div>
@@ -112,7 +95,7 @@
           <div class="card p-3">
             <div class="card-body">
               <h5 class="card-title">Total Jiwa</h5>
-              <span class="counter display-4" data-target="5000">0</span>
+              <span class="counter display-4" data-target="6443">0</span>
             </div>
           </div>
         </div>
@@ -120,7 +103,7 @@
           <div class="card p-3">
             <div class="card-body">
               <h5 class="card-title">Total KK</h5>
-              <span class="counter display-4" data-target="1200">0</span>
+              <span class="counter display-4" data-target="1758">0</span>
             </div>
           </div>
         </div>
@@ -128,7 +111,7 @@
           <div class="card p-3">
             <div class="card-body">
               <h5 class="card-title">Dusun</h5>
-              <span class="counter display-4" data-target="15">0</span>
+              <span class="counter display-4" data-target="4">0</span>
             </div>
           </div>
         </div>
@@ -136,7 +119,7 @@
           <div class="card p-3">
             <div class="card-body">
               <h5 class="card-title">Jumlah RT</h5>
-              <span class="counter display-4" data-target="50">0</span>
+              <span class="counter display-4" data-target="31">0</span>
             </div>
           </div>
         </div>
@@ -167,10 +150,10 @@
   <!-- Kantor Desa -->
   <section id="kantor-desa" class="py-5">
     <div class="container transition-container">
-      <h2 class="subjudul text-center mb-4">Kantor Desa Sungai Keran</h2>
+      <h2 class="subjudul text-center mb-4">Kantor Desa & Balai Desa Harapan</h2>
       <div class="row">
         <div class="col-lg-12">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17596.69517182833!2d108.89841217452445!3d0.692050119300173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31e305ab91cca753%3A0x10d868d0d0d897e3!2sSungai%20Keran%20Village%20Office!5e0!3m2!1sen!2sid!4v1728940315050!5m2!1sen!2sid" width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.381582325904!2d108.9807299!3d1.1760021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31e482da5226b941%3A0xbb1b81f1600f81c3!2sKantor%20Desa%20%26%20Balai%20Desa%20Harapan!5e0!3m2!1sen!2sid!4v1698827469279!5m2!1sen!2sid" width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>

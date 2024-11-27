@@ -26,7 +26,7 @@
                                 </div>
                                 <div class="card-body" style="font-size: 15px;">
                                     <p class="card-title text-danger fw-medium" id="kepala-desa">KEPALA DESA</p>
-                                    <p class="card-text" id="nama-kepala-desa">Nama Kepala Desa</p>
+                                    <p class="card-text" id="nama-kepala-desa">FARIDH FARDIANSYAH, ST</p>
                                 </div>
                             </div>
                         </div>
@@ -41,9 +41,9 @@
                                         <i class="fas fa-building lembaga-icon" style="display:none;"></i>
                                     </div>
                                     <div class="lembaga-info">
-                                        <h3 class="lembaga-name">Lembaga Pemberdayaan Masyarakat Desa</h3>
-                                        <p class="lembaga-alamat">Jl. Desa Sejahtera No. 10</p>
-                                        <p class="lembaga-ketua">Ketua: Budi Santoso</p>
+                                        <h3 class="lembaga-name">Lembaga Pemberdayaan Masyarakat (LPM)</h3>
+                                        <p class="lembaga-alamat"></p>
+                                        <p class="lembaga-ketua">Ketua: Riyadi Kesumadani</p>
                                     </div>
                                 </div>
                             </div>
@@ -57,8 +57,53 @@
                                     </div>
                                     <div class="lembaga-info">
                                         <h3 class="lembaga-name">Karang Taruna Desa</h3>
-                                        <p class="lembaga-alamat">Jl. Pemuda Desa No. 22</p>
-                                        <p class="lembaga-ketua">Ketua: Siti Aminah</p>
+                                        <p class="lembaga-alamat"></p>
+                                        <p class="lembaga-ketua">Ketua: Rici Saputra</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                <div class="lembaga-card">
+                                    <div class="lembaga-img-container">
+                                        <img src="foto-lembaga2.jpg" alt="Foto Lembaga Desa" class="lembaga-img"
+                                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <i class="fas fa-building lembaga-icon" style="display:none;"></i>
+                                    </div>
+                                    <div class="lembaga-info">
+                                        <h3 class="lembaga-name">Pemberdayaan dan Kesejahteraan Keluarga (PKK)</h3>
+                                        <p class="lembaga-alamat"></p>
+                                        <p class="lembaga-ketua">Ketua: Lia Wulandari</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                <div class="lembaga-card">
+                                    <div class="lembaga-img-container">
+                                        <img src="foto-lembaga2.jpg" alt="Foto Lembaga Desa" class="lembaga-img"
+                                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <i class="fas fa-building lembaga-icon" style="display:none;"></i>
+                                    </div>
+                                    <div class="lembaga-info">
+                                        <h3 class="lembaga-name">Badan Kontak Majelis Taklim (BKMT)</h3>
+                                        <p class="lembaga-alamat"></p>
+                                        <p class="lembaga-ketua">Ketua: Hafni</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                <div class="lembaga-card">
+                                    <div class="lembaga-img-container">
+                                        <img src="foto-lembaga2.jpg" alt="Foto Lembaga Desa" class="lembaga-img"
+                                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <i class="fas fa-building lembaga-icon" style="display:none;"></i>
+                                    </div>
+                                    <div class="lembaga-info">
+                                        <h3 class="lembaga-name">Lembaga Pengembangan Tilawatil Qur'an (LPTQ)</h3>
+                                        <p class="lembaga-alamat"></p>
+                                        <p class="lembaga-ketua">Ketua: </p>
                                     </div>
                                 </div>
                             </div>
