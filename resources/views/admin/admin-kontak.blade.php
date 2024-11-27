@@ -37,6 +37,16 @@
                                 </div>
                             </div>
 
+                            {{-- Facebook --}}
+                            <div class="form-group row mb-3">
+                                <label for="instagram" class="col-lg-2 col-md-3 col-sm-4 form-label">Username
+                                    Facebook:</label>
+                                <div class="col-lg-10 col-md-9 col-sm-8">
+                                    <input type="text" name="username_facebook" class="form-control" id="facebook"
+                                    value="{{ $kontak->username_facebook ?? '' }}" required>
+                                </div>
+                            </div>
+
                             <!-- Email -->
                             <div class="form-group row mb-3">
                                 <label for="email" class="col-lg-2 col-md-3 col-sm-4 form-label">Email:</label>

@@ -115,7 +115,7 @@
           <a href="/profile-desa" class="btn-more mt-5 ">Selengkapnya..</a>
         </div>
         <div class="col-lg-7 mt-3">
-          <img src="/image/1.jpg" class="image shadow-lg" alt="Desa Harapan">
+          <img src="{{ asset('storage/'. $profildesa->gambar_desa_1) }}" class="image shadow-lg" alt="Desa Harapan">
         </div>
       </div>
     </div>
@@ -202,74 +202,80 @@
       </div>
     </div>
   </section>
-
+{{-- carousel --}}
+<div class="container">
+  <div class="container-fluid transition-container perangkat-desa-container shadow">
+    <div class="row mb-2 justify-content-center text-center">
+      <div class="col-12">
+        <h2 class="subjudul text-center">Perangkat Desa</h2>
+      </div>
+    </div>
+  <div id="kegiatanCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+    <div class="carousel-indicators">
+        @foreach ($perangkat_desas->chunk(3) as $index => $chunk)
+        <button type="button" data-bs-target="#kegiatanCarousel" data-bs-slide-to="{{ $index }}" 
+        class="{{ $index === 0 ? 'active' : '' }}" aria-label="Slide {{ $index + 1 }}">
+        </button>
+            
+        @endforeach
+    </div>
+    <div class="carousel-inner">
+      @foreach ($perangkat_desas->chunk(3) as $index => $chunk)
+      <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+        <div class="row justify-content-center g-4">
+          @foreach ($chunk as $perangkatdesa)
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card shadow-sm border-0 rounded h-100">
+                  <img src="{{ asset('storage/'.$perangkatdesa->gambar_perangkatdesa) }}" alt=""
+                  class="card-img-top rounded-top" style="height: 250px; object-fit:cover; object-position:center;">
+                  <div class="card-body text-center">
+                    <h5 class="card-title fw-bold text-primary">{{ $perangkatdesa->nama }}</h5>
+                    <p class="card-text text-muted">{{ $perangkatdesa->jabatan }}</p>
+                  </div>
+                </div>
+              </div>
+          @endforeach
+        </div>
+    </div>
+      @endforeach
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#kegiatanCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#kegiatanCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+</div>  
   <!-- End of Perangkat Desa -->
 
-  <!-- Pengumuman -->
+
+  {{-- Pengumuman 2 --}}
   <section id="pengumuman" class="py-5">
     <div class="container transition-container mb-3 justify-content-center">
       <div class="row">
         <h2 class="subjudul text-center mb-5">Pengumuman</h2>
+        @foreach ($pengumuman as $p)
         <div class="col-lg-3 col-md-4 mb-4">
           <div class="card shadow">
             <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
-              <h5 class="card-title text-center border-bottom pb-2 mb-3">Pengumuman 1</h5>
+              <h5 class="card-title text-center border-bottom pb-2 mb-3">{{ $p->judul }}</h5>
               <p class="card-text text-muted">
-                <i class="fas fa-clock"></i> 12 Oktober 2024
+                <i class="fas fa-clock"></i> {{ $p->created_at->format('Y-m-d') }}
               </p>
-              <p class="card-text">Ini adalah isi pengumuman 1. Deskripsi singkat
-                mengenai pengumuman ini.</p>
-
-              <a href="halaman_pengumuman_1.html" class="btn btn-link ms-auto">Read more...</a>
+              <p class="card-text">{{ $p->deskripsi_singkat }}</p>
+                
+                <a href="/pengumuman/content" class="btn btn-link ms-auto">Read more...</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mb-4">
-          <div class="card shadow">
-            <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
-              <h5 class="card-title text-center border-bottom pb-2 mb-3">Pengumuman 1</h5>
-              <p class="card-text text-muted">
-                <i class="fas fa-clock"></i> 12 Oktober 2024
-              </p>
-              <p class="card-text">Ini adalah isi pengumuman 1. Deskripsi singkat
-                mengenai pengumuman ini.</p>
-
-              <a href="halaman_pengumuman_1.html" class="btn btn-link ms-auto">Read more...</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mb-4">
-          <div class="card shadow">
-            <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
-              <h5 class="card-title text-center border-bottom pb-2 mb-3">Pengumuman 1</h5>
-              <p class="card-text text-muted">
-                <i class="fas fa-clock"></i> 12 Oktober 2024
-              </p>
-              <p class="card-text">Ini adalah isi pengumuman 1. Deskripsi singkat
-                mengenai pengumuman ini.</p>
-
-              <a href="halaman_pengumuman_1.html" class="btn btn-link ms-auto">Read more...</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mb-4">
-          <div class="card shadow">
-            <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
-              <h5 class="card-title text-center border-bottom pb-2 mb-3">Pengumuman 1</h5>
-              <p class="card-text">
-                <i class="fas fa-clock"></i> 12 Oktober 2024
-              </p>
-              <p class="card-text">Ini adalah isi pengumuman 1. Deskripsi singkat
-                mengenai pengumuman ini.</p>
-
-              <a href="halaman_pengumuman_1.html" class="btn btn-link ms-auto">Read more...</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+        @endforeach
+{{-- end pengumuman2 --}}
+    
   </section>
-  <!-- End of Pengumuman -->
+  {{-- End of Pengumuman 2 --}}
 
   <!-- Footer -->
   <footer class="d-flex flex-column align-items-center text-center text-dark bg-light p-4">

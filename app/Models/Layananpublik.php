@@ -12,7 +12,7 @@ class Layananpublik extends Model
     protected $fillable = [
         'kategori_fasilitas',
         'nama_fasilitas',
-        'url_alamat',
+        // 'url_alamat',
         'gambar_fasilitas',
     ];
 }

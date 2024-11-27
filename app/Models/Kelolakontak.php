@@ -12,6 +12,7 @@ class Kelolakontak extends Model
     protected $fillable = [
         'no_whatsapp',
         'username_instagram',
+        'username_facebook',
         'email',
     ];
     

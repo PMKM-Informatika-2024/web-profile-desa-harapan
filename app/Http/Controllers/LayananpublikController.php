@@ -38,8 +38,8 @@ class LayananpublikController
         $validatedData = $request->validate([
             'kategori_fasilitas' => 'required',
             'nama_fasilitas' => 'required',
-            'url_alamat' => 'required',
-            'gambar_fasilitas'=>'image'
+            // 'url_alamat' => 'required',
+            'gambar_fasilitas'=>'image',
         ]);
         if($request->file('gambar_fasilitas')) {
             $validatedData['gambar_fasilitas'] = $request->file('gambar_fasilitas')->store('gambar_yang_tersimpan');

@@ -45,14 +45,14 @@
                                             </div>
                                         </div>
 
-                                        <!-- Input URL Alfamat -->
+                                        {{-- <!-- Input URL Alfamat -->
                                         <div class="form-group row mb-3">
                                             <label for="urlAlamat" class="col-lg-2 col-md-3 col-sm-4 form-label">URL
                                                 Alamat:</label>
                                             <div class="col-lg-10 col-md-9 col-sm-8">
                                                 <input name="url_alamat" type="url" class="form-control" id="urlAlamat" required>
                                             </div>
-                                        </div>
+                                        </div> --}}
 
                                         <!-- Input Foto -->
                                         <div class="form-group row mb-3">
@@ -82,7 +82,7 @@
                                 <th>No</th>
                                 <th>Kategori</th>
                                 <th>Nama</th>
-                                <th>URL Alamat</th>
+                                {{-- <th>URL Alamat</th> --}}
                                 <th>Foto</th>
                                 <th>Aksi</th>
                             </tr>
@@ -94,7 +94,7 @@
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $fasilitaspendidikan->kategori_fasilitas }}</td>
                                 <td>{{ $fasilitaspendidikan->nama_fasilitas }}</td>
-                                <td>{{ $fasilitaspendidikan->url_alamat }}</td>
+                                {{-- <td>{{ $fasilitaspendidikan->url_alamat }}</td> --}}
                                 <td><img src="{{ asset('storage/' . $fasilitaspendidikan->gambar_fasilitas) }}"
                                         alt="" class="img-thumbnail" style="width: 50px; height: 50px;"></td>
                                 <td>
@@ -123,7 +123,7 @@
                                 <th>No</th>
                                 <th>Kategori</th>
                                 <th>Nama</th>
-                                <th>URL Alamat</th>
+                                {{-- <th>URL Alamat</th> --}}
                                 <th>Foto</th>
                                 <th>Aksi</th>
                             </tr>
@@ -135,7 +135,7 @@
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $fasilitaspublik->kategori_fasilitas }}</td>
                                 <td>{{ $fasilitaspublik->nama_fasilitas }}</td>
-                                <td>{{ $fasilitaspublik->url_alamat }}</td>
+                                {{-- <td>{{ $fasilitaspublik->url_alamat }}</td> --}}
                                 <td><img src="{{ asset('storage/' . $fasilitaspublik->gambar_fasilitas) }}"
                                         alt="" class="img-thumbnail" style="width: 50px; height: 50px;"></td>
                                 <td>
@@ -185,11 +185,11 @@
                                             <input type="text" name="nama_fasilitas" class="form-control" id="editNama"
                                                 required>
                                         </div>
-                                        <div class="mb-3">
+                                        {{-- <div class="mb-3">
                                             <label for="editurlAlamat" class="form-label">URL Alamat</label>
                                             <input type="text" name="url_alamat" class="form-control" id="editurlAlamat"
                                                 required>
-                                        </div>
+                                        </div> --}}
                                         <div class="mb-3">
                                             <label for="editFoto" class="form-label">Foto</label>
                                             <img alt="" id="previewImage" class="img-thumbnail"
@@ -225,7 +225,7 @@
             document.getElementById('editKategoriFasilitas').value = layananpublik.kategori_fasilitas;
             document.getElementById('editGambar').value = layananpublik.gambar_fasilitas;
             document.getElementById('editNama').value = layananpublik.nama_fasilitas;
-            document.getElementById('editurlAlamat').value = layananpublik.url_alamat;  
+            //document.getElementById('editurlAlamat').value = layananpublik.url_alamat;  
             const previewImage = document.getElementById('previewImage');
             if (layananpublik.gambar_fasilitas) {
                 previewImage.src = `/storage/${layananpublik.gambar_fasilitas}`;
