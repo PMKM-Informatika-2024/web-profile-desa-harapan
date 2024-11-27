@@ -108,7 +108,7 @@
 
   <!-- Footer -->
   <footer class="text-center text-dark bg-light p-4 border-top">
-    <p>Copyright &copy; 2024 Desa Sungai Keran</p>
+    <p>Copyright &copy; 2024 Desa Harapan Pemangkat</p>
   </footer>
   <!-- End of Footer -->
 

@@ -68,7 +68,7 @@ class ProfildesaController
             'total_rt' => 'required|integer',
             'total_rw' => 'required|integer',
             'suku_melayu' => 'required|integer',
-            'suku_madura' => 'required|integer',
+            'suku_melayusambas' => 'required|integer',
             'suku_tionghoa' => 'required|integer',
             'suku_dayak' => 'required|integer',
             'suku_jawa' => 'required|integer',

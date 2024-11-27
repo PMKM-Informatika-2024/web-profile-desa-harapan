@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('gambar_desa_3');
             $table->string('gambar_desa_4');
             $table->string('gambar_desa_5');
+            $table->string('gambar_desa_6');
             $table->text('visi_desa');
             $table->text('misi_desa');
             $table->integer('total_jiwa');
@@ -29,7 +30,7 @@ return new class extends Migration
             $table->integer('total_rt');
             $table->integer('total_rw');
             $table->integer('suku_melayu');
-            $table->integer('suku_madura');
+            $table->integer('suku_melayu_sambas');
             $table->integer('suku_tionghoa');
             $table->integer('suku_dayak');
             $table->integer('suku_jawa');
