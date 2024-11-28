@@ -32,8 +32,9 @@ Route::get('/profile-desa', function () {
     ]);
 });
 Route::get('/perangkat-desa', function () {
-    $perangkatdesas = Perangkatdesa::all();
-    return view('user/perangkat-desa', compact('perangkatdesas'));
+    return view('user/perangkat-desa', [
+        'perangkatdesa' => Perangkatdesa::all()
+    ]);
 });
 
 Route::get('/daftar-kegiatan', function () {
