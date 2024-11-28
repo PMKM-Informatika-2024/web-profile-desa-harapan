@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('fasilitas_utama');   
             $table->string('jam_operasional');   
             $table->string('kontak');   
-            $table->string('akreditasi');   
+            $table->string('akreditasi');
             $table->string('jumlah_tenaga_pengajar');   
             $table->string('jumlah_murid');   
             $table->string('visi');   

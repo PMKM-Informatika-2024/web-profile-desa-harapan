@@ -25,7 +25,10 @@ Route::get('/', function () {
     ]);     
 });
 Route::get('/profile-desa', function () {
-    return view('user/profile-desa');
+    return view('user/profile-desa',[
+        'profildesa' => Profildesa::first(),
+        
+    ]);
 });
 Route::get('/perangkat-desa', function () {
     $perangkatdesas = Perangkatdesa::all();

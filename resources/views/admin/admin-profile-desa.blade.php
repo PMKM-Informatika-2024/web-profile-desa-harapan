@@ -35,12 +35,20 @@
                                     <textarea name="sejarah_desa" class="form-control" id="sejarahDesa" placeholder="Masukkan Sejarah Desa" required>{{ $profildesa->sejarah_desa ?? '' }}</textarea>
                                 </div>
                             </div>
-
+                            
                             <!-- Foto Desa -->
+
+                            <input type="hidden" name="oldImage1" value="{{ $profildesa->gambar_desa_1 }}">
+                            <input type="hidden" name="oldImage2" value="{{ $profildesa->gambar_desa_2 }}">
+                            <input type="hidden" name="oldImage3" value="{{ $profildesa->gambar_desa_3 }}">
+                            <input type="hidden" name="oldImage4" value="{{ $profildesa->gambar_desa_4 }}">
+                            <input type="hidden" name="oldImage5" value="{{ $profildesa->gambar_desa_5 }}">
+                            <input type="hidden" name="oldImage6" value="{{ $profildesa->gambar_desa_6 }}">
+
+                            
                             <div class="form-group row mb-3">
                                 <label for="fotoDesa" class="col-lg-2 col-md-3 col-sm-4 form-label">Foto Desa:</label>
                                 <div class="col-lg-10 col-md-9 col-sm-8">
-                                    <input type="hidden" name="oldImage1" id="editGambar">
                                     <img src="{{ asset('storage/' . $profildesa->gambar_desa_1) }}" alt="" class="img-thumbnail" style="width: 100px; height: 100px;">
                                     <br>
                                     <br>
@@ -52,7 +60,6 @@
                             <div class="form-group row mb-3">
                                 <label for="fotoDesa" class="col-lg-2 col-md-3 col-sm-4 form-label"></label>
                                 <div class="col-lg-10 col-md-9 col-sm-8">
-                                    <input type="hidden" name="oldImage2" id="editGambar">
                                     <img src="{{ asset('storage/' . $profildesa->gambar_desa_2) }}" alt="" class="img-thumbnail" style="width: 100px; height: 100px;">
                                     <br>
                                     <br>
@@ -64,7 +71,6 @@
                             <div class="form-group row mb-3">
                                 <label for="fotoDesa" class="col-lg-2 col-md-3 col-sm-4 form-label"></label>
                                 <div class="col-lg-10 col-md-9 col-sm-8">
-                                    <input type="hidden" name="oldImage3" id="editGambar">
                                     <img src="{{ asset('storage/' . $profildesa->gambar_desa_3) }}" alt="" class="img-thumbnail" style="width: 100px; height: 100px;">
                                     <br>
                                     <br>
@@ -76,7 +82,6 @@
                             <div class="form-group row mb-3">
                                 <label for="fotoDesa" class="col-lg-2 col-md-3 col-sm-4 form-label"></label>
                                 <div class="col-lg-10 col-md-9 col-sm-8">
-                                    <input type="hidden" name="oldImage4" id="editGambar">
                                     <img src="{{ asset('storage/' . $profildesa->gambar_desa_4) }}" alt="" class="img-thumbnail" style="width: 100px; height: 100px;">
                                     <br>
                                     <br>
@@ -88,7 +93,6 @@
                             <div class="form-group row mb-3">
                                 <label for="fotoDesa" class="col-lg-2 col-md-3 col-sm-4 form-label"></label>
                                 <div class="col-lg-10 col-md-9 col-sm-8">
-                                    <input type="hidden" name="oldImage5" id="editGambar">
                                     <img src="{{ asset('storage/' . $profildesa->gambar_desa_5) }}" alt="" class="img-thumbnail" style="width: 100px; height: 100px;">
                                     <br>
                                     <br>
@@ -97,7 +101,17 @@
                                 </div>
                                 <div id="imagePreview" class="mt-3"></div>
                             </div>
-
+                            <div class="form-group row mb-3">
+                                <label for="fotoDesa" class="col-lg-2 col-md-3 col-sm-4 form-label"></label>
+                                <div class="col-lg-10 col-md-9 col-sm-8">
+                                    <img src="{{ asset('storage/' . $profildesa->gambar_desa_6) }}" alt="" class="img-thumbnail" style="width: 100px; height: 100px;">
+                                    <br>
+                                    <br>
+                                    <input name="gambar_desa_6" type="file" class="form-control" id="fotoDesa6" accept="image/*" 
+                                        multiple onchange="previewImages()">
+                                </div>
+                                <div id="imagePreview" class="mt-3"></div>
+                            </div>
 
 
                             <!-- Visi Desa -->
@@ -136,10 +150,7 @@
                                     <label for="totalRT" class="form-label">Total RT:</label>
                                     <input name="total_rt" type="number" class="form-control" id="totalRT" value="{{ $profildesa->total_rt ?? '' }}" required>
                                 </div>
-                                <div class="col-lg-3 col-md-6">
-                                    <label for="totalRT" class="form-label">Total RW:</label>
-                                    <input name="total_rw" type="number" class="form-control" id="totalRW" value="{{ $profildesa->total_rw ?? '' }}" required>
-                                </div>
+
                             </div>
                             <br>
                             <!-- Suku -->
@@ -153,7 +164,7 @@
                                                 min="0">
                                         </div>
                                         <div class="col-lg-2 col-md-3">
-                                            <label for="sukuMadura" class="form-label">Madura</label>
+                                            <label for="sukuMelayuSambas" class="form-label">Melayu Sambas</label>
                                             <input type="number" name="suku_melayusambas" value="{{ $profildesa->suku_melayusambas }}" class="form-control" id="sukuMelayuSambas" placeholder=""
                                                 min="0">
                                         </div>
@@ -229,7 +240,7 @@
                             <div class="form-group row mt-3 mb-3">
                                 <label for="petaDesa" class="col-lg-2 col-md-3 col-sm-4 form-label">Peta Desa:</label>
                                 <div class="col-lg-10 col-md-9 col-sm-8">
-                                    <input name="peta_desa" type="url" class="form-control" id="petaDesa"
+                                    <input name="peta_desa" type="text" class="form-control" id="petaDesa"
                                         placeholder="Masukkan tautan alamat peta Desa" value="{{ $profildesa->peta_desa }}" required>
                                 </div>
                             </div>

@@ -59,14 +59,18 @@ class ProfildesaController
         $validatedData = $request->validate([
             'nama_desa' => 'required',
             'sejarah_desa' => 'required',
-            'gambar_desa' => 'image',
+            'gambar_desa_1' => 'image',
+            'gambar_desa_2' => 'image',
+            'gambar_desa_3' => 'image',
+            'gambar_desa_4' => 'image',
+            'gambar_desa_5' => 'image',
+            'gambar_desa_6' => 'image',
             'visi_desa' => 'required',
             'misi_desa' => 'required',
             'total_jiwa' => 'required|integer',
             'total_kk' => 'required|integer',
             'total_dusun' => 'required|integer',
             'total_rt' => 'required|integer',
-            'total_rw' => 'required|integer',
             'suku_melayu' => 'required|integer',
             'suku_melayusambas' => 'required|integer',
             'suku_tionghoa' => 'required|integer',
@@ -85,36 +89,59 @@ class ProfildesaController
 
         ]);
 
-        if($request->file('gambar_desa_1')) {
-            if($request->oldImage1){
-                Storage::delete($request->oldImage1);
+        $gambarFields = [
+            'gambar_desa_1', 'gambar_desa_2', 'gambar_desa_3',
+            'gambar_desa_4', 'gambar_desa_5', 'gambar_desa_6'
+        ];
+        
+        foreach ($gambarFields as $field) {
+            if ($request->file($field)) {
+                // Hapus gambar lama jika ada
+                if ($request->input('oldImage' . substr($field, -1))) {
+                    Storage::delete($request->input('oldImage' . substr($field, -1)));
+                }
+                // Simpan gambar baru
+                $validatedData[$field] = $request->file($field)->store('gambar_yang_tersimpan');
             }
-            $validatedData['gambar_desa_1'] = $request->file('gambar_desa_1')->store('gambar_yang_tersimpan');
         }
-        if($request->file('gambar_desa_2')) {
-            if($request->oldImage2){
-                Storage::delete($request->oldImage2);
-            }
-            $validatedData['gambar_desa_2'] = $request->file('gambar_desa_2')->store('gambar_yang_tersimpan');
-        }
-        if($request->file('gambar_desa_3')) {
-            if($request->oldImage3){
-                Storage::delete($request->oldImage3);
-            }
-            $validatedData['gambar_desa_3'] = $request->file('gambar_desa_3')->store('gambar_yang_tersimpan');
-        }
-        if($request->file('gambar_desa_4')) {
-            if($request->oldImage4){
-                Storage::delete($request->oldImage4);
-            }
-            $validatedData['gambar_desa_4'] = $request->file('gambar_desa_4')->store('gambar_yang_tersimpan');
-        }
-        if($request->file('gambar_desa_5')) {
-            if($request->oldImage5){
-                Storage::delete($request->oldImage5);
-            }
-            $validatedData['gambar_desa_5'] = $request->file('gambar_desa_5')->store('gambar_yang_tersimpan');
-        }
+        
+
+        // if($request->file('gambar_desa_1')) {
+        //     if($request->oldImage1){
+        //         Storage::delete($request->oldImage1);
+        //     }
+        //     $validatedData['gambar_desa_1'] = $request->file('gambar_desa_1')->store('gambar_yang_tersimpan');
+        // }
+        // if($request->file('gambar_desa_2')) {
+        //     if($request->oldImage2){
+        //         Storage::delete($request->oldImage2);
+        //     }
+        //     $validatedData['gambar_desa_2'] = $request->file('gambar_desa_2')->store('gambar_yang_tersimpan');
+        // }
+        // if($request->file('gambar_desa_3')) {
+        //     if($request->oldImage3){
+        //         Storage::delete($request->oldImage3);
+        //     }
+        //     $validatedData['gambar_desa_3'] = $request->file('gambar_desa_3')->store('gambar_yang_tersimpan');
+        // }
+        // if($request->file('gambar_desa_4')) {
+        //     if($request->oldImage4){
+        //         Storage::delete($request->oldImage4);
+        //     }
+        //     $validatedData['gambar_desa_4'] = $request->file('gambar_desa_4')->store('gambar_yang_tersimpan');
+        // }
+        // if($request->file('gambar_desa_5')) {
+        //     if($request->oldImage5){
+        //         Storage::delete($request->oldImage5);
+        //     }
+        //     $validatedData['gambar_desa_5'] = $request->file('gambar_desa_5')->store('gambar_yang_tersimpan');
+        // }
+        // if($request->file('gambar_desa_6')) {
+        //     if($request->oldImage6){
+        //         Storage::delete($request->oldImage6);
+        //     }
+        //     $validatedData['gambar_desa_6'] = $request->file('gambar_desa_6')->store('gambar_yang_tersimpan');
+        // }
 
         Profildesa::where('id', $request->input('id'))
             ->update($validatedData);

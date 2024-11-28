@@ -20,29 +20,27 @@
     <h2 class="subjudul text-center mb-4">Sejarah Desa</h2>
     <div class="row">
       <div class="container">
-        <p id="sejarahDesa">Harapan adalah sebuah desa yang berada di Kecamatan Pemangkat, Kabupaten Sambas, Kalimantan Barat, Indonesia. Berjarak sekitar 183 KM dari Kota Pontianak dengan titik koordinatnya 1°11′22.88″ LU 108°59′36.67″ BT. Desa Harapan memiliki luas geografis 4806,114 KM<sup>2</sup> dengan jumlah 6443 jiwa dengan berbagai etnis diantaranya Suku Melayu, Melayu Sambas, Jawa, Dayak, Bugis, Tionghoa dan Lainnya, juga berbagai Keyakinan diantaranya Agama Islam, Katolik, Protestan, Hindu, Buddha dan Kong Hu Chu. Terdapat 4 (empat) Dusun yaitu Dusun Abdul Kadir Kasim, Dusun Mekar Lestari, Dusun Teluk Nusa dan Dusun Nusa Indah. </p>
-        <p>Secara historis, Desa Harapan dahulunya bernama Kampong Lo Nam Kok, yang terdiri dari beberapa bagian perbatasan, yaitu sebelah Utara berbatasan dengan Sungai Sambas disebut teluk kera (banyak binatang kera) dan sebelah selatan disebut Lo nam Kok berarti kampong tua yang diambil dari bahasa china, yang berbatasan dengan Gunung dan Hutan rawa kayu jelutung (disebut kampong Jelutung) sedangkan disebelah Timur berbatasan dengan Kampong Perapakan dengan tanah yang berawa/luapan air (banyak genangan air), serta sebelah Barat disebut Kampong Minyak berbatasan dengan Kampong Penjajap adalah merupakan sebagian dari wilayah kerajaan Keraton sambas yang termasuk dalam kewilayahan kewedanaan Kota Pemangkat, dari sejak masa penjajahan Belanda dan Jepang sampai masa Kemerdekaan Republik Indonesia hingga sekarang.</p>
-        <p>Menurut Sejarah Kampong Teluk Kera, kampong Lo Nam Kok dan sebagian Kampong Minyak menjadi satu kekuasaan penuh untuk mengatur berbagai macam urusan dalam Kerajaan Kesultanan Sambas yang disebut KAMPONG LO NAM KOK, dari sejak masa Penjajahan Belanda dan Jepang sampai dengan masa Kemerdekaan Republik Indonesia Tahun 1945.</p>
+        <p>{{ $profildesa->sejarah_desa }}</p>
       </div>
       <div class="container transition-container">
         <div class="row">
           <div class="col-lg-4 col-md-6">
-            <img src="img/1.jpg" id="image-desa" alt="Gambar Desa" class="img-fluid">
+            <img src="{{ asset('storage/'.$profildesa->gambar_desa_1) }}" id="image-desa" alt="Gambar Desa" class="img-fluid">
           </div>
           <div class="col-lg-4 col-md-6">
-            <img src="img/2.jpg" id="image-desa" alt="Gambar Desa" class="img-fluid">
+            <img src="{{ asset('storage/'.$profildesa->gambar_desa_2) }}" id="image-desa" alt="Gambar Desa" class="img-fluid">
           </div>
           <div class="col-lg-4 col-md-6">
-            <img src="img/3.jpg" id="image-desa" alt="Gambar Desa" class="img-fluid">
+            <img src="{{ asset('storage/'.$profildesa->gambar_desa_3) }}" id="image-desa" alt="Gambar Desa" class="img-fluid">
           </div>
           <div class="col-lg-4 col-md-6">
-            <img src="img/4.jpg" id="image-desa" alt="Gambar Desa" class="img-fluid">
+            <img src="{{ asset('storage/'.$profildesa->gambar_desa_4) }}" id="image-desa" alt="Gambar Desa" class="img-fluid">
           </div>
           <div class="col-lg-4 col-md-6">
-            <img src="img/5.jpg" id="image-desa" alt="Gambar Desa" class="img-fluid">
+            <img src="{{ asset('storage/'.$profildesa->gambar_desa_5) }}" id="image-desa" alt="Gambar Desa" class="img-fluid">
           </div>
           <div class="col-lg-4 col-md-6">
-            <img src="img/6.jpg" id="image-desa" alt="Gambar Desa" class="img-fluid">
+            <img src="{{ asset('storage/'.$profildesa->gambar_desa_6) }}" id="image-desa" alt="Gambar Desa" class="img-fluid">
           </div>
         </div>
       </div>
@@ -61,9 +59,7 @@
               <h5 class="mb-2">Visi</h5>
             </div>
             <div class="card-body">
-              <p class="card-text">
-              “Mewujudkan Pemerintahan Desa yang Baik dan Bersih, Wibawa, Unggul, Guna Menuju Masyarakat Adil, Makmur, dan Sejahtera.“
-              </p>
+              <p class="card-text">{{ $profildesa->visi_desa }}</p>
             </div>
           </div>
           <div class="card-visimisi mt-3 mb-5">
@@ -72,11 +68,9 @@
             </div>
             <div class="card-body">
               <ol class="card-text" style="list-style-type: disc;">
-                <li>Mewujudkan Pembenahan dan Peningkatan Kinerja Aparatur Desa Serta Administrasi Desa Guna Meningkatkan Pelayanan Kepada Masyarakat</li>
-                <li>Meningkatkan Sinergitas Pilar Pendukung Pemerintahan Desa yaitu BPD dan LKD (RT, LPM, PKK, Karang Taruna, dll)</li>
-                <li>Mengembangkan potensi ekonomi lokal melalui pertanian, pariwisata, dan UMKM.</li>
-                <li>Melanjutkan Pembangunan Infrastruktur Berdasarkan Indikator dan Skala Prioritas Serta Mengutamakan Azas Manfaat .</li>
-                <li>Berkoordinasi dan Konsolidasi dengan pihak SKPD dan Pihak Terkait di Atas Pemerintahan Desa Demi Percepatan Pembangunan.</li>
+                  @foreach (explode("\n", $profildesa->misi_desa) as $misi)
+                    <li>{{ $misi }}</li>
+                  @endforeach
               </ol>
             </div>
           </div>
@@ -95,7 +89,7 @@
           <div class="card p-3">
             <div class="card-body">
               <h5 class="card-title">Total Jiwa</h5>
-              <span class="counter display-4" data-target="6443">0</span>
+              <span class="counter display-4" data-target="{{ $profildesa->total_jiwa }}">0</span>
             </div>
           </div>
         </div>
@@ -103,7 +97,7 @@
           <div class="card p-3">
             <div class="card-body">
               <h5 class="card-title">Total KK</h5>
-              <span class="counter display-4" data-target="1758">0</span>
+              <span class="counter display-4" data-target="{{ $profildesa->total_kk }}">0</span>
             </div>
           </div>
         </div>
@@ -111,7 +105,7 @@
           <div class="card p-3">
             <div class="card-body">
               <h5 class="card-title">Dusun</h5>
-              <span class="counter display-4" data-target="4">0</span>
+              <span class="counter display-4" data-target="{{ $profildesa->total_dusun }}">0</span>
             </div>
           </div>
         </div>
@@ -119,7 +113,7 @@
           <div class="card p-3">
             <div class="card-body">
               <h5 class="card-title">Jumlah RT</h5>
-              <span class="counter display-4" data-target="31">0</span>
+              <span class="counter display-4" data-target="{{ $profildesa->total_rt }}">0</span>
             </div>
           </div>
         </div>
@@ -131,7 +125,7 @@
             <h5 class="mb-4 text-center w-100">Suku</h5>
             <div class="card chart-card w-75 p-3">
               <canvas id="sukuChart"></canvas>
-            </div>
+            </div> 
           </div>
 
           <!-- Diagram Lingkaran Agama -->
@@ -153,11 +147,13 @@
       <h2 class="subjudul text-center mb-4">Kantor Desa & Balai Desa Harapan</h2>
       <div class="row">
         <div class="col-lg-12">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.381582325904!2d108.9807299!3d1.1760021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31e482da5226b941%3A0xbb1b81f1600f81c3!2sKantor%20Desa%20%26%20Balai%20Desa%20Harapan!5e0!3m2!1sen!2sid!4v1698827469279!5m2!1sen!2sid" width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="{{ $profildesa->peta_desa }}" width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          
         </div>
       </div>
     </div>
   </section>
   <!-- End of Kantor Desa -->
-
+  
   @endsection
+  

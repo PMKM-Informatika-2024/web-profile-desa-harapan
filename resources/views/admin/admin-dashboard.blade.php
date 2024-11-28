@@ -34,10 +34,10 @@
                             <div class="d-flex align-items-start">
                                 <div class="flex-grow-1">
                                     <h4 class="mb-2">
-                                        {{ $dashboard->total_rw }}
+                                        {{ $dashboard->total_dusun }}
                                     </h4>
                                     <p class="jumlah mb-2">
-                                        Jumlah RW
+                                        Jumlah Dusun
                                     </p>
                                 </div>
                             </div>

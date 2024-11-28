@@ -6,116 +6,95 @@ use Illuminate\Http\Request;
 use App\Models\Layananpublik;
 use Illuminate\Support\Facades\Storage;
 
-class LayananpublikController  
+class LayananPublikController 
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    public function index(Request $request)
     {
-        return view('admin.admin-layanan-publik', [
-        'layananpublikpendidikan' => Layananpublik::where('kategori_fasilitas', 'pendidikan')->get(),
-        'layananpublikpublik' => Layananpublik::where('kategori_fasilitas', 'publik')->get()
+        $kategori = $request->query('kategori', 'pendidikan'); // Default ke 'pendidikan'
+        $layananpublik = Layananpublik::where('kategori_fasilitas', $kategori)->get();
 
-        ]);
-
+        return view('admin.admin-layanan-publik', compact('layananpublik', 'kategori'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store( Request $request)
+    public function store(Request $request)
     {
         // dd($request);
-        $validatedData = $request->validate([
-            // ada dikeduanya
+        $rules = [
             'kategori_fasilitas' => 'required',
             'nama_fasilitas' => 'required',
             'alamat' => 'required',
-            'gambar_fasilitas'=>'image',
-            'fasilitas_utama'=>'required',
-            'jam_operasional'=>'required',
-            'kontak'=>'required',
-            // fasilitas pendidikan
-            'akreditasi'=>'required',
-            'jumlah_tenaga_pengajar'=>'required',
-            'jumlah_murid'=>'required',
-            'visi'=>'required',
-            'misi'=>'required',
+            'gambar_fasilitas' => 'image|nullable',
+            'fasilitas_utama' => 'required',
+            'jam_operasional' => 'required',
+            'kontak' => 'required',
+        ];
 
-        ]);
-        if($request->file('gambar_fasilitas')) {
+        if ($request->kategori_fasilitas === 'pendidikan') {
+            $rules = array_merge($rules, [
+                'akreditasi' => 'nullable',
+                'jumlah_tenaga_pengajar' => 'nullable',
+                'jumlah_murid' => 'nullable',
+                'visi' => 'nullable',
+                'misi' => 'nullable',
+            ]);
+        }
+
+        $validatedData = $request->validate($rules);
+
+        if ($request->hasFile('gambar_fasilitas')) {
             $validatedData['gambar_fasilitas'] = $request->file('gambar_fasilitas')->store('gambar_yang_tersimpan');
         }
+
         Layananpublik::create($validatedData);
-        return redirect('/layananpublik')->with('success', 'layanan Publik berhasil ditambahkan');
+        return redirect('/layananpublik')->with('success', 'Layanan Publik berhasil ditambahkan');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Layananpublik $layananpublik)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Layananpublik $layananpublik)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, Layananpublik $layananpublik)
     {
-        // dd($request);
-        $validatedData = $request->validate([
+        dd($request);
+        $rules = [
             'kategori_fasilitas' => 'required',
             'nama_fasilitas' => 'required',
             'alamat' => 'required',
-            'fasilitas_utama'=>'required',
-            'jam_operasional'=>'required',
-            'kontak'=>'required',
-            'akreditasi'=>'required',
-            'jumlah_tenaga_pengajar'=>'required',
-            'jumlah_murid'=>'required',
-            'visi'=>'required',
-            'misi'=>'required',
-        ]);
-        if($request->file('gambar_fasilitas')) {
-            if($request->oldImage){
-                Storage::delete($request->oldImage);
+            'gambar_fasilitas' => 'image|nullable',
+            'fasilitas_utama' => 'required',
+            'jam_operasional' => 'required',
+            'kontak' => 'required',
+        ];
+
+        if ($request->kategori_fasilitas === 'pendidikan') {
+            $rules = array_merge($rules, [
+                'akreditasi' => 'nullable',
+                'jumlah_tenaga_pengajar' => 'nullable',
+                'jumlah_murid' => 'nullable',
+                'visi' => 'nullable',
+                'misi' => 'nullable',
+            ]);
+        }
+
+        $validatedData = $request->validate($rules);
+
+        if ($request->hasFile('gambar_fasilitas')) {
+            // Hapus gambar lama jika ada
+            if ($layananpublik->gambar_fasilitas) {
+                Storage::delete($layananpublik->gambar_fasilitas);
             }
             $validatedData['gambar_fasilitas'] = $request->file('gambar_fasilitas')->store('gambar_yang_tersimpan');
         }
-        Layananpublik::where('id', $request->input('id'))
-            ->update($validatedData);
 
-        return redirect('/layananpublik')->with('success', 'Layanan publik berhasil diupdate');
+        $layananpublik->update($validatedData);
+
+        return redirect('/layananpublik')->with('success', 'Layanan Publik berhasil diperbarui');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Layananpublik $layananpublik)
     {
-        // dd($request);
-        if($layananpublik->gambar_fasilitas){
+        // Hapus gambar fasilitas jika ada
+        if ($layananpublik->gambar_fasilitas) {
             Storage::delete($layananpublik->gambar_fasilitas);
         }
-        Layananpublik::destroy($layananpublik->id);
-        return redirect('/layananpublik')->with('success', 'Layanan publik berhasil dihapus');
+
+        $layananpublik->delete();
+        return redirect('/layananpublik')->with('success', 'Layanan Publik berhasil dihapus');
     }
 }
