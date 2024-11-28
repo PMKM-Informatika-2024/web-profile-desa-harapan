@@ -12,6 +12,7 @@ use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\KelolakegiatanController;
 use App\Http\Controllers\KelolakontakController;
 use App\Models\Layananpublik;
+use App\Models\Lembagadesa;
 use App\Models\Pengumuman;
 use App\Models\Perangkatdesa;
 use App\Models\Profildesa;
@@ -34,6 +35,7 @@ Route::get('/perangkat-desa', function () {
     $perangkatdesas = Perangkatdesa::all();
     return view('user/perangkat-desa', compact('perangkatdesas'));
 });
+
 Route::get('/daftar-kegiatan', function () {
     return view('user/kegiatan');
 });
@@ -55,7 +57,10 @@ Route::get('/fasilitas-pendidikan', function () {
     return view('user/fasilitas-pendidikan');
 });
 Route::get('/lembaga-desa', function () {
-    return view('user/lembaga-desa');
+    return view('user/lembaga-desa',[
+        'lembagadesa' => Lembagadesa::all(),
+        'perangkatdesa' => Perangkatdesa::whereIn('jabatan',['Kepala Desa','KEPALA DESA', 'kepala desa'])->first(),
+    ]);
 });
 Route::get('/pemerintahan-desa', function () {
     return view('user/pemerintahan-desa');

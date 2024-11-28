@@ -107,11 +107,7 @@
 
   <!-- Footer -->
   <footer class="text-center text-dark bg-light p-4 border-top">
-<<<<<<< HEAD
-    <p>Copyright &copy; 2024 Desa Harapan Pemangkat</p>
-=======
     <p>Copyright &copy; 2024 Desa Harapan</p>
->>>>>>> e6024337da9d631a45db54687012319b3128b269
   </footer>
   <!-- End of Footer -->
 
