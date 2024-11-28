@@ -1,6 +1,5 @@
 @extends('layouts.layout')
 @section('child')
-@section('title', 'Profile - Desa Harapan')
     
 <!-- End of Navbar -->
 
@@ -155,6 +154,5 @@
     </div>
   </section>
   <!-- End of Kantor Desa -->
-  
   @endsection
   
