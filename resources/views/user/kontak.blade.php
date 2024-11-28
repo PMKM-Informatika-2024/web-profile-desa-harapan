@@ -1,5 +1,6 @@
 @extends('layouts.layout')
 @section('child')
+@section('title', 'Kontak - Desa Harapan')
     
   <!-- Banner -->
   <section id="banner">

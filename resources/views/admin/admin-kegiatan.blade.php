@@ -1,6 +1,6 @@
 @extends('layouts.adminlayout')
 @section('child')
-    
+@section('title', 'Admin - Kegiatan - Desa Harapan')
 
 <main class="content px-3 py-2">
     <div class="container-fluid" id="admin-kegiatan">
