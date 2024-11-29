@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>@yield('title', 'Desa Harapan')</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&family=Lato:wght@400;700&display=swap"
     rel="stylesheet">
@@ -67,7 +67,7 @@
               </ul>
             </li>
             <li class="nav-item ms-3">
-              <a class="nav-link {{ Request::is('layanan-publik') ? 'active-link' : '' }}" href="layanan-publik" id="layanan-publik">Layanan Publik</a>
+              <a class="nav-link {{ Request::is('layanan-publik') ? 'active-link' : '' }}" href="/layanan-publik" id="layanan-publik">Layanan Publik</a>
             </li>
             <li class="nav-item ms-3 dropdown">
               <a class="nav-link dropdown-toggle {{ Request::is('layanan-administrasi') || Request::is('daftar-pengumuman') || Request::is('daftar-kegiatan') ? 'active-link' : '' }}" href="#" id="informasi-publik" role="button" data-bs-toggle="dropdown"
@@ -154,6 +154,8 @@
       const navbarCollapse = document.getElementById('navbarSupportedContent');
       const closeBtn = document.getElementById('closeSidebar');
       const toggleBtn = document.querySelector('.navbar-toggler');
+
+      closeBtn.style.display = 'none';
 
       // Event listener untuk membuka dan menutup sidebar
       toggleBtn.addEventListener('click', function () {
