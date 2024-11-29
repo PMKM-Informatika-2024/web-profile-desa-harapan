@@ -166,8 +166,13 @@
       <button class="carousel-control-next" type="button" data-bs-target="#kegiatanCarousel" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
-      </button>
+      </button> 
     </div>
+    <br>
+    <div class="text-center">
+      <a href="/perangkat-desa" class="btn-more mt-3 ">Selengkapnya..</a>
+    </div>
+    <br>
   </div>  
   </section>
 {{-- carousel --}}

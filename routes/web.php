@@ -11,6 +11,7 @@ use App\Http\Controllers\LayananadministrasiController;
 use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\KelolakegiatanController;
 use App\Http\Controllers\KelolakontakController;
+use App\Models\Kelolakegiatan;
 use App\Models\Layananpublik;
 use App\Models\Lembagadesa;
 use App\Models\Pengumuman;
@@ -38,7 +39,9 @@ Route::get('/perangkat-desa', function () {
 });
 
 Route::get('/daftar-kegiatan', function () {
-    return view('user/kegiatan');
+    return view('user/kegiatan',[
+        'kegiatan' => Kelolakegiatan::orderBy('created_at','desc')->limit(6)->get(),
+    ]);
 });
 Route::get('/daftar-kontak', function () {
     return view('user/kontak');

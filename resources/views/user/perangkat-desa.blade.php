@@ -24,37 +24,35 @@
           <div class="container mt-4">
             <div class="row">
                 @foreach ($perangkatdesa as $perangkat)
-                  @if ($perangkat->jabatan == 'KEPALA DESA')
+                  @if (strtolower($perangkat->jabatan) == 'kepala desa')
                     <div class="container">
                       <div class="col-lg-4 col-sm-6 mx-auto">
                         <div class="mb-4">
                           <div class="card text-center border-0">
                             <div class="image-container position-relative p-3">
-                              <img src="" class="image-fluid rounded-circle" alt="Kepala Desa"
-                                style="height: 210px; width: 210px; object-fit: cover; display: none;" id="foto-kepala-desa">
-                              <i class="fas fa-user-circle fa-10x text-muted" id="ikon-kepala-desa"></i>
+                              <img src="{{ asset('storage/' . $perangkat->gambar_perangkatdesa) }}" class="image-fluid rounded-circle" alt="Kepala Desa"
+                                style="height: 210px; width: 210px; object-fit: cover; ;" id="foto-kepala-desa">
                             </div>
                             <div class="card-body" style="font-size: 15px;">
-                              <p class="card-title text-danger fw-medium" id="kepala-desa"{{ $perangkat->jabatan }}</p>
-                              <p class="card-text" id="nama-kepala-desa">{{ $perangkat->nama }}</p>
+                              <p class="card-title text-danger fw-medium" id="kepala-desa">{{strtoupper($perangkat->jabatan) }}</p>
+                              <p class="card-text" id="nama-kepala-desa">{{ strtoupper($perangkat->nama) }}</p>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  @elseif($perangkat->jabatan == 'SEKRETARIS DESA')
+                  @elseif(strtolower($perangkat->jabatan) == 'sekretaris desa')
                     <div class="container">
                       <div class="col-lg-4 col-sm-6 mx-auto">
                         <div class="mb-4">
                           <div class="card text-center border-0">
                             <div class="image-container position-relative p-3">
-                              <img src="" class="image-fluid rounded-circle" alt="Sekretaris Desa"
-                                style="height: 210px; width: 210px; object-fit: cover; display: none;" id="foto-sekretaris-desa">
-                              <i class="fas fa-user-circle fa-10x text-muted" id="ikon-sekretaris-desa"></i>
+                              <img src="{{ asset('storage/' . $perangkat->gambar_perangkatdesa) }}" class="image-fluid rounded-circle" alt="Sekretaris Desa"
+                                style="height: 210px; width: 210px; object-fit: cover; ;" id="foto-sekretaris-desa">
                             </div>
                             <div class="card-body" style="font-size: 15px;">
-                              <p class="card-title text-danger fw-medium" id="sekretasis-desa">{{ $perangkat->jabatan }}</p>
-                              <p class="card-text" id="nama-sekretaris-desa">{{ $perangkat->nama }}</p>
+                              <p class="card-title text-danger fw-medium" id="sekretasis-desa">{{strtoupper($perangkat->jabatan) }}</p>
+                              <p class="card-text" id="nama-sekretaris-desa">{{ strtoupper($perangkat->nama) }}</p>
                             </div>
                           </div>
                         </div>
@@ -65,13 +63,12 @@
                           <div class="mb-4">
                             <div class="card text-center overflow-hidden border-0">
                               <div class="image-container position-relative p-3">
-                                <img src="" class="image-fluid rounded-circle" alt="Kasi Pemerintahan"
-                                  style="height: 210px; width: 210px; object-fit: cover; display: none;" id="foto-kasi-pemerintahan">
-                                <i class="fas fa-user-circle fa-10x text-muted" id="ikon-kasi-pemerintahan"></i>
+                                <img src="{{ asset('storage/' . $perangkat->gambar_perangkatdesa) }}" class="image-fluid rounded-circle" alt="Kasi Pemerintahan"
+                                  style="height: 210px; width: 210px; object-fit: cover; ;" id="foto-kasi-pemerintahan">
                               </div>
                               <div class="card-body" style="font-size: 15px;">
-                                <p class="card-title text-danger fw-medium" id="kasi-pemerintahan">{{ $perangkat->jabatan }}</p>
-                                <p class="card-text" id="nama-kasi-pemerintahan">{{ $perangkat->nama }}</p>
+                                <p class="card-title text-danger fw-medium" id="kasi-pemerintahan">{{ strtoupper($perangkat->jabatan) }}</p>
+                                <p class="card-text" id="nama-kasi-pemerintahan">{{ strtoupper($perangkat->nama) }}</p>
                               </div>
                             </div>
                           </div>
