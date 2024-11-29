@@ -12,6 +12,7 @@ use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\KelolakegiatanController;
 use App\Http\Controllers\KelolakontakController;
 use App\Models\Kelolakegiatan;
+use App\Models\Kelolakontak;
 use App\Models\Layananpublik;
 use App\Models\Lembagadesa;
 use App\Models\Pengumuman;
@@ -44,7 +45,9 @@ Route::get('/daftar-kegiatan', function () {
     ]);
 });
 Route::get('/daftar-kontak', function () {
-    return view('user/kontak');
+    return view('user/kontak',[
+        'kontak' => Kelolakontak::first(),
+    ]);
 });
 Route::get('/layanan-administrasi', function () {
     return view('user/layanan-administrasi');

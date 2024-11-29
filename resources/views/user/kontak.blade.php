@@ -33,7 +33,7 @@
             </div>
             <div>
               <p class="mb-1">Whatsapp</p>
-              <p><a href="https://wa.me/your-wa-number" target="_blank">0888 xxxx xxxx</a></p>
+              <p><a href="https://wa.me/{{ $kontak->no_whatsapp }}" target="_blank">{{ $kontak->no_whatsapp }}</a></p>
             </div>
           </div>
 
@@ -44,7 +44,17 @@
             </div>
             <div>
               <p class="mb-1">Instagram</p>
-              <p><a href="https://www.instagram.com/your-ig" target="_blank">@sungai_keran</a></p>
+              <p><a href="https://www.instagram.com/{{ $kontak->username_instagram }}" target="_blank">@ {{ $kontak->username_instagram }}</a></p>
+            </div>
+          </div>
+          <!-- Facebook Section -->
+          <div class="d-flex align-items-center mt-3">
+            <div class="me-3">
+              <i class="fab fa-facebook fa-5x" style="color: #3048e1;"></i>
+            </div>
+            <div>
+              <p class="mb-1">Facebook</p>
+              <p><a href="https://www.facebook.com/{{ $kontak->username_facebook }}" target="_blank">@ {{ $kontak->username_facebook }}</a></p>
             </div>
           </div>
 
@@ -55,7 +65,7 @@
             </div>
             <div>
               <p class="mb-1">Email</p>
-              <p><a href="mailto:your.email" target="_blank">desaharapan@gmail.com</a></p>
+              <p><a href="mailto:{{ $kontak->email }}" target="_blank">{{ $kontak->email }}</a></p>
             </div>
           </div>
         </div>
