@@ -1,17 +1,13 @@
 @extends('layouts.layout')
+@section('kid')
+    <style>
+      nav{
+        background: linear-gradient(135deg, #001F3F, #002e5c, #0d2b3f, #213346, #001637);
+      }
+    </style>
+@endsection
 @section('child')
-    
 
-  <!-- Banner -->
-  <section id="banner">
-    <div class="container-fluid banner-image w-100 vh-60 d-flex justify-content-center align-items-center">
-        <div class="row">
-            <div class="text-center">
-                <h1 class="text-banner">Detail Pengumuman</h1>
-            </div>
-        </div>
-    </div>
-</section>
 <!-- End of Banner -->
   <!-- Pengumuman -->
   <section id="pengumuman">

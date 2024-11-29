@@ -28,6 +28,7 @@
             font-size: 1rem;
         }
 </style>
+@yield('kid')
 <body>
   <!-- Navbar -->
   <section id="navbar">
