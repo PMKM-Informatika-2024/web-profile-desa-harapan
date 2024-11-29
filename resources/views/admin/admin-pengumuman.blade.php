@@ -45,6 +45,12 @@
                                             id="gambarPengumuman" accept="image/*">
                                     </div>
                                 </div>
+                                <div class="form-group row mb-3">
+                                    <label for="deskripsiSingkat" class="col-lg-2 col-md-3 col-sm-4 form-label">Konten:</label>
+                                    <div class="col-lg-10 col-md-9 col-sm-8">
+                                        <textarea name="konten" class="form-control" id="Konten" required></textarea>
+                                    </div>
+                                </div>
                                 <div class="d-flex justify-content-end mt-4">
                                     <button type="submit" class="btn btn-simpan">Simpan</button>
                                     {{-- <a href="admin-pengumuman.htmx`l" class="btn btn-batal ms-2">Batal</a> --}}
@@ -64,6 +70,7 @@
                                 <th>Judul</th>
                                 <th>Foto</th>
                                 <th>Deskripsi Singkat</th>
+                                <th>konten</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -76,6 +83,7 @@
                                     <td><img src="{{ asset('storage/' . $pengumuman->gambar_pengumuman) }}"
                                         alt="" class="img-thumbnail" style="width: 50px; height: 50px;"></td>
                                     <td>{{ $pengumuman->deskripsi_singkat }}</td>
+                                    <td>{{ $pengumuman->konten }}</td>
                                     <td>
                                         <a class=" btn btn-warning" href="javascript:void(0)" data-bs-toggle="modal"
                                             data-bs-target="#editPengumumanModal"
@@ -122,6 +130,11 @@
                                                 required>
                                         </div>
                                         <div class="mb-3">
+                                            <label for="editKonten" class="form-label">Konten</label>
+                                            <input type="text" name="konten" class="form-control" id="editKonten"
+                                                required>
+                                        </div>
+                                        <div class="mb-3">
                                             <label for="editFoto" class="form-label">Foto</label>
                                             <img alt="" id="previewImage" class="img-thumbnail"
                                                 style="width: 50px; height: 50px;">
@@ -151,6 +164,7 @@
             document.getElementById('editGambar').value = pengumuman.gambar_pengumuman;
             document.getElementById('editJudul').value = pengumuman.judul;
             document.getElementById('editDeskripsi').value = pengumuman.deskripsi_singkat;
+            document.getElementById('editKonten').value = pengumuman.konten;
             const previewImage = document.getElementById('previewImage');
             if (pengumuman.gambar_pengumuman) {
                 previewImage.src = `/storage/${pengumuman.gambar_pengumuman}`;

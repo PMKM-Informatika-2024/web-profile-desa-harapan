@@ -12,6 +12,7 @@ class Pengumuman extends Model
     protected $fillable = [
         'judul',
         'deskripsi_singkat',
+        'konten',
         'gambar_pengumuman',
     ];
     

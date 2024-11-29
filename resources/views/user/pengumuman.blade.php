@@ -32,38 +32,18 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($pengumuman as $p)
                     <tr>
-                        <td>1</td>
-                        <td>22 Oktober 2024</td>
-                        <td>Pengumuman Pendaftaran Layanan Desa</td>
-                        <td><a href="pengumuman1.html" class="btn btn-more">Selengkapnya</a></td>
+                        <td>{{ $loop->iteration }}</td>
+                        <td>{{ $p->created_at }}</td>
+                        <td>{{ $p->judul }}</td>
+                        <td><a href="/detailpengumuman/{{ $p->id }}" class="btn btn-more">Selengkapnya</a></td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>20 Oktober 2024</td>
-                        <td>Rapat Koordinasi Bulanan</td>
-                        <td><a href="pengumuman2.html" class="btn btn-more">Selengkapnya</a></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>18 Oktober 2024</td>
-                        <td>Penyampaian Informasi Pelayanan Publik</td>
-                        <td><a href="pengumuman3.html" class="btn btn-more">Selengkapnya</a></td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>15 Oktober 2024</td>
-                        <td>Program Bantu Jaminan Sosial</td>
-                        <td><a href="pengumuman4.html" class="btn btn-more">Selengkapnya</a></td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>10 Oktober 2024</td>
-                        <td>Update Program Pengembangan Desa</td>
-                        <td><a href="pengumuman5.html" class="btn btn-more">Selengkapnya</a></td>
-                    </tr>
+                    @endforeach
+
                 </tbody>
             </table>
+            {{-- <a href="/pengumuman/{{ $pengumuman->id }}">Detail Pengumuman</a> --}}
         </div>
     </section>
     <!-- End of Pengumuman -->

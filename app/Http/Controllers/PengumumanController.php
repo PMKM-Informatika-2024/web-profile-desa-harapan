@@ -49,7 +49,9 @@ class PengumumanController
      */
     public function show(Pengumuman $pengumuman)
     {
-        //
+        return view('/user/detailpengumuman',[
+            'pengumuman' => $pengumuman,
+        ]);
     }
 
     /**

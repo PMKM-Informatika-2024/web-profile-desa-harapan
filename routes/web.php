@@ -21,62 +21,71 @@ use App\Models\Profildesa;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('user/beranda',[
-        'profildesa' => Profildesa::first(),
-        'perangkat_desas'=>Perangkatdesa::orderBy('created_at','asc')->limit(6)->get(),
-        'pengumuman'=>Pengumuman::orderBy('created_at','asc')->limit(4)->get(),
-    ]);     
+return view('user/beranda',[
+    'profildesa' => Profildesa::first(),
+    'perangkat_desas'=>Perangkatdesa::orderBy('created_at','asc')->limit(6)->get(),
+    'pengumuman'=>Pengumuman::orderBy('created_at','asc')->limit(4)->get(),
+]);     
 });
 Route::get('/profile-desa', function () {
-    return view('user/profile-desa',[
-        'profildesa' => Profildesa::first(),
-        
-    ]);
+return view('user/profile-desa',[
+    'profildesa' => Profildesa::first(),
+    
+]);
 });
 Route::get('/perangkat-desa', function () {
-    return view('user/perangkat-desa', [
-        'perangkatdesa' => Perangkatdesa::all()
-    ]);
+return view('user/perangkat-desa', [
+    'perangkatdesa' => Perangkatdesa::all()
+]);
 });
 
 Route::get('/daftar-kegiatan', function () {
-    return view('user/kegiatan',[
-        'kegiatan' => Kelolakegiatan::orderBy('created_at','desc')->limit(6)->get(),
-    ]);
+return view('user/kegiatan',[
+    'kegiatan' => Kelolakegiatan::orderBy('created_at','desc')->limit(6)->get(),
+]);
 });
 Route::get('/daftar-kontak', function () {
-    return view('user/kontak',[
-        'kontak' => Kelolakontak::first(),
-    ]);
+return view('user/kontak',[
+    'kontak' => Kelolakontak::first(),
+]);
 });
 Route::get('/layanan-administrasi', function () {
-    return view('user/layanan-administrasi');
+return view('user/layanan-administrasi');
 });
 Route::get('/layanan-publik', function () {
-    $layananpublikpendidikan = Layananpublik::where('kategori_fasilitas', 'pendidikan')->get();
-    $layananpublikpublik = Layananpublik::where('kategori_fasilitas', 'publik')->get();
-    return view('user/layanan-publik',[
-        'layananpublikpendidikan' => $layananpublikpendidikan,
-        'layananpublikpublik' => $layananpublikpublik,
-    ]);
+$layananpublikpendidikan = Layananpublik::where('kategori_fasilitas', 'pendidikan')->get();
+$layananpublikpublik = Layananpublik::where('kategori_fasilitas', 'publik')->get();
+return view('user/layanan-publik',[
+    'layananpublikpendidikan' => $layananpublikpendidikan,
+    'layananpublikpublik' => $layananpublikpublik,
+]);
 });
 Route::get('/fasilitas-pendidikan', function () {
-    return view('user/fasilitas-pendidikan');
+return view('user/fasilitas-pendidikan');
 });
 Route::get('/lembaga-desa', function () {
-    return view('user/lembaga-desa',[
-        'lembagadesa' => Lembagadesa::all(),
-        'perangkatdesa' => Perangkatdesa::whereIn('jabatan',['Kepala Desa','KEPALA DESA', 'kepala desa'])->first(),
-    ]);
+return view('user/lembaga-desa',[
+    'lembagadesa' => Lembagadesa::all(),
+    'perangkatdesa' => Perangkatdesa::whereIn('jabatan',['Kepala Desa','KEPALA DESA', 'kepala desa'])->first(),
+]);
 });
 Route::get('/pemerintahan-desa', function () {
-    return view('user/pemerintahan-desa');
+return view('user/pemerintahan-desa');
 });
 Route::get('/daftar-pengumuman', function () {
-    return view('user/pengumuman');
+return view('user/pengumuman',[
+    'pengumuman' => Pengumuman::orderBy('created_at','desc')->get(),
+]);
 });
+Route::get('/detailpengumuman/{id}', function($id){
+$pengumuman = pengumuman::find($id);
+return view('user/detailpengumuman',[
+    'detailpengumuman' => $pengumuman,
+]);
+});
+
 Route::get('/struktur-pemerintahan', function () {
-    return view('user/struktur-pemerintahan');
+return view('user/struktur-pemerintahan');
 });
 Route::get('/adminlogin', [LoginController::class, 'index'])->middleware('guest');
 Route::post('/adminlogin', [LoginController::class, 'authenticate']);
