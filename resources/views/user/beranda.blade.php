@@ -192,9 +192,10 @@
               <p class="card-text text-muted">
                 <i class="fas fa-clock"></i> {{ $p->created_at->format('Y-m-d') }}
               </p>
+              <img src="{{ asset('storage/'.$p->gambar_pengumuman) }}" width="150px" height=""  alt="">
               <p class="card-text">{{ $p->deskripsi_singkat }}</p>
                 
-                <a href="/pengumuman/content" class="btn btn-link ms-auto">Read more...</a>
+                <a href="/detailpengumuman/{{ $p->id }}" class="btn btn-link ms-auto">Read more...</a>
               </div>
             </div>
           </div>
