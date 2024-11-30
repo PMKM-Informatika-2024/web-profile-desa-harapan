@@ -96,7 +96,7 @@
       <div class="row">
         <div class="text-center">
           <h2 class="text-banner-h2"> Selamat Datang di </h2>
-          <h1 class="text-banner-h1">Desa Harapan</h1>
+          <h1 class="text-banner-h1">{{ $profildesa->nama_desa }}</h1>
         </div>
 
       </div>
