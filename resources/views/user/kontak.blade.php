@@ -44,7 +44,7 @@
             </div>
             <div>
               <p class="mb-1">Instagram</p>
-              <p><a href="https://www.instagram.com/{{ $kontak->username_instagram }}" target="_blank">@ {{ $kontak->username_instagram }}</a></p>
+              <p><a href="https://www.instagram.com/{{ $kontak->username_instagram }}" target="_blank">DESA HARAPAN</a></p>
             </div>
           </div>
           <!-- Facebook Section -->
@@ -54,7 +54,7 @@
             </div>
             <div>
               <p class="mb-1">Facebook</p>
-              <p><a href="https://www.facebook.com/{{ $kontak->username_facebook }}" target="_blank">@ {{ $kontak->username_facebook }}</a></p>
+              <p><a href="https://www.facebook.com/{{ $kontak->username_facebook }}" target="_blank">DESA HARAPAN</a></p>
             </div>
           </div>
 
