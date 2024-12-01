@@ -46,7 +46,8 @@
                                             <label for="persyaratanLayanan"
                                                 class="col-lg-2 col-md-3 col-sm-4 form-label">Persyaratan:</label>
                                             <div class="col-lg-10 col-md-9 col-sm-8">
-                                                <textarea class="form-control" id="persyaratanLayanan" name="persyaratan" required></textarea>
+                                                <input hidden class="form-control" id="persyaratanLayanan" name="persyaratan" required></input>
+                                                <trix-editor input="persyaratanLayanan"></trix-editor>
                                             </div>
                                         </div>
 
@@ -79,7 +80,7 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $layananadministrasi->nama_layanan }}</td>
                                     <td>{{ $layananadministrasi->deskripsi }}</td>
-                                    <td>{{ $layananadministrasi->persyaratan }}</td>
+                                    <td>{!! $layananadministrasi->persyaratan !!}</td>
                                     <td>
                                         <a class=" btn btn-warning" href="javascript:void(0)" data-bs-toggle="modal"
                                             data-bs-target="#editLayananModal"
@@ -123,7 +124,8 @@
                                         </div>
                                         <div class="mb-3">
                                             <label for="editPersyaratanLayanan" class="form-label">Persyaratan</label>
-                                            <textarea type="text" name="persyaratan" class="form-control" id="editPersyaratanLayanan" required></textarea>
+                                            <input type="hidden" name="persyaratan" class="form-control" id="editPersyaratanLayanan" required></textarea>
+                                            <trix-editor input="editPersyaratanLayanan"></trix-editor>
                                         </div>
                                         <button type="submit" class="btn btn-edit">Update</button>
                                     </form>
@@ -147,7 +149,11 @@ function loadEditData(layananadministrasi) {
             document.getElementById('editId').value = layananadministrasi.id;
             document.getElementById('editNamaLayanan').value = layananadministrasi.nama_layanan;
             document.getElementById('editDeskripsiLayanan').value = layananadministrasi.deskripsi;
-            document.getElementById('editPersyaratanLayanan').value = layananadministrasi.persyaratan;
+            // document.getElementById('editPersyaratanLayanan').value = layananadministrasi.persyaratan;
+             // Force Trix editor to update
+            const trixEditor = document.querySelector('trix-editor[input="editPersyaratanLayanan"]');
+            trixEditor.editor.loadHTML(layananadministrasi.persyaratan);
+
             const editForm = document.getElementById('editLayananForm');
             editForm.action = `/layananadministrasi/${layananadministrasi.id}`;
             // const previewImage = document.getElementById('previewImage');

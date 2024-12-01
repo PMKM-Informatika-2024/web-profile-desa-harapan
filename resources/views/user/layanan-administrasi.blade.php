@@ -18,20 +18,20 @@
   <section>
     <div class="container transition-container py-5 mt-5 mb-5">
       <div class="row">
-        <div class="accordion" id="accordionLayanan">
-            @foreach ($layananadministrasi as $key => $administrasi)            
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card shadow-sm border-0 rounded-lg">
-                <div class="card-body text-center">
-                  <div class="icon-circle mb-3">
-                    <i class="bi bi-house-door-fill" style="font-size: 3rem; color: #007bff;"></i>
-                  </div>
-                  <h5 class="card-title">{{ $administrasi->nama_layanan }}</h5>
-                  <p class="card-text">{{ $administrasi->deskripsi }}</p>
-                </div>
-                
+        @foreach ($layananadministrasi as $key => $administrasi)            
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card shadow-sm border-0 rounded-lg">
+            <div class="card-body text-center">
+              <div class="icon-circle mb-3">
+                <i class="bi bi-house-door-fill" style="font-size: 3rem; color: #007bff;"></i>
               </div>
-              <!-- Konten Accordion -->
+              <h5 class="card-title">{{ $administrasi->nama_layanan }}</h5>
+              <p class="card-text">{{ $administrasi->deskripsi }}</p>
+            </div>
+            
+          </div>
+          <!-- Konten Accordion -->
+          <div class="accordion" id="accordionLayanan">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="heading{{ $key }}">
                   <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ $key }}"aria-expanded="false" aria-controls="collapse{{ $key }}">
@@ -42,15 +42,15 @@
                   <div class="accordion-body">
                     <ul>
                       @foreach (explode("\n", $administrasi->persyaratan) as $persyaratan)
-                        <li>{{ trim($persyaratan) }}</li> 
+                        <li>{!! trim($persyaratan) !!}</li> 
                       @endforeach
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
+            </div>
             @endforeach
-        </div>
       </div>
     </div>
   </section>

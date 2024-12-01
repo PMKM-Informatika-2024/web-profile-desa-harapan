@@ -1055,6 +1055,16 @@ a.sidebar-link.active {
 
 /* End of Kelola Perangkat Desa */
 
+.accordion-body ul {
+  text-align: left; /* atau center jika ingin di tengah */
+  list-style-position: inside;
+  padding-left: 0;
+}
+.accordion-body {
+  padding: 15px;
+  text-align: justify; /* Untuk meratakan teks */
+}
+
 
 
 
