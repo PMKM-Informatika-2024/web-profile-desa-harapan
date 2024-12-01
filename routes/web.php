@@ -13,6 +13,7 @@ use App\Http\Controllers\KelolakegiatanController;
 use App\Http\Controllers\KelolakontakController;
 use App\Models\Kelolakegiatan;
 use App\Models\Kelolakontak;
+use App\Models\Layananadministrasi;
 use App\Models\Layananpublik;
 use App\Models\Lembagadesa;
 use App\Models\Pengumuman;
@@ -50,7 +51,9 @@ return view('user/kontak',[
 ]);
 });
 Route::get('/layanan-administrasi', function () {
-return view('user/layanan-administrasi');
+return view('user/layanan-administrasi',[
+    'layananadministrasi' => Layananadministrasi::all(),
+]);
 });
 Route::get('/layanan-publik', function () {
 $layananpublikpendidikan = Layananpublik::where('kategori_fasilitas', 'pendidikan')->get();
