@@ -179,7 +179,7 @@
 <!-- End of Perangkat Desa -->
 
 
-  {{-- Pengumuman 2 --}}
+  {{-- Pengumuman --}}
   <section id="pengumuman" class="py-5">
     <div class="container transition-container mb-3 justify-content-center">
       <div class="row">
@@ -201,13 +201,24 @@
           </div>
         @endforeach
   </section>
-
-  <section>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/f-0exTFd404?si=FasddpKgDZMl7E4f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </section>
-
 {{-- end pengumuman --}}
-    
+
+  {{-- Video Profile --}}
+  <section id="videoprofile" class="py-5">
+    <div class="container transition-container mb-3 justify-content-center">
+      <div class="row">
+        <h2 class="subjudul text-center mb-5">Video Profile</h2>
+        <div class="col-lg-3 col-md-4 mb-4">
+          <div class="card shadow">
+            <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/f-0exTFd404?si=FasddpKgDZMl7E4f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{-- End of Video Profile --}}
 
   <!-- Footer -->
   <footer class="d-flex flex-column align-items-center text-center text-dark bg-light p-4">
