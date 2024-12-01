@@ -275,52 +275,5 @@
 @section('kodejs')
     <script>
         
-        // preview image
-        // function previewImages() {
-        //     const previewContainer = document.getElementById('imagePreview');
-        //     const files = document.getElementById('fotoDesa').files;
-
-        //     previewContainer.innerHTML = '';
-
-        //     Array.from(files).forEach((file) => {
-        //         const reader = new FileReader();
-
-        //         reader.onload = function(event) {
-        //             const imageDiv = document.createElement('div');
-        //             imageDiv.style.position = 'relative';
-        //             imageDiv.style.display = 'inline-block';
-        //             imageDiv.style.marginRight = '10px';
-
-        //             const img = document.createElement('img');
-        //             img.src = event.target.result;
-        //             img.style.width = '100px';
-        //             img.style.height = 'auto';
-        //             img.style.borderRadius = '5px';
-
-        //             const removeBtn = document.createElement('span');
-        //             removeBtn.innerHTML = '✖';
-        //             removeBtn.style.position = 'absolute';
-        //             removeBtn.style.top = '0';
-        //             removeBtn.style.right = '0';
-        //             removeBtn.style.color = 'red';
-        //             removeBtn.style.cursor = 'pointer';
-        //             removeBtn.onclick = function() {
-        //                 // Remove the image and its corresponding file from the input
-        //                 const newFileList = Array.from(files).filter(f => f !== file);
-        //                 const dataTransfer = new DataTransfer();
-        //                 newFileList.forEach(f => dataTransfer.items.add(f));
-        //                 document.getElementById('fotoDesa').files = dataTransfer.files;
-
-        //                 imageDiv.remove();
-        //             };
-
-        //             imageDiv.appendChild(img);
-        //             imageDiv.appendChild(removeBtn);
-        //             previewContainer.appendChild(imageDiv);
-        //         };
-
-        //         reader.readAsDataURL(file);
-        //     });
-        // }
     </script>
 @endsection
