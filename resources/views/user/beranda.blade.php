@@ -112,7 +112,7 @@
         <div class="col-lg-5 mt-3 d-flex flex-column justify-content-between">
           <h2 class="subjudul">Mengenal Tentang Desa Harapan</h2>
           <p style="text-align: justify;" id="sejarahDesa">Harapan adalah sebuah desa yang berada di Kecamatan Pemangkat, Kabupaten Sambas, Kalimantan Barat, Indonesia. Berjarak sekitar 183 KM dari Kota Pontianak dengan titik koordinatnya 1°11′22.88″ LU 108°59′36.67″ BT. Desa Harapan memiliki luas geografis 4806,114 KM<sup>2</sup> dengan jumlah 6443 jiwa dengan berbagai etnis diantaranya Suku Melayu, Melayu Sambas, Jawa, Dayak, Bugis, Tionghoa dan Lainnya, juga berbagai Keyakinan diantaranya.......</p>
-          <a href="/profile-desa" class="btn-more mt-3 ">Selengkapnya..</a>
+          <a href="/profile-desa" class="btn-more mt-2">Selengkapnya..</a>
         </div>
         <div class="col-lg-7 mt-3">
           <img src="{{ asset('storage/'. $profildesa->gambar_desa_1) }}" class="image shadow-lg" alt="Desa Harapan">
