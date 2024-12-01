@@ -116,7 +116,7 @@
 
 /* CSS for responsive banner */
 #banner-beranda .banner-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../image/kantordesa.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../image/pov-gununggajah.jpg');
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -127,7 +127,7 @@
 }
 
 .banner-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../image/kantordesa.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../image/pov-gununggajah.jpg');
   background-size: cover;
   height: 65vh;
   display: flex;
@@ -296,8 +296,8 @@
 }
 
 #content .image {
-  width: 530px;
-  max-height: 388px;
+  width: 540px;
+  height: 415px;
   border-radius: 30px;
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
