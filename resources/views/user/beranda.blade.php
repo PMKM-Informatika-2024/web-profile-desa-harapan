@@ -22,7 +22,7 @@
   <section id="navbar">
     <nav class="navbar navbar-expand-lg navbar-dark p-md-3">
       <div class="container-fluid">
-        <a class="navbar-brand ms-3 d-flex align-items-center" href="#">
+        <a class="navbar-brand ms-3 d-flex align-items-center" href="/">
           <img src="/image/kab-sambas.png" width="50" class="me-2">
           <span style="line-height: 1.1; font-size:medium;">
             Desa<br>
@@ -206,15 +206,11 @@
   {{-- Video Profile --}}
   <section id="videoprofile" class="py-5">
     <div class="container transition-container mb-3 justify-content-center">
-      <div class="row">
+      <div class="row " style="padding: 50px">
         <h2 class="subjudul text-center mb-5">Video Profile</h2>
-        <div class="col-lg-3 col-md-4 mb-4">
-          <div class="card shadow">
-            <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/f-0exTFd404?si=FasddpKgDZMl7E4f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+          <div class="ratio ratio-16x9">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/f-0exTFd404?si=FasddpKgDZMl7E4f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
-        </div>
       </div>
     </div>
   </section>

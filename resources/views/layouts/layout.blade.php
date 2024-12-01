@@ -34,7 +34,7 @@
   <section id="navbar">
     <nav class="navbar navbar-expand-lg navbar-dark p-md-3">
       <div class="container-fluid">
-        <a class="navbar-brand ms-3 d-flex align-items-center" href="#">
+        <a class="navbar-brand ms-3 d-flex align-items-center" href="/">
           <img src="/image/kab-sambas.png" width="50" class="me-2">
           <span style="line-height: 1.1; font-size:medium;">
             Desa<br>
