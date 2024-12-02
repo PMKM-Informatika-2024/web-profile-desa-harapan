@@ -58,7 +58,7 @@
     <div class="login-container">
       <form action="/adminlogin" method="POST" class="form-signin">
         @csrf
-        <h2 class="text-center mb-3">Admin Login</h2>
+        <h2 class="text-center mb-3">Login Admin Desa Harapan <br><img src="/image/kab-sambas.png" width="100" class="mt-3"></h2>
         <input type="text" name="username" id="nipUsername" class="form-control mb-3" placeholder="NIP/Username" required>
         <input type="password" name="password" id="password" class="form-control mb-3" placeholder="Password" required>
         <button class="btn-simpan" type="submit">Login<i class="fas fa-sign-in-alt px-2"></i></button>
