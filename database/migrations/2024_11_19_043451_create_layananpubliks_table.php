@@ -16,16 +16,9 @@ return new class extends Migration
             $table->timestamps();
             $table->string('kategori_fasilitas');
             $table->string('nama_fasilitas');     
-            $table->string('alamat');   
+            $table->string('alamat');
+            $table->string('url_alamat');
             $table->string('gambar_fasilitas');   
-            $table->string('fasilitas_utama');   
-            $table->string('jam_operasional');   
-            $table->string('kontak');   
-            $table->string('akreditasi');
-            $table->string('jumlah_tenaga_pengajar');   
-            $table->string('jumlah_murid');   
-            $table->string('visi');   
-            $table->string('misi');   
         });
     }
 

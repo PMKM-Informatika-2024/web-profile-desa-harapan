@@ -10,81 +10,53 @@ class LayananPublikController
 {
     public function index(Request $request)
     {
-        $kategori = $request->query('kategori', 'pendidikan'); // Default ke 'pendidikan'
-        $layananpublik = Layananpublik::where('kategori_fasilitas', $kategori)->get();
-
-        return view('admin.admin-layanan-publik', compact('layananpublik', 'kategori'));
+        return view('admin.admin-layanan-publik',[
+            'fasilitaspendidikan' => Layananpublik::where('kategori_fasilitas','pendidikan')->get(),
+            'fasilitaspublik' => Layananpublik::where('kategori_fasilitas','publik')->get(),
+            'layananpublik' => Layananpublik::all(),
+        ]);
     }
 
     public function store(Request $request)
     {
         // dd($request);
-        $rules = [
+        $validatedData = $request->validate([
             'kategori_fasilitas' => 'required',
             'nama_fasilitas' => 'required',
-            'alamat' => 'required',
-            'gambar_fasilitas' => 'image|nullable',
-            'fasilitas_utama' => 'required',
-            'jam_operasional' => 'required',
-            'kontak' => 'required',
-        ];
-
-        if ($request->kategori_fasilitas === 'pendidikan') {
-            $rules = array_merge($rules, [
-                'akreditasi' => 'nullable',
-                'jumlah_tenaga_pengajar' => 'nullable',
-                'jumlah_murid' => 'nullable',
-                'visi' => 'nullable',
-                'misi' => 'nullable',
-            ]);
-        }
-
-        $validatedData = $request->validate($rules);
-
-        if ($request->hasFile('gambar_fasilitas')) {
+            'alamat'=>'required',
+            'url_alamat'=>'required',
+            'gambar_fasilitas' => 'image',
+        ]);
+        if($request->file('gambar_fasilitas')) {
             $validatedData['gambar_fasilitas'] = $request->file('gambar_fasilitas')->store('gambar_yang_tersimpan');
         }
-
         Layananpublik::create($validatedData);
-        return redirect('/layananpublik')->with('success', 'Layanan Publik berhasil ditambahkan');
+        return redirect('/layananpublik')->with('success', 'Fasilitas baru berhasil ditambahkan');
+
+
+       
     }
 
     public function update(Request $request, Layananpublik $layananpublik)
     {
-        dd($request);
-        $rules = [
+        // dd($request);
+        $validatedData = $request->validate([
             'kategori_fasilitas' => 'required',
             'nama_fasilitas' => 'required',
             'alamat' => 'required',
-            'gambar_fasilitas' => 'image|nullable',
-            'fasilitas_utama' => 'required',
-            'jam_operasional' => 'required',
-            'kontak' => 'required',
-        ];
-
-        if ($request->kategori_fasilitas === 'pendidikan') {
-            $rules = array_merge($rules, [
-                'akreditasi' => 'nullable',
-                'jumlah_tenaga_pengajar' => 'nullable',
-                'jumlah_murid' => 'nullable',
-                'visi' => 'nullable',
-                'misi' => 'nullable',
-            ]);
-        }
-
-        $validatedData = $request->validate($rules);
-
-        if ($request->hasFile('gambar_fasilitas')) {
-            // Hapus gambar lama jika ada
-            if ($layananpublik->gambar_fasilitas) {
-                Storage::delete($layananpublik->gambar_fasilitas);
+            'url_alamat' => 'required',
+            'gambar_fasilitas' => 'image',
+        ]);
+        if($request->file('gambar_fasilitas')) {
+            if($request->oldImage){
+                Storage::delete($request->oldImage);
             }
             $validatedData['gambar_fasilitas'] = $request->file('gambar_fasilitas')->store('gambar_yang_tersimpan');
         }
+        Layananpublik::where('id', $request->input('id'))
+            ->update($validatedData);
 
-        $layananpublik->update($validatedData);
-
-        return redirect('/layananpublik')->with('success', 'Layanan Publik berhasil diperbarui');
+        return redirect('/layananpublik')->with('success', 'Pengumuman berhasil diupdate');
     }
 
     public function destroy(Layananpublik $layananpublik)
@@ -95,6 +67,6 @@ class LayananPublikController
         }
 
         $layananpublik->delete();
-        return redirect('/layananpublik')->with('success', 'Layanan Publik berhasil dihapus');
+        return redirect('/layananpublik')->with('success', 'Fasilitas berhasil dihapus');
     }
 }

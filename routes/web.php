@@ -42,7 +42,7 @@ return view('user/perangkat-desa', [
 
 Route::get('/daftar-kegiatan', function () {
 return view('user/kegiatan',[
-    'kegiatan' => Kelolakegiatan::orderBy('created_at','desc')->limit(6)->get(),
+    'kegiatan' => Kelolakegiatan::orderBy('created_at','desc')->get(),
 ]);
 });
 Route::get('/daftar-kontak', function () {
@@ -56,12 +56,10 @@ return view('user/layanan-administrasi',[
 ]);
 });
 Route::get('/layanan-publik', function () {
-$layananpublikpendidikan = Layananpublik::where('kategori_fasilitas', 'pendidikan')->get();
-$layananpublikpublik = Layananpublik::where('kategori_fasilitas', 'publik')->get();
-return view('user/layanan-publik',[
-    'layananpublikpendidikan' => $layananpublikpendidikan,
-    'layananpublikpublik' => $layananpublikpublik,
-]);
+    return view('user/layanan-publik',[
+        'fasilitaspendidikan' => Layananpublik::where('kategori_fasilitas','pendidikan')->get(),
+        'fasilitaspublik' => Layananpublik::where('kategori_fasilitas','publik')->get(),
+    ]);
 });
 Route::get('/fasilitas-pendidikan', function () {
 return view('user/fasilitas-pendidikan');

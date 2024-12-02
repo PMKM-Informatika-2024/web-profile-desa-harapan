@@ -14,13 +14,7 @@ class Layananpublik extends Model
         'nama_fasilitas',
         'gambar_fasilitas',
         'alamat',
-        'fasilitas_utama',
-        'jam_operasional',
-        'kontak',
-        'akreditasi',
-        'jumlah_tenaga_pengajar',
-        'jumlah_murid',
-        'visi',
-        'misi',
+        'url_alamat',
+        
     ];
 }

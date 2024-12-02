@@ -209,7 +209,7 @@
       <div class="row " style="padding: 50px">
         <h2 class="subjudul text-center mb-5">Video Profile</h2>
           <div class="ratio ratio-16x9">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/f-0exTFd404?si=FasddpKgDZMl7E4f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="100%" height="100%" src="https://youtu.be/w2lyC3vH7cs?si=BRKPZcmkT-V003ih{{ video }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
       </div>
     </div>
