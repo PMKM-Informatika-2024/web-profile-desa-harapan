@@ -70,7 +70,7 @@
                 </div>
                 <ul class="sidebar-nav">
                     <li class="sidebar-item">
-                        <a href="admin" class="sidebar-link {{ Request::is('admin') ? 'active-link' : '' }}"
+                        <a href="admin" class="sidebar-link {{ Request::is('admin') ? 'active' : '' }}"
                             id="admin-dashboard">
                             <i class="fa-solid fa-list pe-2"></i>
                             <span class="link-text">Dashboard</span>
@@ -78,7 +78,7 @@
                     </li>
                     <li class="sidebar-item">
                         <a href="profildesa"
-                            class="sidebar-link {{ Request::is('adminprofildesa*') ? 'active' : '' }}"
+                            class="sidebar-link {{ Request::is('profildesa*') ? 'active' : '' }}"
                             id="admin-profile-desa">
                             <i class="fa-solid fa-id-card pe-2"></i>
                             <span class="link-text">Profile Desa</span>
@@ -94,7 +94,7 @@
                     </li>
                     <li class="sidebar-item">
                         <a href="lembagadesa"
-                            class="sidebar-link {{ Request::is('adminlembagadesa*') ? 'active' : '' }}"
+                            class="sidebar-link {{ Request::is('lembagadesa*') ? 'active' : '' }}"
                             id="admin-lembaga-desa">
                             <i class="fa-solid fa-landmark pe-2"></i>
                             <span class="link-text">Lembaga Desa</span>
@@ -102,7 +102,7 @@
                     </li>
                     <li class="sidebar-item">
                         <a href="layananpublik"
-                            class="sidebar-link {{ Request::is('adminlayananpublik*') ? 'active' : '' }}"
+                            class="sidebar-link {{ Request::is('layananpublik*') ? 'active' : '' }}"
                             id="admin-layanan-publik">
                             <i class="fa-solid fa-hands-helping pe-2"></i>
                             <span class="link-text">Layanan Publik</span>
@@ -110,7 +110,7 @@
                     </li>
                     <li class="sidebar-item">
                         <a href="layananadministrasi"
-                            class="sidebar-link {{ Request::is('adminlayananadministrasi*') ? 'active' : '' }}"
+                            class="sidebar-link {{ Request::is('layananadministrasi*') ? 'active' : '' }}"
                             id="admin-layanan-administrasi">
                             <i class="fa-solid fa-file-signature pe-2"></i>
                             <span class="link-text">Layanan Administrasi</span>
@@ -118,21 +118,21 @@
                     </li>
                     <li class="sidebar-item">
                         <a href="pengumuman"
-                            class="sidebar-link {{ Request::is('adminpengumuman*') ? 'active' : '' }}"
+                            class="sidebar-link {{ Request::is('pengumuman*') ? 'active' : '' }}"
                             id="admin-pengumuman">
                             <i class="fa-solid fa-bullhorn pe-2"></i>
                             <span class="link-text">Pengumuman</span>
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a href="kegiatan" class="sidebar-link {{ Request::is('adminkegiatan*') ? 'active' : '' }}"
+                        <a href="kegiatan" class="sidebar-link {{ Request::is('kegiatan*') ? 'active' : '' }}"
                             id="admin-kegiatan">
                             <i class="fa-solid fa-calendar-day pe-2"></i>
                             <span class="link-text">Kegiatan</span>
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a href="kontak" class="sidebar-link {{ Request::is('adminkontak*') ? 'active' : '' }}"
+                        <a href="kontak" class="sidebar-link {{ Request::is('kontak*') ? 'active' : '' }}"
                             id="admin-kontak">
                             <i class="fa-solid fa-address-book pe-2"></i>
                             <span class="link-text">Kontak</span>

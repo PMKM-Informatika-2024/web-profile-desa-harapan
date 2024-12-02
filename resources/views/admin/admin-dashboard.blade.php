@@ -91,8 +91,9 @@
                             </div>
                             <!-- Google Maps Embed -->
                             <div class="mt-3">
-                                    <iframe src="{{ $dashboard->peta_desa }}" width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy"
-                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    {{-- <iframe src="{{ $dashboard->peta_desa }}" width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
+                                    {!! $dashboard->peta_desa !!}
                             </div>
                         </div>
                     </div>
