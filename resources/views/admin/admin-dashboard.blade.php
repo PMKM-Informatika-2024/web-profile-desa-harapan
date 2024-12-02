@@ -18,12 +18,11 @@
                             <div class="d-flex align-items-start">
                                 <div class="flex-grow-1">
                                     <h4 class="mb-2">
-                                        {{ $dashboard->total_dusun }}
+                                        {{ $dashboard->total_kk }}
                                     </h4>
                                     <p class="jumlah mb-2">
-                                        Jumlah Dusun
+                                        Jumlah KK
                                     </p>
-
                                 </div>
                             </div>
                         </div>
