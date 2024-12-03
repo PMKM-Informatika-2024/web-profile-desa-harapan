@@ -35,7 +35,6 @@ class LembagadesaController
         // dd($request);
         $validatedData = $request->validate([
             'nama_lembaga' => 'required',
-            'alamat_lembaga' => 'required',
             'nama_ketua' => 'required',
             'gambar_lembaga'=>'image'
         ]);
@@ -70,7 +69,6 @@ class LembagadesaController
         // dd($request);
         $validatedData = $request->validate([
             'nama_lembaga' => 'required',
-            'alamat_lembaga' => 'required',
             'nama_ketua' => 'required',
             'gambar_lembaga' => 'image'
         ]);

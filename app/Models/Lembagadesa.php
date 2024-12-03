@@ -11,7 +11,6 @@ class Lembagadesa extends Model
     use HasFactory;
     protected $fillable = [
         'nama_lembaga',
-        'alamat_lembaga',
         'nama_ketua',
         'gambar_lembaga',
     ];

@@ -210,7 +210,7 @@
         <h2 class="subjudul text-center mb-5">Video Profile</h2>
           <div class="ratio ratio-16x9">
             {{-- iframe video profile --}}
-            {{-- {{ $videoprofile->video }} --}}
+            {!! $videoprofile->url_video !!}
           </div>
       </div>
     </div>
@@ -222,9 +222,10 @@
     <p>Copyright &copy; 2024 Desa Harapan</p>
     <!-- Social Media Links -->
     <div class="contact-icons d-flex justify-content-center mt-0">
-      <a href="https://wa.me/your-wa-number" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://www.instagram.com/your-ig" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="mailto:your-email" target="_blank"><i class="fas fa-envelope"></i></a>
+      <a href="https://wa.me/{{ $kontak->no_whatsapp }}" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/{{ $kontak->username_instagram }}" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/{{ $kontak->username_facebook }}" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="mailto:{{ $kontak->email }}" target="_blank"><i class="fas fa-envelope"></i></a>
     </div>
   </footer>
 

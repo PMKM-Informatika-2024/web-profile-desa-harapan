@@ -11,6 +11,7 @@ use App\Http\Controllers\LayananadministrasiController;
 use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\KelolakegiatanController;
 use App\Http\Controllers\KelolakontakController;
+use App\Http\Controllers\VideoprofileController;
 use App\Models\Kelolakegiatan;
 use App\Models\Kelolakontak;
 use App\Models\Layananadministrasi;
@@ -19,6 +20,7 @@ use App\Models\Lembagadesa;
 use App\Models\Pengumuman;
 use App\Models\Perangkatdesa;
 use App\Models\Profildesa;
+use App\Models\Videoprofile;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -26,6 +28,8 @@ return view('user/beranda',[
     'profildesa' => Profildesa::first(),
     'perangkat_desas'=>Perangkatdesa::orderBy('created_at','asc')->limit(6)->get(),
     'pengumuman'=>Pengumuman::orderBy('created_at','asc')->limit(4)->get(),
+    'videoprofile' => Videoprofile::first(),
+    'kontak'=>Kelolakontak::first(),
 ]);     
 });
 Route::get('/profile-desa', function () {
@@ -103,3 +107,4 @@ Route::resource('/layananadministrasi', LayananadministrasiController::class)->m
 Route::resource('/pengumuman', PengumumanController::class)->middleware('auth');
 Route::resource('/kegiatan', KelolakegiatanController::class)->middleware('auth');
 Route::resource('/kontak', KelolakontakController::class)->middleware('auth');
+Route::resource('/videoprofile', VideoprofileController::class)->middleware('auth');

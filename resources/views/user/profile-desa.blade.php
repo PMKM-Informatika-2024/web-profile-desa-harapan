@@ -146,10 +146,13 @@
   <section id="kantor-desa" class="py-5">
     <div class="container transition-container">
       <h2 class="subjudul text-center mb-4">Kantor Desa & Balai Desa Harapan</h2>
-      <div class="row">
-        <div class="col-lg-12">
-          <iframe src="{{ $profildesa->peta_desa }}" width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          
+      <div class="row justify-content-center">
+        <div class="col-lg-12 text-center">
+          {{ $profildesa->kantor_desa }}          
+        </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-12 text-center">
+          {!! $profildesa->peta_desa !!}          
         </div>
       </div>
     </div>

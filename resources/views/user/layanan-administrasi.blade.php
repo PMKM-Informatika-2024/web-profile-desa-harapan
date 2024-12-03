@@ -42,7 +42,7 @@
                   <div class="accordion-body">
                     <ul>
                       @foreach (explode("\n", $administrasi->persyaratan) as $persyaratan)
-                        <li>{!! trim($persyaratan) !!}</li> 
+                        {!! trim($persyaratan) !!}
                       @endforeach
                     </ul>
                   </div>

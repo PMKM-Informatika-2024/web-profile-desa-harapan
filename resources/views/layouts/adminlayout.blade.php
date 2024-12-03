@@ -85,6 +85,14 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
+                        <a href="videoprofile"
+                            class="sidebar-link {{ Request::is('videoprofile*') ? 'active' : '' }}"
+                            id="admin-video-profile">
+                            <i class="fa-solid fa-id-card pe-2"></i>
+                            <span class="link-text">Video Profile</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
                         <a href="perangkatdesa"
                             class="sidebar-link {{ Request::is('perangkatdesa*') ? 'active' : '' }}"
                             id="admin-perangkat-desa">
@@ -194,33 +202,6 @@
             document.querySelector("#sidebar").classList.toggle("collapsed");
         });
 
-        // // Active sidebar
-        // const currentUrl = window.location.href;
-        // console.log(currentUrl);
-
-        // const sidebarItems = [
-        //   { id: 'admin-dashboard', url: 'admin' },
-        //   { id: 'admin-profile-desa', url: 'adminprofiledesa' },
-        //   { id: 'admin-perangkat-desa', url: 'adminperangkatdesa' },
-        //   { id: 'admin-lembaga-desa', url: 'adminlembagadesa' },
-        //   { id: 'admin-layanan-publik', url: 'adminlayananpublik' },
-        //   { id: 'admin-layanan-administrasi', url: 'adminlayananadministrasi' },
-        //   { id: 'admin-pengumuman', url: 'adminpengumuman' },
-        //   { id: 'admin-kegiatan', url: 'adminkegiatan' },
-        //   { id: 'admin-kontak', url: 'adminkontak' },
-        //   { id: 'kelola-pengguna', url: 'adminkelolapengguna' }
-        // ];
-
-        // sidebarItems.forEach(item => {
-        //   if (currentUrl.includes(item.url)) {
-        //     const sidebarLink = document.getElementById(item.id);
-        //     console.log('sidebar link: ', sidebarLink);
-
-        //     if (sidebarLink) {
-        //       sidebarLink.classList.add('active');
-        //     }
-        //   }
-        // });
     </script>
 </body>
 
