@@ -63,6 +63,7 @@ Route::get('/layanan-publik', function () {
     return view('user/layanan-publik',[
         'fasilitaspendidikan' => Layananpublik::where('kategori_fasilitas','pendidikan')->get(),
         'fasilitaspublik' => Layananpublik::where('kategori_fasilitas','publik')->get(),
+        
     ]);
 });
 Route::get('/fasilitas-pendidikan', function () {

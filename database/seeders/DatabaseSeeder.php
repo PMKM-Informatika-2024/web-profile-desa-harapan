@@ -89,7 +89,7 @@ class DatabaseSeeder extends Seeder
             'nama_fasilitas' => 'Sekolah Dasar Negeri 4',
             'gambar_fasilitas' => 'sekolah.png',
             'alamat' => 'Jl. Anom, Harapan, Kec. Pemangkat, Kabupaten Sambas, Kalimantan Barat 79455',
-            'url_alamat' => 'https://g.co/kgs/yKrGjqn',
+            'url_alamat' => 'https://maps.app.goo.gl/9VJ51tuZJRVke6fU7',
         ]);
 
         Layananadministrasi::create([

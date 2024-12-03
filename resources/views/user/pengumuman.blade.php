@@ -16,12 +16,6 @@
     <!-- Pengumuman -->
     <section id="pengumuman">
         <div class="container transition-container py-5 mb-5" style="background: none;">
-            <div class="col-12 col-md-6 col-lg-4 ms-auto mb-3">
-                <form class="d-flex justify-content-end">
-                    <input type="text" class="form-control me-2" placeholder="Cari pengumuman..." aria-label="Search">
-                    <button class="btn btn-more" type="submit">Cari</button>
-                </form>
-            </div>
             <table class="table table-bordered table-striped">
                 <thead class="table-light text-center">
                     <tr>

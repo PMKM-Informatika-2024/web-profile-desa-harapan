@@ -14,61 +14,49 @@
     <!-- End of Banner -->
 
     <!-- Fasilitas Pendidikan -->
-    <section id="fasilitas-pendidikan">
-        <div class="container-fluid transition-container p-0 overflow-hidden">
-            <div class="row">
-                <div class="text-center py-5">
-                    <h2 class="subjudul">Fasilitas Pendidikan</h2>
-                </div>
-                <div class="container-fluid">
-                    <div class="row">
-                        @foreach ($fasilitaspendidikan as $fpen)
-                            <div class="col-lg-4 col-md-6 g-0">
-                                <div class="card-sekolah position-relative">
-                                    <img src="{{ asset('storage'.$fpen->gambar_fasilitas) }}" alt="">
-                                    <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100">
-                                        <div class="position-absolute top-50 start-50 translate-middle text-center w-90">
-                                            <h5>{{ $fpen->nama_fasilitas }}</h5>
-                                            <button class="button">Lokasi <a href="{{ $fpen->url_alamat }}"></a></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-    <!-- End of Fasilitas Pendidikan -->
-
-    <!-- Fasilitas Publik -->
-    <section id="fasilitas-publik">
-        <div class="container-fluid transition-container p-0 overflow-hidden">
-            <div class="row">
-                <div class="text-center py-5">
-                    <h2 class="subjudul">Fasilitas Publik</h2>
-                </div>
-                <div class="container-fluid mb-5">
-                    <div class="row">
-                        @foreach ($fasilitaspublik as $fpub)
-                        <div class="col-lg-4 col-md-6 g-0">
-                            <div class="card-fasilitas-publik position-relative">
-                                <img src="" alt="">
-                                <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100">
-                                    <div class="position-absolute top-50 start-50 translate-middle text-center w-90">
-                                        <h5>SD Negeri 10 Sungai Keran</h5>
-                                        <button class="button">Lokasi</button>
-                                    </div>
-                                </div>
+    <section id="fasilitaspendidikan">
+        <div class="container-fluid transition-container py-5 mt-5 mb-5">
+          <div class="row">
+            <h2 class="subjudul text-center mb-5">Fasilitas Pendidikan</h2>
+            @foreach ($fasilitaspendidikan as $fpen)
+                <div class="col-lg-4 col-md-6 g-0">
+                    <div class="card-sekolah position-relative p-3">
+                        <img src="{{ asset('storage/' . $fpen->gambar_fasilitas) }}" alt="{{ $fpen->nama_fasilitas }}" class="img-fluid">
+                        <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100">
+                            <div class="position-absolute top-50 start-50 translate-middle text-center w-90">
+                                <h5>{{ $fpen->nama_fasilitas }}</h5>
+                                <a href="{{ $fpen->url_alamat }}" target="_blank" class="btn btn-primary">Alamat</a>
                             </div>
                         </div>
-                        @endforeach
                     </div>
                 </div>
-            </div>
+            @endforeach
+          </div>
         </div>
-    </section>
+      </section>
+    <!-- End of Fasilitas Pendidikan -->
+<br>
+<hr>
+    <!-- Fasilitas Publik -->
+    <section id="fasilitaspublik">
+        <div class="container-fluid transition-container py-5 mt-5 mb-5">
+          <div class="row">
+            <h2 class="subjudul text-center mb-5">Fasilitas Publik</h2>
+            @foreach ($fasilitaspublik as $fpub)
+                <div class="col-lg-4 col-md-6 g-0">
+                    <div class="card-sekolah position-relative p-3">
+                        <img src="{{ asset('storage/' . $fpub->gambar_fasilitas) }}" alt="{{ $fpub->nama_fasilitas }}" class="img-fluid">
+                        <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100">
+                            <div class="position-absolute top-50 start-50 translate-middle text-center w-90">
+                                <h5>{{ $fpub->nama_fasilitas }}</h5>
+                                <a href="{{ $fpub->url_alamat }}" target="_blank" class="btn btn-primary">Alamat</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+          </div>
+        </div>
+      </section>
     <!-- End of Fasilitas Publik -->
 @endsection

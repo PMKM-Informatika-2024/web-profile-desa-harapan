@@ -150,6 +150,8 @@
         <div class="col-lg-12 text-center">
           {{ $profildesa->kantor_desa }}          
         </div>
+      </div>
+      <br>
       <div class="row justify-content-center">
         <div class="col-lg-12 text-center">
           {!! $profildesa->peta_desa !!}          
