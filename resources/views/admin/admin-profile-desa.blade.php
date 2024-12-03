@@ -34,10 +34,28 @@
                             <div class="form-group row mb-3">
                                 <label for="sejarahDesa" class="col-lg-2 col-md-3 col-sm-4 form-label">Sejarah Desa:</label>
                                 <div class="col-lg-10 col-md-9 col-sm-8">
-                                    <textarea name="sejarah_desa" class="form-control" id="sejarahDesa" placeholder="Masukkan Sejarah Desa" required>{{ $profildesa->sejarah_desa ?? '' }}</textarea>
+                                    <input type="hidden" name="sejarah_desa" class="form-control" id="sejarahDesa" value="{!! $profildesa->sejarah_desa !!}" required></input>
+                                    <trix-editor input="sejarahDesa"></trix-editor>
                                 </div>
                             </div>
-                            
+                            <!-- Visi Desa -->
+                            <div class="form-group row mb-3">
+                                <label for="visiDesa" class="col-lg-2 col-md-3 col-sm-4 form-label">Visi Desa:</label>
+                                <div class="col-lg-10 col-md-9 col-sm-8">
+                                    <input type="hidden" name="visi_desa" class="form-control" id="visiDesa" value="{!! $profildesa->visi_desa !!}" required></input>
+                                    <trix-editor input="visiDesa"></trix-editor>
+                                </div>
+                            </div>
+                            <!-- Misi Desa -->
+                            <div class="form-group row mb-3">
+                                <label for="misiDesa" class="col-lg-2 col-md-3 col-sm-4 form-label">Misi Desa:</label>
+                                <div class="col-lg-10 col-md-9 col-sm-8">
+                                    <input type="hidden" name="misi_desa" class="form-control" id="misiDesa" value="{!! $profildesa->misi_desa !!}" required></input>
+                                    <trix-editor input="misiDesa"></trix-editor>
+                                </div>
+                            </div>
+                            <br>
+
                             <!-- Foto Desa -->
 
                             <input type="hidden" name="oldImage1" value="{{ $profildesa->gambar_desa_1 }}">
@@ -114,26 +132,7 @@
                                 </div>
                                 <div id="imagePreview" class="mt-3"></div>
                             </div>
-
-
-                            <!-- Visi Desa -->
-                            <div class="form-group row mb-3">
-                                <label for="visiDesa" class="col-lg-2 col-md-3 col-sm-4 form-label">Visi Desa:</label>
-                                <div class="col-lg-10 col-md-9 col-sm-8">
-                                    <textarea name="visi_desa" class="form-control" id="visiDesa" placeholder="Masukkan Visi Desa" required>{{ $profildesa->visi_desa ?? '' }}</textarea>
-                                </div>
-                            </div>
-
-                            <!-- Misi Desa -->
-                            <div class="form-group row mb-3">
-                                <label for="misiDesa" class="col-lg-2 col-md-3 col-sm-4 form-label">Misi Desa:</label>
-                                <div class="col-lg-10 col-md-9 col-sm-8">
-                                    <textarea name="misi_desa" class="form-control" id="misiDesa" placeholder="Masukkan Misi Desa" required>{{ $profildesa->misi_desa ?? '' }}</textarea>
-                                </div>
-                            </div>
-
                             <br>
-
                             <!-- Additional Details (Total Jiwa, Total KK, Total Dusun, Total RT) -->
                             <div class="form-group row gx-3 gy-3">
                                 <div class="col-lg-3 col-md-6">

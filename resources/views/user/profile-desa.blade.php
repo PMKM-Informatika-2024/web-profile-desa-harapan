@@ -21,7 +21,7 @@
     <h2 class="subjudul text-center mb-4">Sejarah Desa</h2>
     <div class="row">
       <div class="container">
-        <p>{{ $profildesa->sejarah_desa }}</p>
+        <p>{!! $profildesa->sejarah_desa !!}</p>
       </div>
       <div class="container transition-container">
         <div class="row">
@@ -60,19 +60,21 @@
               <h5 class="mb-2">Visi</h5>
             </div>
             <div class="card-body">
-              <p class="card-text">{{ $profildesa->visi_desa }}</p>
+              <p class="card-text">{!! $profildesa->visi_desa !!}</p>
             </div>
           </div>
+          <br>
           <div class="card-visimisi mt-3 mb-5">
             <div class="card-header">
               <h5 class="mb-2">Misi</h5>
             </div>
             <div class="card-body">
-              <ol class="card-text" style="list-style-type: disc;">
+              {{-- <ol class="card-text" style="list-style-type: disc;">
                   @foreach (explode("\n", $profildesa->misi_desa) as $misi)
                     <li>{{ $misi }}</li>
                   @endforeach
-              </ol>
+              </ol> --}}
+              <p>{!! $profildesa->misi_desa!!}</p>
             </div>
           </div>
         </div>
