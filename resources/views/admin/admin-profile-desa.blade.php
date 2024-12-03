@@ -247,10 +247,11 @@
                             </div>
                             <br>
                             <!-- Kantor Desa -->
-                            <div class="form-group row mt-3 mb-3">
+                            <div class="form-group row mb-3">
                                 <label for="kantorDesa" class="col-lg-2 col-md-3 col-sm-4 form-label">Kantor Desa:</label>
                                 <div class="col-lg-10 col-md-9 col-sm-8">
-                                    <textarea name="kantor_desa" type="text" class="form-control" id="kantorDesa" placeholder="Masukkan alamat Kantor Desa" required>{{ $profildesa->kantor_desa }}</textarea>
+                                    <input type="hidden" name="kantor_desa" class="form-control" id="kantorDesa" value="{!! $profildesa->kantor_desa !!}" required></input>
+                                    <trix-editor input="kantorDesa"></trix-editor>
                                 </div>
                             </div>
 

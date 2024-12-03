@@ -148,11 +148,6 @@
   <section id="kantor-desa" class="py-5">
     <div class="container transition-container">
       <h2 class="subjudul text-center mb-4">Kantor Desa & Balai Desa Harapan</h2>
-      <div class="row justify-content-center">
-        <div class="col-lg-12 text-center">
-          {{ $profildesa->kantor_desa }}          
-        </div>
-      </div>
       <br>
       <div class="row justify-content-center">
         <div class="col-lg-12 text-center">

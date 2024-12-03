@@ -109,7 +109,7 @@
                                 </div>
                             </div>
                             <div class="mt-3 text-muted">
-                                <p>{{ $dashboard->kantor_desa }}</p>
+                                <p>{!! $dashboard->kantor_desa !!}</p>
                             </div>
                         </div>
                     </div>

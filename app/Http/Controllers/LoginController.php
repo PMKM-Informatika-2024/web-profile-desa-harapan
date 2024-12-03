@@ -33,7 +33,7 @@ class LoginController
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/');
+        return redirect('/adminlogin');
     }
 
     public function register(Request $request){
