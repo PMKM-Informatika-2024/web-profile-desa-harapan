@@ -12,7 +12,7 @@
 
 <!-- End of Banner -->
   <!-- Pengumuman -->
-  <section id="pengumuman" style="margin-top: 120px">
+  <section id="pengumuman" style="margin-top: 120px; margin-bottom: 20px" >
     <div class="container col-lg-8 col-md-10 col-sm-12 my-4 p-4" style="background-color: #f8f9fa; border-radius: 8px;">
       <div class="row">
         <div class="col-12 text-center">

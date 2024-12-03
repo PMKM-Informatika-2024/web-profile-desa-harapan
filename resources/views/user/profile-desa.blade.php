@@ -158,4 +158,118 @@
   </section>
   <!-- End of Kantor Desa -->
   @endsection
-  
+
+@section('kodejs')
+    <script>
+
+      const suku_data = [
+        {{ $profildesa->suku_melayu }},
+        {{ $profildesa->suku_melayusambas }},
+        {{ $profildesa->suku_tionghoa }},
+        {{ $profildesa->suku_dayak }},
+        {{ $profildesa->suku_jawa }},
+        {{ $profildesa->suku_bugis }},
+        {{ $profildesa->suku_lainnya }},
+      ]
+
+      const agama_data = [
+        {{ $profildesa->agama_islam }},
+        {{ $profildesa->agama_katolik }},
+        {{ $profildesa->agama_protestan }},
+        {{ $profildesa->agama_buddha }},
+        {{ $profildesa->agama_hindu }},
+        {{ $profildesa->agama_konghucu }},
+      ]
+
+      // Diagram Lingkaran Suku
+      const sukuCtx = document.getElementById('sukuChart').getContext('2d');
+      const sukuChart = new Chart(sukuCtx, {
+        type: 'pie',
+        data: {
+          labels: ['Melayu', 'Melayu Sambas', 'Tionghoa', 'Dayak', 'Jawa', 'Bugis', 'Lainnya'],
+          datasets: [{
+            label: 'Jumlah Suku',
+            data: suku_data,
+            backgroundColor: ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'magenta'],
+            hoverOffset: 0
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: {
+                usePointStyle: true,
+                pointStyle: 'circle'
+              }
+            },
+            datalabels: {
+              color: '#000',
+              anchor: 'end',
+              align: 'end',
+              offset: -50,
+              formatter: (value, context) => {
+                const total = context.chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
+                const percentage = (value / total * 100).toFixed(1) + '%';
+                return percentage;
+              },
+              font: {
+                weight: 'medium'
+              }
+            }
+          },
+          layout: {
+            padding: 0
+          }
+        },
+        plugins: [ChartDataLabels]
+      });
+
+      // Diagram Lingkaran Agama
+      const agamaCtx = document.getElementById('agamaChart').getContext('2d');
+      const agamaChart = new Chart(agamaCtx, {
+        type: 'pie',
+        data: {
+          labels: ['Islam', 'Katolik', 'Protestan', 'Buddha', 'Hindu', 'Kong Hu Chu'],
+          datasets: [{
+            label: 'Jumlah Agama',
+            data: agama_data,
+            backgroundColor: ['red', 'orange', 'yellow', 'green', 'blue', 'magenta'],
+            hoverOffset: 0
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: {
+                usePointStyle: true,
+                pointStyle: 'circle'
+              }
+            },
+            datalabels: {
+              color: '#000',
+              anchor: 'end',
+              align: 'end',
+              offset: -50,
+              formatter: (value, context) => {
+                const total = context.chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
+                const percentage = (value / total * 100).toFixed(1) + '%';
+                return percentage;
+              },
+              font: {
+                weight: 'medium'
+              }
+            }
+          },
+          layout: {
+            padding: 0
+          }
+        },
+        plugins: [ChartDataLabels]
+      });
+
+    </script>
+@endsection

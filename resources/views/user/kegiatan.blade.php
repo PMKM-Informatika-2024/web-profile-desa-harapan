@@ -32,6 +32,8 @@
       </div>
     </div>
   </section>
+
+  <section></section>
   <!-- End of Kegiatan -->
   
 @endsection
