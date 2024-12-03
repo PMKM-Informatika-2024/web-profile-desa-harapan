@@ -27,7 +27,7 @@ Route::get('/', function () {
 return view('user/beranda',[
     'profildesa' => Profildesa::first(),
     'perangkat_desas'=>Perangkatdesa::orderBy('created_at','asc')->limit(6)->get(),
-    'pengumuman'=>Pengumuman::orderBy('created_at','asc')->limit(4)->get(),
+    'pengumuman'=>Pengumuman::orderBy('created_at','asc')->limit(3)->get(),
     'videoprofile' => Videoprofile::first(),
     'kontak'=>Kelolakontak::first(),
 ]);     
