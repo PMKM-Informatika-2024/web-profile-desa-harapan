@@ -179,28 +179,52 @@
 <!-- End of Perangkat Desa -->
 
 
-  {{-- Pengumuman --}}
-  <section id="pengumuman" class="py-5">
-    <div class="container transition-container mb-3 justify-content-center">
-      <div class="row">
-        <h2 class="subjudul text-center mb-5">Pengumuman</h2>
-        @foreach ($pengumuman as $p)
-        <div class="col-lg-3 col-md-4 mb-4">
-          <div class="card shadow">
-            <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
-              <h5 class="card-title text-center border-bottom pb-2 mb-3">{{ $p->judul }}</h5>
-              <p class="card-text text-muted">
-                <i class="fas fa-clock"></i> {{ $p->created_at->format('Y-m-d') }}
-              </p>
-              <img src="{{ asset('storage/'.$p->gambar_pengumuman) }}" width="150px" height=""  alt="">
-              <p class="card-text">{{ $p->deskripsi_singkat }}</p>
-                
-                <a href="/detailpengumuman/{{ $p->id }}" class="btn btn-link ms-auto">Read more...</a>
+{{-- Pengumuman --}}
+<section id="pengumuman" class="py-5">
+  <div class="container transition-container mb-3 justify-content-center">
+      <h2 class="subjudul text-center fw-bold">Pengumuman</h2>
+      <hr class=" mb-5 " style="width: 150px; margin: 0 auto; border: 2px solid black; opacity: 1; margin-top:10px">
+      <div class="row g-4 justify-content-center">
+          @foreach ($pengumuman as $p)
+              <div class="col-lg-4 col-md-6">
+                  <!-- Card Klikable -->
+                  <div class="card shadow-sm border-0 h-100">
+                      <a href="/detailpengumuman/{{ $p->id }}" class="text-decoration-none">
+                              
+                          <!-- Gambar -->
+                          <img src="{{ asset('storage/' . $p->gambar_pengumuman) }}" 
+                          style="height: 200px; object-fit: cover; object-position: center;" 
+                              class="card-img-top rounded-top">
+                          <!-- Konten -->
+                          <div class="card-body d-flex flex-column p-3">
+                              <div class="d-flex justify-content-between text-muted mb-2" style="font-size: 0.8rem;">
+                                  <!-- Ikon Tanggal -->
+                                  <span>
+                                      <i class="fas fa-calendar-alt" style="margin-right: 8px;"></i>
+                                      {{ $p->created_at->format('d-m-Y') }}
+                                  </span>
+                                  <!-- Ikon Penulis -->
+                                  <span>
+                                      <i class="fas fa-user" style="margin-right: 8px;"></i>
+                                      Admin
+                                  </span>
+                              </div>
+                              <!-- Judul -->
+                              <h5 class="card-title fw-bold text-dark mb-1" style="margin-top:3px;">
+                                  {{ $p->judul }}
+                              </h5>
+                              <!-- Deskripsi Singkat -->
+                              <p class="card-text text-muted small">
+                                  <p>{{ $p->deskripsi_singkat }}
+                                  </p>
+                          </div>
+                      </a>
+                  </div>
               </div>
-            </div>
-          </div>
-        @endforeach
-  </section>
+          @endforeach
+      </div>
+  </div>
+</section>  
 {{-- end pengumuman --}}
 
   {{-- Video Profile --}}

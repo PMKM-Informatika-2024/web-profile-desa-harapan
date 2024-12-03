@@ -1,5 +1,7 @@
 @extends('layouts.layout')
 @section('kid')
+@section('title', 'Detail Pengumuman - Desa Harapan')
+
     <style>
       nav{
         background: linear-gradient(135deg, #001F3F, #002e5c, #0d2b3f, #213346, #001637);
@@ -16,12 +18,12 @@
         <div class="col-12 text-center">
           <h3 class="mb-3">{{ $detailpengumuman->judul }}</h3>
           <p class="text-muted mb-1">
-            by <span>Admin Desa</span> / <span>{{ $detailpengumuman->created_at->format('Y-m-d') }}</span>
+            by <span>Admin Desa</span> / <span>{{ $detailpengumuman->created_at->format('d-m-Y') }}</span>
           </p>
         </div>
         <div class="col-12 text-center my-3">
           <img src="{{ asset('storage/'. $detailpengumuman->gambar_pengumuman) }}" alt="Gambar Pengumuman" class="img-fluid"
-            style="max-width: 300px; border-radius: 0px;">
+            style="max-width: 800px; border-radius: 0px;">
         </div>
         <div class="col-12">
           <p class="text-justify mt-3 ms-5 me-5">

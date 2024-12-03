@@ -72,7 +72,7 @@
                             <th>Judul</th>
                             <th>Foto</th>
                             <th>Deskripsi Singkat</th>
-                            <th>konten</th>
+                            {{-- <th>konten</th> --}}
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -85,7 +85,7 @@
                                 <td><img src="{{ asset('storage/' . $pengumuman->gambar_pengumuman) }}" alt=""
                                         class="img-thumbnail" style="width: 50px; height: 50px;"></td>
                                 <td>{{ $pengumuman->deskripsi_singkat }}</td>
-                                <td>{!! $pengumuman->konten !!}</td>
+                                {{-- <td>{!! $pengumuman->konten !!}</td> --}}
                                 <td>
                                     <a class=" btn btn-warning" href="javascript:void(0)" data-bs-toggle="modal"
                                         data-bs-target="#editPengumumanModal"
