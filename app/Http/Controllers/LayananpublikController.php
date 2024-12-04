@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Layananpublik;
 use Illuminate\Support\Facades\Storage;
 
-class LayananPublikController 
+class LayananpublikController 
 {
     public function index(Request $request)
     {
