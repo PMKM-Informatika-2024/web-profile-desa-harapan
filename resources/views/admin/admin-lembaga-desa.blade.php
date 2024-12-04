@@ -19,7 +19,7 @@
                         <div class="col-12">
                             <div class="card" id="tambahLembagaCard">
                                 <div class="card-body">
-                                  <h5>Tambah Perangkat Desa
+                                  <h5>Tambah Lembaga Desa
                                   <hr>
                                   </h5>
                                     <form id="tambahLembagaForm" action="/lembagadesa" method="POST" enctype="multipart/form-data">
@@ -98,7 +98,7 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="editLembagaModalLabel">Edit Perangkat Desa</h5>
+                                    <h5 class="modal-title" id="editLembagaModalLabel">Edit Lembaga Desa</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>
