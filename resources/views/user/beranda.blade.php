@@ -35,13 +35,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0" style="color: #f8f9fa;">
-            <li class="nav-item">
+            <li class="nav-item ms-3">
               <a class="nav-link {{ Request::is('/') ? 'active-link' : '' }}" href="/" id="beranda">Beranda</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item ms-3">
               <a class="nav-link {{ Request::is('profile-desa') ? 'active-link' : '' }}" href="/profile-desa" id="profile-desa">Profile Desa</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item ms-3 dropdown">
               <a class="nav-link dropdown-toggle {{ Request::is('perangkat-desa') || Request::is('lembaga-desa') ? 'active-link' : '' }}" href="#" id="pemerintahan-desa" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Pemerintahan Desa
@@ -54,10 +54,10 @@
                 <li><a class="dropdown-item" href="/lembaga-desa" id="lembaga-desa">Lembaga Desa</a></li>
               </ul>
             </li>
-            <li class="nav-item">
+            <li class="nav-item ms-3">
               <a class="nav-link {{ Request::is('layanan-publik') ? 'active-link' : '' }}" href="/layanan-publik" id="layanan-publik">Layanan Publik</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item ms-3 dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="informasi-publik" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Informasi Publik
@@ -77,7 +77,7 @@
             </li>
           </ul>
           <ul class="navbar-nav ms-auto me-3">
-            <li class="nav-item">
+            <li class="nav-item ms-3">
               <a class="nav-link" href="/daftar-kontak"
                 style="color:#f8f9fa ; background-color: #1E90FF; border-radius: 8px; padding-left: 15px; padding-right: 15px;">Kontak</a>
             </li>
