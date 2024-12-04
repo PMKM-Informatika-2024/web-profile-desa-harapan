@@ -15,7 +15,6 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card">
-                        <hr>
                         <div class="card-body">
                             <form action="/videoprofile/{{ $videoprofile->id }}" method="POST">
                                 @csrf
