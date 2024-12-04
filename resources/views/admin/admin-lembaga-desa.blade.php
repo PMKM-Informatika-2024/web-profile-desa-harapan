@@ -19,7 +19,9 @@
                         <div class="col-12">
                             <div class="card" id="tambahLembagaCard">
                                 <div class="card-body">
-                                    <hr>
+                                  <h5>Tambah Lembaga Desa
+                                  <hr>
+                                  </h5>
                                     <form id="tambahLembagaForm" action="/lembagadesa" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         <div class="form-group row mb-3">
@@ -96,7 +98,7 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="editLembagaModalLabel">Edit Perangkat Desa</h5>
+                                    <h5 class="modal-title" id="editLembagaModalLabel">Edit Lembaga Desa</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>
