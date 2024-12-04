@@ -21,8 +21,8 @@
         <h2 class="subjudul text-center mb-5">Galeri Kegiatan Desa Harapan</h2>
         @foreach ($kegiatan as $k)
           <div class="col-lg-4 g-0 p-3">
-            <div class="card-kegiatan position-relative ratio ratio-16x9">
-              <img src="{{ asset('storage/' . $k->gambar_kegiatan) }}" alt="" class="img-fluid">
+            <div class="card-kegiatan position-relative image-container">
+              <img src="{{ asset('storage/' . $k->gambar_kegiatan) }}" alt="" class="img-fluid image-container">
               <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100 d-flex align-items-end p-3">
                 <h5 class="text-start">{{ $k->nama_kegiatan }}</h5>
               </div>

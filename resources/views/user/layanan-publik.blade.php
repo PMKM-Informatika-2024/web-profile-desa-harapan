@@ -43,9 +43,9 @@
           <div class="row">
             <h2 class="subjudul text-center mb-5">Fasilitas Publik</h2>
             @foreach ($fasilitaspublik as $fpub)
-                <div class="col-lg-4 col-md-6 g-0">
-                    <div class="card-sekolah position-relative p-3">
-                        <img src="{{ asset('storage/' . $fpub->gambar_fasilitas) }}" alt="{{ $fpub->nama_fasilitas }}" class="img-fluid">
+                <div class="col-lg-4 col-md-6 g-0 image-container">
+                    <div class="card-sekolah position-relative p-3 ">
+                        <img src="{{ asset('storage/' . $fpub->gambar_fasilitas) }}" alt="{{ $fpub->nama_fasilitas }}" class="img-fluid image-container">
                         <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100">
                             <div class="position-absolute top-50 start-50 translate-middle text-center w-90">
                                 <h5>{{ $fpub->nama_fasilitas }}</h5>

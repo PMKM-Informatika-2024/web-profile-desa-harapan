@@ -23,7 +23,7 @@
                     <div class="col-lg-4 col-md-6">
                         <!-- Card Klikable -->
                         <div class="card shadow-sm border-0 h-100">
-                            <a href="/detailpengumuman/{{ $p->id }}" class="text-decoration-none">
+                            <a href="/detailpengumuman/{{ $p->id }}" target="_blank" class="text-decoration-none">
                                     
                                 <!-- Gambar -->
                                 <img src="{{ asset('storage/' . $p->gambar_pengumuman) }}" 

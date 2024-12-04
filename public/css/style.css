@@ -656,6 +656,24 @@ footer {
   color: #007bff;
 }
 
+.image-container {
+  width: 100%;
+  height: 250px; /* Atur tinggi yang sesuai */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 8px; /* Opsional, untuk tampilan lebih menarik */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opsional */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Pastikan gambar sesuai tanpa distorsi */
+  object-position: center; /* Opsional, mengatur posisi gambar */
+}
+
 /* END OF USER */
 
 

@@ -61,8 +61,8 @@ return view('user/layanan-administrasi',[
 });
 Route::get('/layanan-publik', function () {
     return view('user/layanan-publik',[
-        'fasilitaspendidikan' => Layananpublik::where('kategori_fasilitas','pendidikan')->get(),
-        'fasilitaspublik' => Layananpublik::where('kategori_fasilitas','publik')->get(),
+        'fasilitaspendidikan' => Layananpublik::where('kategori_fasilitas','pendidikan')->orderBy('created_at','desc')->get(),
+        'fasilitaspublik' => Layananpublik::where('kategori_fasilitas','publik')->orderBy('created_at','desc')->get(),
         
     ]);
 });

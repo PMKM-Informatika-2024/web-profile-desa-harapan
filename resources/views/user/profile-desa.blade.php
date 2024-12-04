@@ -26,22 +26,22 @@
       <div class="container transition-container">
         <div class="row">
           <div class="col-lg-4 col-md-6">
-            <img src="{{ asset('storage/'.$profildesa->gambar_desa_1) }}" id="image-desa" alt="Gambar Desa" class="img-fluid">
+            <img src="{{ asset('storage/'.$profildesa->gambar_desa_1) }}" id="image-desa" alt="Gambar Desa" class="img-fluid image-container">
           </div>
           <div class="col-lg-4 col-md-6">
-            <img src="{{ asset('storage/'.$profildesa->gambar_desa_2) }}" id="image-desa" alt="Gambar Desa" class="img-fluid">
+            <img src="{{ asset('storage/'.$profildesa->gambar_desa_2) }}" id="image-desa" alt="Gambar Desa" class="img-fluid image-container">
           </div>
           <div class="col-lg-4 col-md-6">
-            <img src="{{ asset('storage/'.$profildesa->gambar_desa_3) }}" id="image-desa" alt="Gambar Desa" class="img-fluid">
+            <img src="{{ asset('storage/'.$profildesa->gambar_desa_3) }}" id="image-desa" alt="Gambar Desa" class="img-fluid image-container">
           </div>
           <div class="col-lg-4 col-md-6">
-            <img src="{{ asset('storage/'.$profildesa->gambar_desa_4) }}" id="image-desa" alt="Gambar Desa" class="img-fluid">
+            <img src="{{ asset('storage/'.$profildesa->gambar_desa_4) }}" id="image-desa" alt="Gambar Desa" class="img-fluid image-container">
           </div>
           <div class="col-lg-4 col-md-6">
-            <img src="{{ asset('storage/'.$profildesa->gambar_desa_5) }}" id="image-desa" alt="Gambar Desa" class="img-fluid">
+            <img src="{{ asset('storage/'.$profildesa->gambar_desa_5) }}" id="image-desa" alt="Gambar Desa" class="img-fluid image-container">
           </div>
           <div class="col-lg-4 col-md-6">
-            <img src="{{ asset('storage/'.$profildesa->gambar_desa_6) }}" id="image-desa" alt="Gambar Desa" class="img-fluid">
+            <img src="{{ asset('storage/'.$profildesa->gambar_desa_6) }}" id="image-desa" alt="Gambar Desa" class="img-fluid image-container">
           </div>
         </div>
       </div>
