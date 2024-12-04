@@ -19,7 +19,9 @@
                         <div class="col-12">
                             <div class="card" id="tambahLembagaCard">
                                 <div class="card-body">
-                                    <hr>
+                                  <h5>Tambah Perangkat Desa
+                                  <hr>
+                                  </h5>
                                     <form id="tambahLembagaForm" action="/lembagadesa" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         <div class="form-group row mb-3">
