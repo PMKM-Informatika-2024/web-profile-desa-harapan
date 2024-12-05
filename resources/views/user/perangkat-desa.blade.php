@@ -63,7 +63,7 @@
                           <div class="mb-4">
                             <div class="card text-center overflow-hidden border-0">
                               <div class="image-container position-relative p-3">
-                                <img src="{{ asset('storage/' . $perangkat->gambar_perangkatdesa) }}" class="image-fluid rounded-circle" alt="Kasi Pemerintahan"
+                                <img src="{{ asset('storage/' . $perangkat->gambar_perangkatdesa) }}" class="image-fluid rounded-circle" alt="Perangkat Desa"
                                   style="height: 210px; width: 210px; object-fit: cover; ;" id="foto-kasi-pemerintahan">
                               </div>
                               <div class="card-body" style="font-size: 15px;">
