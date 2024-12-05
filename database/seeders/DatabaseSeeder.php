@@ -190,11 +190,32 @@ Jam Operasional: Senin - Jumat, 08.00 - 16.00
             'url_alamat' => 'https://maps.app.goo.gl/9VJ51tuZJRVke6fU7',
         ]);
         Layananpublik::create([ 
+            'kategori_fasilitas' => 'pendidikan',
+            'nama_fasilitas' => 'Paud Kelompok Bermain Cahaya Bangsa',
+            'gambar_fasilitas' => 'sekolah.png',
+            'alamat' => 'Pemangkat Kota, Kec. Pemangkat, Kabupaten Sambas, Kalimantan Barat',
+            'url_alamat' => 'https://maps.app.goo.gl/pQx9ASwFkJXqL1co8',
+        ]);
+        Layananpublik::create([ 
+            'kategori_fasilitas' => 'pendidikan',
+            'nama_fasilitas' => 'Paud SPS Mutiara Bangsa',
+            'gambar_fasilitas' => 'sekolah.png',
+            'alamat' => 'Kec. Pemangkat, Kabupaten Sambas, Kalimantan Barat',
+            'url_alamat' => 'https://maps.app.goo.gl/4WUvBydV4xxGndri9',
+        ]);
+        Layananpublik::create([ 
+            'kategori_fasilitas' => 'pendidikan',
+            'nama_fasilitas' => 'KB Nur Islami & SPS Nusa Indah',
+            'gambar_fasilitas' => 'sekolah.png',
+            'alamat' => '5XJM+7FW, Jl. Tlk. Nusa Harapan, Penjajap, Kec. Pemangkat, Kabupaten Sambas, Kalimantan Barat 79453',
+            'url_alamat' => 'https://maps.app.goo.gl/MsasSQ3PN4MNcChV9',
+        ]);
+        Layananpublik::create([ 
             'kategori_fasilitas' => 'publik',
-            'nama_fasilitas' => 'Lapangan Volley Topan',
+            'nama_fasilitas' => 'BPD Desa Harapan',
             'gambar_fasilitas' => 'lapanganvolley.png',
-            'alamat' => 'Jalan SDN 04 Gg.Abdul Hakim Dusun Mekar Lestari, Harapan, Pemangkat, Sambas Regency, West Kalimantan 79453',
-            'url_alamat' => 'https://maps.app.goo.gl/dyEwQ2a3g49i6nBt6',
+            'alamat' => '5XGM+98V, Pemangkat Kota, Kec. Pemangkat, Kabupaten Sambas, Kalimantan Barat 79453',
+            'url_alamat' => 'https://maps.app.goo.gl/EgkDAS4JQePMtAQg6',
         ]);
 
         Layananadministrasi::create([
