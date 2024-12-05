@@ -38,13 +38,12 @@
                                 <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                                     <div class="lembaga-card">
                                         <div class="lembaga-img-container">
-                                            <img src="{{ $lembaga->gambar_lembaga }}" alt="Foto Lembaga Desa" class="lembaga-img"
+                                            <img src="{{ asset('storage/'. $lembaga->gambar_lembaga) }}" alt="Foto Lembaga Desa" class="lembaga-img"
                                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                            <i class="fas fa-building lembaga-icon" style="display:none;"></i>
+                                            <i class="fas fa-building lembaga-icon" style="display: none;"></i>
                                         </div>
                                         <div class="lembaga-info">
                                             <h3 class="lembaga-name">{{ $lembaga->nama_lembaga }}</h3>
-                                            <p class="lembaga-alamat">{{ $lembaga->alamat_lembaga }}</p>
                                             <p class="lembaga-ketua">Ketua: {{ $lembaga->nama_ketua }}</p>
                                         </div>
                                     </div>
