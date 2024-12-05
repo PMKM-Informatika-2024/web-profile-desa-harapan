@@ -38,7 +38,7 @@
                                 <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                                     <div class="lembaga-card">
                                         <div class="lembaga-img-container">
-                                            <img src="foto-lembaga.jpg" alt="Foto Lembaga Desa" class="lembaga-img"
+                                            <img src="{{ $lembaga->gambar_lembaga }}" alt="Foto Lembaga Desa" class="lembaga-img"
                                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                                             <i class="fas fa-building lembaga-icon" style="display:none;"></i>
                                         </div>
