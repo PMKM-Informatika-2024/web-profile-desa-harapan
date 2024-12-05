@@ -95,6 +95,71 @@ Jam Operasional: Senin - Jumat, 08.00 - 16.00
             'jabatan' => 'Kepala Desa',
             'gambar_perangkatdesa' => 'photo.png',
         ]);
+        Perangkatdesa::create([
+            'nama' => 'Egy Arisandi',
+            'jabatan' => 'Sekretaris Desa',
+            'gambar_perangkatdesa' => 'photo.png',
+        ]);
+        Perangkatdesa::create([
+            'nama' => 'Yusuf',
+            'jabatan' => 'Kasi Pemerintahan',
+            'gambar_perangkatdesa' => 'photo.png',
+        ]);
+        Perangkatdesa::create([
+            'nama' => 'Trya Meryanti, S.Pd',
+            'jabatan' => 'Kasi Pelayanan',
+            'gambar_perangkatdesa' => 'photo.png',
+        ]);
+        Perangkatdesa::create([
+            'nama' => 'Sabhan Zuhriadi',
+            'jabatan' => 'Kasi Kesejahteraan',
+            'gambar_perangkatdesa' => 'photo.png',
+        ]);
+        Perangkatdesa::create([
+            'nama' => 'Iwan',
+            'jabatan' => 'Kaur Perencanaan',
+            'gambar_perangkatdesa' => 'photo.png',
+        ]);
+        Perangkatdesa::create([
+            'nama' => 'Eka Purnama, S.Pd',
+            'jabatan' => 'Kaur Keuangan',
+            'gambar_perangkatdesa' => 'photo.png',
+        ]);
+        Perangkatdesa::create([
+            'nama' => 'Erna Ningsih',
+            'jabatan' => 'Kaur TU & Umum',
+            'gambar_perangkatdesa' => 'photo.png',
+        ]);
+        Perangkatdesa::create([
+            'nama' => 'Muyazi Dedi',
+            'jabatan' => 'Operator',
+            'gambar_perangkatdesa' => 'photo.png',
+        ]);
+        Perangkatdesa::create([
+            'nama' => 'Ichwan',
+            'jabatan' => 'Staff Keuangan',
+            'gambar_perangkatdesa' => 'photo.png',
+        ]);
+        Perangkatdesa::create([
+            'nama' => 'Trisnawati, S.Sos',
+            'jabatan' => 'Kepala Dusun Abdul Kadir Kasim',
+            'gambar_perangkatdesa' => 'photo.png',
+        ]);
+        Perangkatdesa::create([
+            'nama' => 'Sarbani',
+            'jabatan' => 'Kepala Dusun Mekar Lestari',
+            'gambar_perangkatdesa' => 'photo.png',
+        ]);
+        Perangkatdesa::create([
+            'nama' => 'Nuruh Syahida, S.Pd',
+            'jabatan' => 'Kepala Dusun Nusa Indah',
+            'gambar_perangkatdesa' => 'photo.png',
+        ]);
+        Perangkatdesa::create([
+            'nama' => 'Azhari',
+            'jabatan' => 'Kepala Dusun Teluk Mesar',
+            'gambar_perangkatdesa' => 'photo.png',
+        ]);
 
         Lembagadesa::create([
             'nama_lembaga' => 'Lembaga Pemberdayaan Masyarakat (LPM)',
