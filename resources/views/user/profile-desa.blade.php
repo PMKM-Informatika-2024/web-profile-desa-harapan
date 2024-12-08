@@ -159,7 +159,9 @@
       <br>
       <div class="row justify-content-center">
         <div class="col-lg-12 text-center">
-          {!! $profildesa->peta_desa !!}          
+          <div class="responsive-map">
+            {!! $profildesa->peta_desa !!}          
+          </div>
         </div>
       </div>
     </div>
