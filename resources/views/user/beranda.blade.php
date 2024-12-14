@@ -65,7 +65,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item {{ Request::is('daftar-pengumuman') || Request::is('daftar-kegiatan') ? 'active-link' : '' }}" href="/layanan-administrasi" id="layanan-administrasi">Layanan
-                    Administrasi Desa</a></li>6
+                    Administrasi Desa</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
