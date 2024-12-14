@@ -65,7 +65,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item {{ Request::is('daftar-pengumuman') || Request::is('daftar-kegiatan') ? 'active-link' : '' }}" href="/layanan-administrasi" id="layanan-administrasi">Layanan
-                    Administrasi Desa</a></li>
+                    Administrasi Desa</a></li>6
                 <li>
                   <hr class="dropdown-divider">
                 </li>
@@ -116,7 +116,9 @@
           <a href="/profile-desa" class="btn-more mt-2">Selengkapnya..</a>
         </div>
         <div class="col-lg-7 mt-3">
-          <img src="{{ asset('storage/'. $profildesa->gambar_desa_1) }}" class="image shadow-lg" alt="Desa Harapan">
+          <div class="container-fluid transition-container mt-5">
+            <img src="{{ asset('storage/'. $profildesa->gambar_desa_1) }}" class="image image-fluid shadow-lg" alt="Desa Harapan">
+          </div>
         </div>
       </div>
     </div>

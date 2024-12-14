@@ -69,6 +69,14 @@
   display: block;
 }
 
+@media (max-width: 576px) {
+  .image {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto; /* Jika perlu  gambar di tengah */
+  }
+}
+
 @media (max-width: 991px) {
   .navbar-collapse {
     background-color: var(--sec-color);
@@ -693,6 +701,13 @@ footer {
   object-position: center; /* Opsional, mengatur posisi gambar */
 }
 
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
 /* END OF USER */
 
 
@@ -929,6 +944,8 @@ a.sidebar-link.active {
   background-color: #16599b;
   color: #f8f9fa;
 }
+
+
 
 @media (max-width: 768px) {
   .main .btn-simpan {
