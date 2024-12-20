@@ -116,7 +116,9 @@
           <a href="/profile-desa" class="btn-more mt-2">Selengkapnya..</a>
         </div>
         <div class="col-lg-7 mt-3">
-          <img src="{{ asset('storage/'. $profildesa->gambar_desa_1) }}" class="image shadow-lg" alt="Desa Harapan">
+          <div class="container-fluid transition-container mt-5">
+            <img src="{{ asset('storage/'. $profildesa->gambar_desa_1) }}" class="image image-fluid shadow-lg" alt="Desa Harapan">
+          </div>
         </div>
       </div>
     </div>
